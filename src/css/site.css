@@ -960,10 +960,23 @@ footer section:last-child {
 
 /*contentFilter*/
 
+main section .content .contentFilter {
+    height: 100%;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px var(--light-shadow);
+    max-width: initial;
+}
+
 .contentFilter form {
     display: grid;
-    grid-template-columns: repeat(4, fit-content(220px));
+    grid-template-columns: repeat(4, max-content);
     grid-gap: 40px;
+    max-width: initial;
+    align-items: center;
 }
 
 .contentFilter form .button {
@@ -1004,6 +1017,10 @@ footer section:last-child {
 .button.transparent:hover {
     background-color: var(--background-grey-light);
     cursor: pointer;
+}
+
+.button.transparent.blue {
+    color: var(--text-blue);
 }
 
 .button.onlyIcon {

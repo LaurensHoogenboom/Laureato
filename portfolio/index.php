@@ -10,27 +10,29 @@
                 Dit is wat ik doe. Kijk gerust eens rond.
             </h3>
         </article>
-        <div class="contentFilter">
-            <form>
-                <div class="buttonTextInput">
-                    <input type="text" placeholder="Zoeken">
-                    <label class="icon" for="submitSearch">
-                        &#xe901;
-                    </label>
-                    <input type="submit" class="hidden" id="submitSearch">
-                </div>
-                <select>
-                    <option>Categorie</option>
-                    <option></option>
-                    <option></option>
-                </select>
-                <select>
-                    <option>Sortering</option>
-                    <option></option>
-                    <option></option>
-                </select>
-                <a class="button transparent">Filters Wissen</a>
-            </form>
+        <div class="content">
+            <div class="contentFilter">
+                <form>
+                    <div class="buttonTextInput">
+                        <input type="text" placeholder="Zoeken">
+                        <label class="icon" for="submitSearch">
+                            &#xe901;
+                        </label>
+                        <input type="submit" class="hidden" id="submitSearch">
+                    </div>
+                    <select>
+                        <option>Categorie</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <select>
+                        <option>Sortering</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <a class="button transparent blue">Filters Wissen</a>
+                </form>
+            </div>
         </div>
     </div>
 </section>
