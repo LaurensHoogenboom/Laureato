@@ -12,12 +12,6 @@
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
-                <label class="button blue mobileFilterButton">
-                    <span class="text">
-                        Filters
-                    </span>
-                </label>
-
                 <form>
                     <div class="buttonTextInput">
                         <input type="text" placeholder="Zoeken">
@@ -39,6 +33,12 @@
                     </select>
                     <a class="button transparent blue">Filters Wissen</a>
                 </form>
+
+                <label class="button blue mobileFilterButton">
+                    <span class="text">
+                        Filters
+                    </span>
+                </label>
             </div>
         </div>
     </div>

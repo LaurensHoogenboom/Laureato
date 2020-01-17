@@ -244,6 +244,7 @@ nav .navButton {
         padding: 0;
         overflow: hidden;
         transition: max-height 0.3s;
+        overflow: auto;
     }
     nav .navMenu .navLinks a {
         display: block;
@@ -1056,6 +1057,7 @@ main section .content .contentFilter {
         height: 138px;
         transition: all 0.3s;
         top: 0;
+        overflow: auto;
     }
     
     .contentFilterWrapper .mobileFilterButton {
@@ -1081,7 +1083,6 @@ main section .content .contentFilter {
     .contentFilter.active form {
         display: grid;
         grid-template-columns: 1fr;
-        margin-top: 40px;
         grid-gap: 17px;
     }
 
@@ -1112,7 +1113,7 @@ main section .content .contentFilter {
     }
 
     .contentFilter.active form {
-        margin-top: 40px;
+        margin-bottom: 40px;
     }
 }
 
@@ -1121,10 +1122,6 @@ main section .content .contentFilter {
         height: calc(100vh - 60px);
         top: 60px;
         padding: 40px 25px;
-    }
-
-    .contentFilter.active form {
-        margin-top: 40px;
     }
 }
 
