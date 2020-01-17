@@ -10,175 +10,107 @@
                 Dit is wat ik doe. Kijk gerust eens rond.
             </h3>
         </article>
-    </div>
-</section>
-
-<section class="right">
-    <div class="overlay">
-        <div class="content center">
-            <img src="/about/img/CardSet.png">
-        </div>
-
-        <article>
-            <h1>
-                Hoi, ik ben Laurens Hoogenboom.
-            </h1>
-            <h3>
-                About Me.
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum porta aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
-                Vestibulum lacinia sollicitudin nulla eu sollicitudin. 
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum porta aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
-            </p>
-            <h3>
-                Philosophy
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum pota aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
-            </p>
-            <a class="button" href="#">Curiculum Vitae</a>
-        </article>
-    </div>
-</section>
-
-<section class="largeMargin center">
-    <div class="overlay">
-        <article class="forceMargin">
-            <h1>
-                Vaardigheden & Tools
-            </h1>
-            <p>
-                Dit is wat ik kan verdeeld over de verschillende vakgebieden waarop ik actief ben.
-            </p>
-        </article>
-
-        <div class="iconSet detail">
-            <label>
-                <span class="icon">
-                    &#xe903;
-                </span>
-                <h2>
-                    Classic Art
-                </h2>
-                <ul>
-                    <li>
-                        Portretten & Dieren
-                    </li>
-                    <li>
-                        Architectuur
-                    </li>
-                    <li>
-                        Landschappen
-                    </li>
-                </ul>
-            </label>
-            <label>
-                <span class="icon">
-                    &#xe902;
-                </span>
-                <h2>
-                    Web
-                </h2>
-                <ul>
-                    <li>
-                        HTML & CSS
-                    </li>
-                    <li>
-                        JavaScript
-                    </li>
-                    <li>
-                        PHP
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        .Net
-                    </li>
-                    <li>
-                        C#
-                    </li>
-                    <li>
-                        SQL
-                    </li>
-                </ul>
-            </label>
-            <label>
-                <span class="icon">
-                    &#xe904;
-                </span>
-                <h2>
-                    UI/UX
-                </h2>
-                <ul>
-                    <li>
-                        Modile & Desktop Applications
-                    </li>
-                    <li>
-                        Websites & Webstores
-                    </li>
-                    <li>
-                        Hardware
-                    </li>
-                </ul>
-            </label>
+        <div class="contentFilter">
+            <form>
+                <div class="buttonTextInput">
+                    <input type="text" placeholder="Zoeken">
+                    <label class="icon" for="submitSearch">
+                        &#xe901;
+                    </label>
+                    <input type="submit" class="hidden" id="submitSearch">
+                </div>
+                <select>
+                    <option>Categorie</option>
+                    <option></option>
+                    <option></option>
+                </select>
+                <select>
+                    <option>Sortering</option>
+                    <option></option>
+                    <option></option>
+                </select>
+                <a class="button transparent">Filters Wissen</a>
+            </form>
         </div>
     </div>
 </section>
 
-<section class="smallMargin center laurelRight">
+<section class="contentList">
     <div class="overlay">
-        <article class="forceMargin">
-            <h1>
-                Blader door mijn Portfolio
-            </h1>
-        </article>
-        <form>
-            <div class="buttonTextInput larger">
-                <input type="text" placeholder="Zoeken">
-                <label class="icon" for="submitSearch">
-                    &#xe901;
+        <div class="itemList">
+            <div class="item">
+                <div class="content" style="background-image: url(/portfolio/content/church/kerk.jpg);">
+
+                </div>
+                <label class="title">
+                    <span class="icon">
+                        &#xe903;
+                    </span>
+                    Kathedraal
                 </label>
-                <input type="submit" class="hidden" id="submitSearch">
             </div>
-        </form>
+
+            <div class="item">
+                <div class="content" style="background-image: url(/portfolio/content/consilio/consilio.jpg);">
+
+                </div>
+                <label class="title">
+                    <span class="icon">
+                        &#xe904;
+                    </span>
+                    Consilio
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="content" style="background-image: url(/portfolio/content/tactilephoto/tactilephoto.jpg);">
+
+                </div>
+                <label class="title">
+                    <span class="icon">
+                        &#xe904;
+                    </span>
+                    Tactile Photo
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="content" style="background-image: url(/portfolio/content/breda/breda.jpg);">
+
+                </div>
+                <label class="title">
+                    <span class="icon">
+                        &#xe903;
+                    </span>
+                    Breda
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="content" style="background-image: url(/portfolio/content/polderweide/polderweide.jpg);">
+
+                </div>
+                <label class="title">
+                    De Polderweide
+                </label>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="left">
     <div class="overlay">
         <article>
-            <h1>
-                Bevalt het hier?
-            </h1>
-            <p>
-                Als u interesse, vragen of opmerkingen hebt over mijn werk, deze website of deze website of een
-                opdracht hebt kunt u gerust contact met me opnemen.
-            </p>
-            <ul>
-                <li>
-                    info@laureato.nl
-                </li>
-                <li>
-                    (+31) 6 22 85 48 00
-                </li>
-            </ul>
-        </article>
 
+        </article>
         <div class="content">
-            <form>
-                <input type="text" placeholder="Naam">
-                <input type="text" placeholder="E-mailadres">
-                <textarea placeholder="Bericht"></textarea>
-                <label class="button blue">Verzenden</label>
-            </form>
+    
         </div>
     </div>
 </section>
+
+
+
+
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/footer.php"; ?>
