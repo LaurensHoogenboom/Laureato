@@ -22,13 +22,14 @@
                     </div>
                     <select>
                         <option>Categorie</option>
-                        <option></option>
-                        <option></option>
+                        <option>UX / UI</option>
+                        <option>Web</option>
+                        <option>Art</option>
                     </select>
                     <select>
                         <option>Sortering</option>
-                        <option></option>
-                        <option></option>
+                        <option>Datum</option>
+                        <option>Type</option>
                     </select>
                     <a class="button transparent blue">Filters Wissen</a>
                 </form>
@@ -93,8 +94,55 @@
 
                 </div>
                 <label class="title">
+                    <span class="icon">
+                        &#xe902;
+                    </span>
                     De Polderweide
                 </label>
+            </div>
+        </div>
+
+        <div class="itemPaging">
+            <div class="pageNumber">
+                <label class="button grey round">
+                    <div class="chevron left">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <label class="button blue square">
+                    1
+                </label>
+                <label class="button grey round">
+                    <div class="chevron right">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+
+            <div></div>
+            
+            <div class="pageSize">
+                <label>
+                    Items per pagina:
+                </label>
+                
+                <form>
+                    <select>
+                        <option>
+                            10
+                        </option>
+        
+                        <option>
+                            15
+                        </option>
+        
+                        <option>
+                            25
+                        </option>
+                    </select>
+                </form>
             </div>
         </div>
     </div>
@@ -103,16 +151,44 @@
 <section class="left">
     <div class="overlay">
         <article>
-
+            <h1>
+                Nog meer weten over wat ik doe?
+            </h1>
+            <p>
+                Kijk dan eens naar de diensten die ik lever.
+                Ik doe alles wat met User Interface Design, User Experience Design en het web te maken heeft.
+                Daarnaast ben ik ook op expressief vlak actief.
+            </p>
         </article>
-        <div class="content">
-    
+        <div class="content center">
+            <div class="iconSet">
+                <label>
+                    <span class="icon">
+                        &#xe902;
+                    </span>
+                    <h2>
+                        Web
+                    </h2>
+                </label>
+                <label>
+                    <span class="icon">
+                        &#xe903;
+                    </span>
+                    <h2>
+                        Classic Art
+                    </h2>
+                </label>
+                <label>
+                    <span class="icon">
+                        &#xe904;
+                    </span>
+                    <h2>
+                        UI/UX
+                    </h2>
+                </label>
+            </div>
         </div>
     </div>
 </section>
-
-
-
-
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/footer.php"; ?>

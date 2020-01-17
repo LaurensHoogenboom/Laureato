@@ -46,7 +46,7 @@
                 </div>
             </form>
 
-            <div class="button onlyIcon transparent square">
+            <div class="button transparent square">
                 <span class="icon">
                     &#xe900;
                 </span>

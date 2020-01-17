@@ -10,6 +10,7 @@
     --background-white: rgb(2255, 255, 255);
     --background-grey-lightest: rgb(250, 250, 250);
     --background-grey-light: rgb(240, 240, 240);
+    --background-grey-normal: rgb(220,220,220);
     --text-grey-light: rgb(180, 180, 180);
     --text-grey-normal: rgb(112, 112, 112);
     --text-grey-dark: rgb(51, 51, 51);
@@ -344,6 +345,7 @@ main section {
 
 main section .overlay {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
     padding: 80px 168px;
@@ -653,8 +655,14 @@ main section.home .chevron {
     position: absolute;
     bottom: 50px;
     left: 50%;
+    height: 20px;
+    width: 41px;
     transform: rotate(180deg) translateX(-50%);
     animation: homeChevronBounce 2s linear 0s infinite;
+}
+
+main section.home .chevron span {
+    width: 24px;
 }
 
 @keyframes homeChevronBounce {
@@ -983,6 +991,49 @@ main section .content .contentFilter {
     margin-top: 0;
 }
 
+.contentFilter form select {
+    margin-bottom: 0;
+}
+
+/*itemPaging*/
+
+.itemPaging {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    width: 100%;
+    margin-top: 80px;
+    background-color: rgb(255,255,255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px var(--light-shadow);
+    padding: 20px;
+}
+
+.itemPaging:first-child {
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.itemPaging .button {
+    margin-right: 20px;
+}
+
+.itemPaging .button:last-of-type {
+    margin-right: 0;
+}
+
+.itemPaging .pageSize label {
+    padding-right: 20px;
+    line-height: 38px;
+}
+
+.itemPaging form {
+    float: right;
+}
+
+.itemPaging form select {
+    margin-bottom: 0;
+}
+
 /*button*/
 
 .button {
@@ -994,8 +1045,26 @@ main section .content .contentFilter {
     transition: background-color 0.3s;
 }
 
+.button.round, .button.square {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    padding: 0;
+    line-height: 36px;
+}
+
 .button.square {
     border-radius: 4px;
+}
+
+.button.round {
+    border-radius: 50%;
+}
+
+.button.square .icon, .button.round .icon {
+    font-size: 28px;
+    line-height: 38px;
 }
 
 .button.blue {
@@ -1008,6 +1077,10 @@ main section .content .contentFilter {
 
 .button.grey {
     background-color: var(--background-grey-light);
+}
+
+.button.grey:hover {
+    background-color: var(--background-grey-normal);
 }
 
 .button.transparent {
@@ -1023,17 +1096,16 @@ main section .content .contentFilter {
     color: var(--text-blue);
 }
 
-.button.onlyIcon {
-    display: inline-block;
-    height: 36px;
-    width: 36px;
-    text-align: center;
-    padding: 0;
+.button .chevron.left, .button .chevron.right {
+    margin-bottom: 3px;
 }
 
-.button.onlyIcon .icon {
-    font-size: 28px;
-    line-height: 36px;
+.button .chevron.left {
+    margin-left: 3px;
+}
+
+.button .chevron.right {
+    margin-right: 3px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -1181,20 +1253,30 @@ main section:nth-child(even) .buttonTextInput {
 
 /*chevron*/
 
+
+
 .chevron {
     display: inline-block;
     position: relative;
-    height: 20px;
-    width: 41px;
+    height: 8px;
+    width: 16px;
 }
 
 .chevron span {
     position: absolute;
     background-color: var(--text-grey-normal);
     height: 2px;
-    width: 24px;
+    width: 10px;
     border-radius: 1px;
     transition: all 0.4s;
+}
+
+.chevron.left {
+    transform: rotate(-90deg);
+}
+
+.chevron.right {
+    transform: rotate(90deg);
 }
 
 .chevron span:first-of-type {
@@ -1231,14 +1313,14 @@ form {
     max-width: 672px;
 }
 
-form input, form textarea {
+form input, form textarea, form select {
     width: 100%;
     margin-bottom: 17px;
     outline: none;
     transition: box-shadow 0.3s;
 }
 
-form input:focus, form textarea:focus {
+form input:focus, form textarea:focus, form select:focus {
     box-shadow: 0px 0px 15px var(--shadow-input);
     border: 1px solid var(--text-grey-light);
 }
