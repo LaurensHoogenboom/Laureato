@@ -1,6 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; ?>
 
-<section class="smallMargin left background" style="background-image: url(/about/img/header.jpg);">
+<section class="smallMargin left background pageTitle" style="background-image: url(/about/img/header.jpg);">
     <div class="overlay">
         <article>
             <h1>

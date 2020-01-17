@@ -1,6 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; ?>
 
-<section class="smallMargin left">
+<section class="smallMargin left pageTitle">
     <div class="overlay">
         <article>
             <h1>
@@ -10,8 +10,14 @@
                 Dit is wat ik doe. Kijk gerust eens rond.
             </h3>
         </article>
-        <div class="content">
+        <div class="content contentFilterWrapper">
             <div class="contentFilter">
+                <label class="button blue mobileFilterButton">
+                    <span class="text">
+                        Filters
+                    </span>
+                </label>
+
                 <form>
                     <div class="buttonTextInput">
                         <input type="text" placeholder="Zoeken">
@@ -21,13 +27,13 @@
                         <input type="submit" class="hidden" id="submitSearch">
                     </div>
                     <select>
-                        <option>Categorie</option>
+                        <option value="default">Categorie</option>
                         <option>UX / UI</option>
                         <option>Web</option>
                         <option>Art</option>
                     </select>
                     <select>
-                        <option>Sortering</option>
+                        <option value="default">Sortering</option>
                         <option>Datum</option>
                         <option>Type</option>
                     </select>

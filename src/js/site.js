@@ -87,6 +87,34 @@ $('.sliderDots span').click(function() {
     slideShowTimer = window.setInterval(switchSlides, slideSpeed);
 });
 
+//filterbutton
+
+$('.mobileFilterButton').click(function() {
+    var contentFilter = $(this).closest('.contentFilter');
+
+    $(contentFilter).toggleClass('active');
+
+    if ($(this).closest('.contentFilter').hasClass('active')) {
+        $(this).children(".text").text("Sluiten");
+    }
+    else {
+        $(this).children(".text").text("Filters");
+    }
+});
+
+//select
+
+$("select").change(function () {
+    if($(this).val() == "default"){
+        $(this).addClass("placeHolder");
+    } 
+    else {
+        $(this).removeClass("placeHolder")
+    }
+});
+
+$("select").change();
+
 
 
 
