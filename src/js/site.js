@@ -1,11 +1,11 @@
 //highlight the current nav item
 
-$(document).ready(function() {
+$(document).ready(function () {
     var current = location.pathname;
     if (current == "/") {
         $('.navMenu .navLinks a').first().addClass('current');
     } else {
-        $('.navMenu .navLinks a').each(function() {
+        $('.navMenu .navLinks a').each(function () {
             var $this = $(this);
             // if the current path is like this link, make it active
             if ($this.attr('href').indexOf(current) !== -1) {
@@ -17,14 +17,14 @@ $(document).ready(function() {
 
 //navigation menu
 
-$(document).ready(function() {
-    $('#navMenuButton').click(function() {
+$(document).ready(function () {
+    $('#navMenuButton').click(function () {
         $('#navMenu').toggleClass('active');
     });
 });
 
-$(document).ready(function() {
-    $('.hamburgerButton').click(function() {
+$(document).ready(function () {
+    $('.hamburgerButton').click(function () {
         $(this).toggleClass('clicked');
     });
 })
@@ -38,7 +38,7 @@ var slideSpeed = 5000;
 var slideShowTimer = window.setInterval(switchSlides, slideSpeed);
 
 function switchSlides() {
-    sliders.each(function() {
+    sliders.each(function () {
         var slides = $(this).children('.slide');
         var sliderName = $(this).attr("id");
 
@@ -50,25 +50,25 @@ function switchSlides() {
 
         $(currentSlide).removeClass('active');
         $(dots).eq(currentIndex).removeClass('active');
-    
+
         if (currentIndex < maxIndex) {
             var nextSlideIndex = parseInt(currentIndex) + 1;
             var nextSlide = $(this).children('#' + nextSlideIndex);
-    
+
             $(nextSlide).addClass('active');
             $(dots).eq(nextSlideIndex).addClass('active');
         }
         else if (currentIndex = maxIndex) {
             var nextSlideIndex = 0;
             var nextSlide = $(this).children('#' + nextSlideIndex);
-    
+
             $(nextSlide).addClass('active');
             $(dots).eq(nextSlideIndex).addClass('active');
         }
     });
 }
 
-$('.sliderDots span').click(function() {
+$('.sliderDots span').click(function () {
     var dotIndex = $(this).attr('id');
 
     var sliderName = $(this).parent().attr('slider');
@@ -89,7 +89,7 @@ $('.sliderDots span').click(function() {
 
 //filterbutton
 
-$('.mobileFilterButton').click(function() {
+$('.mobileFilterButton').click(function () {
     var contentFilter = $(this).closest('.contentFilter');
 
     $(contentFilter).toggleClass('active');
@@ -105,9 +105,9 @@ $('.mobileFilterButton').click(function() {
 //select
 
 $("select").change(function () {
-    if($(this).val() == "default"){
+    if ($(this).val() == "default") {
         $(this).addClass("placeHolder");
-    } 
+    }
     else {
         $(this).removeClass("placeHolder")
     }
@@ -115,6 +115,58 @@ $("select").change(function () {
 
 $("select").change();
 
+
+//itemlist
+
+$('.itemList .item .tumbnail, .itemList .item .title').click(function () {
+    var item = $(this).closest('.item');
+    var windowOfset;
+
+    $(item).closest('.itemList').find('.item').each(function () {
+        $(this).removeClass('opened');
+    });
+
+    $(item).addClass('opened');
+
+    if (window.innerWidth > 640) {
+        windowOfset = 146;
+    }
+    else if (window.innerWidth > 480) {
+        windowOfset = 120;
+    }
+    else {
+        windowOfset = 100;
+    }
+
+    setTimeout(function () {
+        $("html, body").animate({
+            scrollTop: $(item).offset().top - windowOfset
+        }, 300);
+    }, 300)
+});
+
+$('.itemList .item .cross').click(function () {
+    var item = $(this).closest('.item');
+    var windowOfset;
+
+    $(item).removeClass('opened');
+
+    if (window.innerWidth > 640) {
+        windowOfset = 146;
+    }
+    else if (window.innerWidth > 480) {
+        windowOfset = 120;
+    }
+    else {
+        windowOfset = 100;
+    }
+
+    setTimeout(function () {
+        $("html, body").animate({
+            scrollTop: $(item).offset().top - windowOfset
+        }, 300);
+    }, 300)
+});
 
 
 

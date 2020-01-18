@@ -48,63 +48,51 @@
     <div class="overlay">
         <div class="itemList">
             <div class="item">
-                <div class="content" style="background-image: url(/portfolio/content/church/kerk.jpg);">
-
+                <div class="tumbnail" style="background-image: url(/portfolio/content/church/kerk.jpg);">
                 </div>
+
                 <label class="title">
                     <span class="icon">
                         &#xe903;
                     </span>
                     Kathedraal
                 </label>
+
+                <div class="content">
+                    <iframe class="description">
+                    </iframe>
+                </div>
+
+                <div class="contentControls">
+                    <label class="cross">
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
             </div>
 
             <div class="item">
-                <div class="content" style="background-image: url(/portfolio/content/consilio/consilio.jpg);">
-
+                <div class="tumbnail" style="background-image: url(/portfolio/content/church/kerk.jpg);">
                 </div>
-                <label class="title">
-                    <span class="icon">
-                        &#xe904;
-                    </span>
-                    Consilio
-                </label>
-            </div>
 
-            <div class="item">
-                <div class="content" style="background-image: url(/portfolio/content/tactilephoto/tactilephoto.jpg);">
-
-                </div>
-                <label class="title">
-                    <span class="icon">
-                        &#xe904;
-                    </span>
-                    Tactile Photo
-                </label>
-            </div>
-
-            <div class="item">
-                <div class="content" style="background-image: url(/portfolio/content/breda/breda.jpg);">
-
-                </div>
                 <label class="title">
                     <span class="icon">
                         &#xe903;
                     </span>
-                    Breda
+                    Kathedraal
                 </label>
-            </div>
 
-            <div class="item">
-                <div class="content" style="background-image: url(/portfolio/content/polderweide/polderweide.jpg);">
-
+                <div class="content">
+                    <iframe class="description">
+                    </iframe>
                 </div>
-                <label class="title">
-                    <span class="icon">
-                        &#xe902;
-                    </span>
-                    De Polderweide
-                </label>
+
+                <div class="contentControls">
+                    <label class="cross">
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -128,22 +116,22 @@
             </div>
 
             <div></div>
-            
+
             <div class="pageSize">
                 <label>
                     Items per pagina:
                 </label>
-                
+
                 <form>
                     <select>
                         <option>
                             10
                         </option>
-        
+
                         <option>
                             15
                         </option>
-        
+
                         <option>
                             25
                         </option>
