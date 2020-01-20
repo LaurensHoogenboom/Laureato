@@ -134,12 +134,12 @@ $('.itemList .item .tumbnail, .itemList .item .title').click(function () {
         windowOfset = 100;
     }
 
-    $(iframe).attr("src", $(iframe).attr("page"));
-
     setTimeout(function () {
         $("html, body").animate({
             scrollTop: $(item).offset().top - windowOfset
         }, 300);
+
+        $(iframe).attr("src", $(iframe).attr("page"));
     }, 300)
 });
 
@@ -158,12 +158,12 @@ $('.itemList .item .cross').click(function () {
         windowOfset = 100;
     }
 
-    $(iframe).attr("src", "");
-
     setTimeout(function () {
         $("html, body").animate({
             scrollTop: $(item).offset().top - windowOfset
         }, 300);
+
+        $(iframe).attr("src", "");
     }, 300)
 });
 
