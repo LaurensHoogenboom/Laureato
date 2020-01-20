@@ -118,6 +118,7 @@ $("select").change();
 $('.itemList .item .tumbnail, .itemList .item .title').click(function () {
     var item = $(this).closest('.item');
     var windowOfset;
+    var iframe = $(item).find('iframe');
 
     $(item).closest('.itemList').find('.item').each(function () {
         $(this).removeClass('opened');
@@ -133,6 +134,8 @@ $('.itemList .item .tumbnail, .itemList .item .title').click(function () {
         windowOfset = 100;
     }
 
+    $(iframe).attr("src", $(iframe).attr("page"));
+
     setTimeout(function () {
         $("html, body").animate({
             scrollTop: $(item).offset().top - windowOfset
@@ -143,6 +146,7 @@ $('.itemList .item .tumbnail, .itemList .item .title').click(function () {
 $('.itemList .item .cross').click(function () {
     var item = $(this).closest('.item');
     var windowOfset;
+    var iframe = $(item).find('iframe');
 
     $(item).removeClass('opened');
 
@@ -153,6 +157,8 @@ $('.itemList .item .cross').click(function () {
     } else {
         windowOfset = 100;
     }
+
+    $(iframe).attr("src", "");
 
     setTimeout(function () {
         $("html, body").animate({
