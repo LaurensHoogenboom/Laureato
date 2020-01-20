@@ -59,7 +59,7 @@
                 </label>
 
                 <div class="content">
-                    <iframe class="description">
+                    <iframe class="description" src="/portfolio/content/church/">
                     </iframe>
                 </div>
 
