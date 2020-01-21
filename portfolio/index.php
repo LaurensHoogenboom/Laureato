@@ -7,31 +7,31 @@
                 Portfolio
             </h1>
             <h3>
-                Dit is wat ik doe. Kijk gerust eens rond.
+                This is what I'm doing. Enjoy.
             </h3>
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
                 <form>
                     <div class="buttonTextInput">
-                        <input type="text" placeholder="Zoeken">
+                        <input type="text" placeholder="Search">
                         <label class="icon" for="submitSearch">
                             &#xe901;
                         </label>
                         <input type="submit" class="hidden" id="submitSearch">
                     </div>
                     <select>
-                        <option value="default">Categorie</option>
+                        <option value="default">Category</option>
                         <option>UX / UI</option>
                         <option>Web</option>
                         <option>Art</option>
                     </select>
                     <select>
-                        <option value="default">Sortering</option>
-                        <option>Datum</option>
+                        <option value="default">Sort</option>
+                        <option>Date</option>
                         <option>Type</option>
                     </select>
-                    <a class="button transparent blue">Filters Wissen</a>
+                    <a class="button transparent blue">Delete Filters</a>
                 </form>
 
                 <label class="button blue mobileFilterButton">
@@ -55,7 +55,7 @@
                     <span class="icon">
                         &#xe903;
                     </span>
-                    Kathedraal
+                    Cathedral
                 </label>
 
                 <div class="content">
@@ -95,7 +95,7 @@
 
             <div class="pageSize">
                 <label>
-                    Items per pagina:
+                    Items per page:
                 </label>
 
                 <form>

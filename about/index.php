@@ -4,10 +4,10 @@
     <div class="overlay">
         <article>
             <h1>
-                Over Laureato
+                About Laureato
             </h1>
             <h3>
-                Laurens komt van Laurentius wat verwijst naar Laurierbladeren 
+                Laurens comes from Laurentius which refers to Laurel leaves
             </h3>
         </article>
     </div>
@@ -21,26 +21,29 @@
 
         <article>
             <h1>
-                Hoi, ik ben Laurens Hoogenboom.
+                Hey, I am Laurens Hoogenboom.
             </h1>
             <h3>
                 About Me.
             </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum porta aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
-                Vestibulum lacinia sollicitudin nulla eu sollicitudin. 
+                19 years old, born in the Netherlands, adventurous cyclist, purely dutch and... 
+                Ah right, a designer, artist, and developer. <br>
+                In short, I create human-centered stuff using technology and create art to express my vision on our beautiful world.
             </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum porta aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
+            <p>   
+                My passion for the things I do right know was born in my childhood. 
+                The oldest drawings, luckily saved from the bin, are made at the age of 10. 
+                User Experience and User Interface design was something I started doing at 
+                the age of 11 - although I won't name it like that at that time.
             </p>
+
             <h3>
-                Philosophy
+                Design Philosophy
             </h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta cursus lectus. 
-                Vestibulum pota aliquet ante. Proin leo tellus, placerat in porta nec, lobortis in ipsum. 
+                I do believe in design as a process of thinking through and applying gathered 
+                information in a product. Outer beauty serves or is a consequence of this progress.
             </p>
             <a class="button" href="#">Curiculum Vitae</a>
         </article>
@@ -51,10 +54,10 @@
     <div class="overlay">
         <article class="forceMargin">
             <h1>
-                Vaardigheden & Tools
+                Skill & Tools
             </h1>
             <p>
-                Dit is wat ik kan verdeeld over de verschillende vakgebieden waarop ik actief ben.
+                These are my skills sorted out over my different field of activity.
             </p>
         </article>
 
@@ -68,13 +71,13 @@
                 </h2>
                 <ul>
                     <li>
-                        Portretten & Dieren
+                        Portraits & Animals
                     </li>
                     <li>
-                        Architectuur
+                        Architecture
                     </li>
                     <li>
-                        Landschappen
+                        Landscapes
                     </li>
                 </ul>
             </label>
@@ -135,12 +138,12 @@
     <div class="overlay">
         <article class="forceMargin">
             <h1>
-                Blader door mijn Portfolio
+                Browse my portfolio
             </h1>
         </article>
         <form>
             <div class="buttonTextInput larger">
-                <input type="text" placeholder="Zoeken">
+                <input type="text" placeholder="Search">
                 <label class="icon" for="submitSearch">
                     &#xe901;
                 </label>
@@ -154,11 +157,12 @@
     <div class="overlay">
         <article>
             <h1>
-                Bevalt het hier?
+                Do you like it here?
             </h1>
             <p>
-                Als u interesse, vragen of opmerkingen hebt over mijn werk, deze website of deze website of een
-                opdracht hebt kunt u gerust contact met me opnemen.
+                Missing any information, or having any questions or tips about my work or this website? 
+                Or do you want to submit a commission or just want to have a chat? 
+                Feel free to contact me using the information below.
             </p>
             <ul>
                 <li>
@@ -172,10 +176,10 @@
 
         <div class="content">
             <form>
-                <input type="text" placeholder="Naam">
-                <input type="text" placeholder="E-mailadres">
-                <textarea placeholder="Bericht"></textarea>
-                <label class="button blue">Verzenden</label>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email Address">
+                <textarea placeholder="Message"></textarea>
+                <label class="button blue">Send</label>
             </form>
         </div>
     </div>

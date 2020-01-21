@@ -69,27 +69,28 @@
     <div class="overlay">
         <article>
             <h1>
-                Over Laureato
+                About Laureato
             </h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum quis lacus in
-                tincidunt. Ut id mattis dolor. Curabitur iaculis ullamcorper aliquam. Nulla enim tortor,
-                euismod a rutrum in, auctor vitae lectus. Praesent at egestas ipsum. Vestibulum eget
-                justo vitae dolor condimentum egestas. Proin facilisis vestibulum lacus sed finibus.
+                Hi! My name is Laurens Hoogenboom, 19 years old, born in the Netherlands,
+                cyclist and a pure dutch fellow. My main activities are User Interface and
+                User Experience Design, Web development and the creation of classic art.
+                In terms of design, I do focus on a well thought functional experience,
+                were outer beauty a consequence.
             </p>
             <ul>
                 <li>
                     User Interface & User Experience Design
                 </li>
                 <li>
-                    Webontwikkeling
+                    Webdevelopment
                 </li>
                 <li>
-                    Klassieke Tekenkunst
+                    Classic Art
                 </li>
             </ul>
             <a class="button blue" href="/about/">
-                Meer Lezen
+                Tell me more
             </a>
         </article>
 
@@ -104,12 +105,12 @@
     <div class="overlay">
         <article class="forceMargin">
             <h1>
-                Blader door mijn Portfolio
+                Browse my portfolio
             </h1>
         </article>
         <form>
             <div class="buttonTextInput larger">
-                <input type="text" placeholder="Zoeken">
+                <input type="text" placeholder="Search">
                 <label class="icon" for="submitSearch">
                     &#xe901;
                 </label>
@@ -123,11 +124,12 @@
     <div class="overlay">
         <article>
             <h1>
-                Bevalt het hier?
+                Do you like it here?
             </h1>
             <p>
-                Als u interesse, vragen of opmerkingen hebt over mijn werk, deze website of deze website of een
-                opdracht hebt kunt u gerust contact met me opnemen.
+                Missing any information, or having any questions or tips about my work or this website? 
+                Or do you want to submit a commission or just want to have a chat? 
+                Feel free to contact me using the information below.
             </p>
             <ul>
                 <li>
@@ -141,10 +143,10 @@
 
         <div class="content">
             <form>
-                <input type="text" placeholder="Naam">
-                <input type="text" placeholder="E-mailadres">
-                <textarea placeholder="Bericht"></textarea>
-                <label class="button blue">Verzenden</label>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email Address">
+                <textarea placeholder="Message"></textarea>
+                <label class="button blue">Send</label>
             </form>
         </div>
     </div>

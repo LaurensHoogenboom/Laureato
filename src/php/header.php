@@ -29,7 +29,7 @@
 
             <div class="navLinks" id="navMenu">
                 <a href="/">Home</a>
-                <a href="/about/">Over</a>
+                <a href="/about/">About</a>
                 <a href="/portfolio/">Portfolio</a>
                 <a href="/contact/">Contact</a>
             </div>
@@ -38,7 +38,7 @@
         <section class="menu">
             <form>
                 <div class="buttonTextInput">
-                    <input type="text" placeholder="Zoeken">
+                    <input type="text" placeholder="Search">
                     <label class="icon" for="submitSearch">
                         &#xe901;
                     </label>
