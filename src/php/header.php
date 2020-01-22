@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/src/css/site.css">
 
     <script src="/src/js/jquery-min.js"></script>
+    <script src="/src/js/data.js"></script>
 </head>
 
 <body>

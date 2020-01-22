@@ -46,30 +46,10 @@
 
 <section class="contentList">
     <div class="overlay">
-        <div class="itemList">
-            <div class="item">
-                <div class="tumbnail" style="background-image: url(/portfolio/content/church/tumbnail.jpg);">
-                </div>
-
-                <label class="title">
-                    <span class="icon">
-                        &#xe903;
-                    </span>
-                    Cathedral
-                </label>
-
-                <div class="content">
-                    <iframe class="description" page="/portfolio/content/church/">
-                    </iframe>
-                </div>
-
-                <div class="contentControls">
-                    <label class="cross">
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
-            </div>
+        <div class="itemList" id="portfolioList">
+            <script>
+                getPortfolioItems();
+            </script>
         </div>
 
         <div class="itemPaging">
