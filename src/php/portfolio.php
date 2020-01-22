@@ -1,5 +1,9 @@
 <?php 
-    $db = new mysqli('localhost', 'root', '', 'laureato') or die(mysqli_error($conn));
+
+    //dev
+    //$db = new mysqli('localhost', 'root', '', 'laureato') or die(mysqli_error($conn));
+
+    $db = new mysqli('localhost', 'i100603_laurens', '10522848', 'i100603_laureato') or die(mysqli_error($conn));
 
     if ($_POST) {
         $action = $_POST['action'];
