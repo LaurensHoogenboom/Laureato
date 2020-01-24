@@ -21,6 +21,7 @@
     --shadow-input: rgba(0, 0, 0, 0.1);
     --shadow-nav: rgba(0, 0, 0, 0.03);
     --light-shadow: rgba(226, 226, 226);
+    --shadow-visible: rgba(0, 0, 0, 0.16);
 }
 
 
@@ -95,27 +96,17 @@ h3 {
 /*list*/
 
 ul {
-    list-style: none;
+    list-style-position: inside;
 }
 
 ul li {
-    padding-left: 60px;
-    text-indent: -60px;
     padding-bottom: 16px;
+    text-indent: -28px;
+    padding-left: 28px;
 }
 
 ul li:last-child {
     padding-bottom: 0;
-}
-
-ul li::before {
-    content: '';
-    display: inline-block;
-    height: 30px;
-    width: 35px;
-    background-image: url(/home/img/Laurel.svg);
-    vertical-align: middle;
-    margin-right: 20px;
 }
 
 a {
@@ -166,7 +157,6 @@ article .button:last-child {
     margin-bottom: 0;
 }
 
-
 /*misc*/
 
 .icon {
@@ -183,9 +173,29 @@ body {
 }
 
 section {
-    min-height: 100vh;
     width: 100%;
     padding: 60px;
+}
+
+section.art {
+    min-height: 100vh;
+}
+
+section:nth-child(even) {
+    background-color: var(--background-grey-lightest);
+}
+
+section.projectTitle {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section.procesStep {
+    text-align: center;
 }
 
 section.right {
@@ -205,7 +215,7 @@ section .content {
 section .content > img {
     max-width: 100%;
     max-height: 100%;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.16);
+    /* box-shadow: 0px 0px 20px rgba(0,0,0,0.16); */
 }
 
 @media only screen and (max-width: 863px) {
@@ -240,7 +250,126 @@ section .content > img {
     }
 }
 
+/*infoblock*/
 
+.infoBlock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.infoBlock .block {
+    padding: 20px;
+    background-color: var(--background-white);
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px var(--light-shadow);
+}
+
+.infoBlock ul, .infoBlock li {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.infoBlock.transparent .block {
+    padding: 0;
+    box-shadow: none;
+    background: none;
+}
+
+.infoBlock .fontBlock span {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.infoBlock .fontBlock span:first-of-type {
+    font-size: 30px;
+    padding-bottom: 17px;
+}
+
+.infoBlock .fontBlock article p {
+    padding-bottom: 40px;
+}
+
+.infoBlock .fontBlock article p:last-child {
+    padding-bottom: 0px;
+}
+
+.infoBlock .colorBlock {
+    display: grid;
+    grid-template-columns: 80px max-content;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.infoBlock .colorBlock .color {
+    height: 80px;
+    width: 80px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px var(--shadow-visible);
+}
+
+.interfaceBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    margin-top: 60px;
+}
+
+.interfaceBlock img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px var(--light-shadow);
+    margin-bottom: 40px;
+}
+
+.interfaceBlock .mobileInterface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+/*structure block*/
+
+.structureBlock {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: SegoeUI;
+    border-spacing: 20px 30px;
+    margin-top: 30px;
+}
+
+.structureBlock tr td {
+    position: relative;
+    background-color: var(--background-white);
+    color: var(--text-grey-normal);
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px var(--light-shadow);
+}
+
+.structureBlock tr td.transparent {
+    background: none;
+    box-shadow: none;
+}
+
+.structureBlock tr td::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    height: 30px;
+    width: 1px;
+    background-color: var(--text-grey-normal);
+}
+
+.structureBlock tr td.transparent::before, .structureBlock tr:first-of-type td::before {
+    display: none;
+}
 
 /*font*/
 
