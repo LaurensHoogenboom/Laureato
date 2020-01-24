@@ -97,6 +97,7 @@ h3 {
 
 ul {
     list-style-position: inside;
+    margin-bottom: 17px;
 }
 
 ul li {
@@ -215,7 +216,7 @@ section .content {
 section .content > img {
     max-width: 100%;
     max-height: 100%;
-    /* box-shadow: 0px 0px 20px rgba(0,0,0,0.16); */
+    filter: drop-shadow(0px 0px 20px var(--shadow-visible));
 }
 
 @media only screen and (max-width: 863px) {
@@ -310,6 +311,28 @@ section .content > img {
     box-shadow: 0px 0px 20px var(--shadow-visible);
 }
 
+@media only screen and (max-width: 1103px) {
+    .infoBlock {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .infoBlock .block:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+}
+
+@media only screen and (max-width: 671px) {
+    .infoBlock {
+        grid-template-columns: 1fr;
+    }
+
+    .infoBlock .block:nth-child(3) {
+        grid-column: 1;
+    }
+}
+
+/*interface block*/
+
 .interfaceBlock {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -330,19 +353,41 @@ section .content > img {
     grid-gap: 40px;
 }
 
+@media only screen and (max-width: 1103px) {
+    .interfaceBlock {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+
+    .interfaceBlock .desktopInterface img:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .interfaceBlock .mobileInterface {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+
 /*structure block*/
 
 .structureBlock {
     width: 100%;
-    table-layout: fixed;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: SegoeUI;
-    border-spacing: 20px 30px;
+    overflow: auto;
     margin-top: 30px;
 }
 
-.structureBlock tr td {
+.structureBlock table {
+    width: 100%;
+    border-spacing: 20px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: SegoeUI;
+}
+
+.structureBlock table tr td {
     position: relative;
     background-color: var(--background-white);
     color: var(--text-grey-normal);
@@ -351,12 +396,12 @@ section .content > img {
     box-shadow: 0px 1px 2px var(--light-shadow);
 }
 
-.structureBlock tr td.transparent {
+.structureBlock table tr td.transparent {
     background: none;
     box-shadow: none;
 }
 
-.structureBlock tr td::before {
+.structureBlock table tr td::before {
     content: '';
     display: block;
     position: absolute;
@@ -367,9 +412,11 @@ section .content > img {
     background-color: var(--text-grey-normal);
 }
 
-.structureBlock tr td.transparent::before, .structureBlock tr:first-of-type td::before {
+.structureBlock table tr td.transparent::before, .structureBlock table tr:first-of-type td::before {
     display: none;
 }
+
+
 
 /*font*/
 

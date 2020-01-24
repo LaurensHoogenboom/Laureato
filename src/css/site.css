@@ -1057,6 +1057,7 @@ footer section:last-child {
     padding: 10px;
     background-color: var(--background-white);
     transition: background-color 0.3s;
+    box-shadow: 0px 1px 2px var(--light-shadow);
 }
 
 .itemList .item .contentControls:hover {
