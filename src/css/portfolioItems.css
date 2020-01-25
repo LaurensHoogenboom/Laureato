@@ -24,17 +24,9 @@
     --shadow-visible: rgba(0, 0, 0, 0.16);
 }
 
-
 /*text*/
 
-p,
-a,
-label,
-span,
-input,
-li,
-textarea,
-select {
+p, a, label, span, input, li, textarea, select {
     font-size: 20px;
     font-weight: 400;
     font-family: SegoeUI;
@@ -81,17 +73,10 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-    p,
-    a,
-    label,
-    span,
-    input,
-    li,
-    textarea {
+    p, a, label, span, input, li, textarea {
         font-size: 18px;
     }
 }
-
 
 /*list*/
 
@@ -114,7 +99,6 @@ a {
     text-decoration: none;
 }
 
-
 /*article*/
 
 article {
@@ -130,9 +114,7 @@ article:last-of-type.forceMargin {
     margin-bottom: 40px;
 }
 
-article h1,
-article h2,
-article p {
+article h1, article h2, article p {
     padding-bottom: 17px;
 }
 
@@ -148,9 +130,7 @@ article .button {
     margin: 23px 0px 17px 0px;
 }
 
-article h1:last-child,
-article p:last-child,
-article ul:last-child {
+article h1:last-child, article p:last-child, article ul:last-child {
     padding-bottom: 0;
 }
 
@@ -173,6 +153,8 @@ body {
     width: 100%;
 }
 
+/*section*/
+
 section {
     width: 100%;
     padding: 60px;
@@ -189,7 +171,7 @@ section:nth-child(even) {
 section.projectTitle {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
-    grid-gap: 60px;
+    grid-gap: 80px;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -213,26 +195,50 @@ section .content {
     align-items: center;
 }
 
-section .content > img {
+section .content>img {
     max-width: 100%;
     max-height: 100%;
     filter: drop-shadow(0px 0px 20px var(--shadow-visible));
+}
+
+@media only screen and (max-width: 1073px) {
+    section.projectTitle {
+        grid-template-columns: 1fr fit-content(380px);
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    section.projectTitle {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content;
+        grid-gap: 40px;
+    }
+    section.projectTitle .description {
+        text-align: center;
+    }
+    section.projectTitle .content {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 863px) {
     section {
         padding: 40px;
     }
-
     section.right {
         grid-template-columns: 1fr;
     }
-
-    section .content >img {
+    section .content>img {
         max-height: initial;
         max-width: initial;
         width: calc(100% + 80px);
         margin: -40px -40px 0px -40px;
+    }
+    section.projectTitle .content>img {
+        max-width: 100%;
+        max-height: 100%;
+        width: initial;
+        margin: 0;
     }
 }
 
@@ -240,14 +246,18 @@ section .content > img {
     section {
         padding: 25px;
     }
-
     section.right {
         grid-gap: 50px;
     }
-
-    section .content >img {
+    section .content>img {
         width: calc(100% + 50px);
         margin: -25px -25px 0px -25px;
+    }
+    section.projectTitle {
+        grid-template-rows: 2fr 1fr;
+    }
+    section.projectTitle .content {
+        align-items: flex-end;
     }
 }
 
@@ -315,9 +325,14 @@ section .content > img {
     .infoBlock {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .infoBlock .block:nth-child(3) {
         grid-column: 1 / 3;
+    }
+}
+
+@media only screen and (max-width: 863px) {
+    .infoBlock {
+        margin-top: 40px;
     }
 }
 
@@ -325,9 +340,14 @@ section .content > img {
     .infoBlock {
         grid-template-columns: 1fr;
     }
-
     .infoBlock .block:nth-child(3) {
         grid-column: 1;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .infoBlock {
+        margin-top: 25px;
     }
 }
 
@@ -353,14 +373,30 @@ section .content > img {
     grid-gap: 40px;
 }
 
+.interfaceBlock .mobileInterface:last-child .column img:last-of-type {
+    margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1103px) {
     .interfaceBlock {
         grid-template-columns: 1fr;
         grid-gap: 40px;
     }
-
     .interfaceBlock .desktopInterface img:last-child {
         margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 863px) {
+    .interfaceBlock {
+        margin-top: 40px;
+        grid-gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .interfaceBlock {
+        margin-top: 25px;
     }
 }
 
@@ -416,7 +452,18 @@ section .content > img {
     display: none;
 }
 
+@media only screen and (max-width: 863px) {
+    .structureBlock {
+        margin-top: 10px;
+        grid-gap: 40px;
+    }
+}
 
+@media only screen and (max-width: 590px) {
+    .structureBlock {
+        margin-top: 0px;
+    }
+}
 
 /*font*/
 
