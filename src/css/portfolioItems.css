@@ -403,7 +403,7 @@ section .content>img {
 @media only screen and (max-width: 414px) {
     .interfaceBlock .mobileInterface {
         grid-template-columns: 1fr;
-        grid-gap: 0;
+        grid-gap: 40px;
     }
 }
 
