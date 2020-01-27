@@ -261,6 +261,12 @@ section .content>img {
     }
 }
 
+@media only screen and (max-width: 414px) {
+    section.procesStep:last-child {
+        padding-bottom: 0;
+    }
+}
+
 /*infoblock*/
 
 .infoBlock {
@@ -351,6 +357,23 @@ section .content>img {
     }
 }
 
+@media only screen and (max-width: 414px) {
+    .infoBlock {
+        width: calc(100% + 50px);
+        margin: 25px -25px 25px -25px;
+    }
+
+    .infoBlock .block {
+        border-radius: 0;
+        padding: 25px;
+    }
+
+    .infoBlock.transparent {
+        padding: 25px;
+        margin: 0px -25px 0px -25px;
+    }
+}
+
 /*interface block*/
 
 .interfaceBlock {
@@ -404,6 +427,19 @@ section .content>img {
     .interfaceBlock .mobileInterface {
         grid-template-columns: 1fr;
         grid-gap: 40px;
+        width: calc(100% + 50px);
+        margin: 0px -25px 0px -25px;
+    }
+
+    .interfaceBlock img {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .interfaceBlock .desktopInterface {
+        width: calc(100% + 50px);
+        margin: 0px -25px 0px -25px;
     }
 }
 
