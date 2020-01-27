@@ -32,7 +32,7 @@
                 In short, I create human-centered stuff using technology and create art to express my vision on our beautiful world.
             </p>
             <p>   
-                My passion for the things I do right know was born in my childhood. 
+                The passion for the things I do right now was born in my childhood. 
                 The oldest drawings, luckily saved from the bin, are made at the age of 10. 
                 User Experience and User Interface design was something I started doing at 
                 the age of 11 - although I won't name it like that at that time.
