@@ -188,6 +188,10 @@ section.right {
     align-items: center;
 }
 
+section.right .content {
+    justify-content: center;
+}
+
 section .content {
     display: flex;
     height: 100%;
