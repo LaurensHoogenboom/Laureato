@@ -181,14 +181,14 @@ section.procesStep {
     text-align: center;
 }
 
-section.right {
+section.right, section.left {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 60px;
     align-items: center;
 }
 
-section.right .content {
+section.right .content, section.left .content {
     justify-content: center;
 }
 
@@ -203,6 +203,14 @@ section .content>img {
     max-width: 100%;
     max-height: 100%;
     filter: drop-shadow(0px 0px 20px var(--shadow-visible));
+}
+
+section .content>img.noShadow {
+    filter: none;
+}
+
+section .content>img.small {
+    width: initial;
 }
 
 @media only screen and (max-width: 1073px) {
@@ -229,7 +237,7 @@ section .content>img {
     section {
         padding: 40px;
     }
-    section.right {
+    section.right, section.left {
         grid-template-columns: 1fr;
     }
     section .content>img {
@@ -250,7 +258,7 @@ section .content>img {
     section {
         padding: 25px;
     }
-    section.right {
+    section.right, section.left {
         grid-gap: 50px;
     }
     section .content>img {
@@ -281,11 +289,19 @@ section .content>img {
     text-align: left;
 }
 
+.infoBlock.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .infoBlock .block {
     padding: 20px;
     background-color: var(--background-white);
     border-radius: 10px;
     box-shadow: 0px 1px 2px var(--light-shadow);
+}
+
+.infoBlock img {
+    max-width: 100%;
 }
 
 .infoBlock ul, .infoBlock li {
@@ -347,7 +363,7 @@ section .content>img {
 }
 
 @media only screen and (max-width: 671px) {
-    .infoBlock {
+    .infoBlock, .infoBlock.two {
         grid-template-columns: 1fr;
     }
     .infoBlock .block:nth-child(3) {
@@ -365,6 +381,19 @@ section .content>img {
     .infoBlock {
         width: calc(100% + 50px);
         margin: 25px -25px 25px -25px;
+    }
+
+    section:nth-child(odd) .infoBlock .block {
+        box-shadow: none;
+        padding: 20px 25px;
+    }
+
+    section:nth-child(odd) .infoBlock.transparent .block {
+        padding: 0;
+    }
+
+    section:nth-child(odd) .infoBlock {
+        grid-gap: 0;
     }
 
     .infoBlock .block {
