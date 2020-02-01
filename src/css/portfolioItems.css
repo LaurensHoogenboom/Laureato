@@ -209,6 +209,13 @@ section .content>img.noShadow {
     filter: none;
 }
 
+section .content>video {
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(0px 0px 20px var(--shadow-visible));
+    border-radius: 10px;
+}
+
 section .content>img.small {
     width: initial;
 }
@@ -240,11 +247,15 @@ section .content>img.small {
     section.right, section.left {
         grid-template-columns: 1fr;
     }
-    section .content>img {
+    section .content>img,section .content>video {
         max-height: initial;
         max-width: initial;
         width: calc(100% + 80px);
         margin: -40px -40px 0px -40px;
+    }
+    section .content>video {
+        max-height: 80vh;
+        max-width: 100%;
     }
     section.projectTitle .content>img {
         max-width: 100%;
@@ -261,7 +272,7 @@ section .content>img.small {
     section.right, section.left {
         grid-gap: 50px;
     }
-    section .content>img {
+    section .content>img,section .content>video {
         width: calc(100% + 50px);
         margin: -25px -25px 0px -25px;
     }
@@ -397,6 +408,9 @@ section .content>img.small {
 
     section:nth-child(odd) .infoBlock {
         grid-gap: 0;
+    }
+    .infoBlock.atomicBlock, section:nth-child(odd) .infoBlock.atomicBlock {
+        grid-gap: 40px;
     }
 
     .infoBlock .block {
