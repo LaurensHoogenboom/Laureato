@@ -46,11 +46,13 @@ function getPortfolioItems(amount, page, sort, category, search) {
                 pageIndex = page;
             }
 
-            items = items.slice(pageIndex * pageSize, pageSize * pageIndex + pageSize);
-
             sessionStorage.setItem('currentPage', pageIndex);
-            sessionStorage.setItem('hasNextpage', pageSize * pageIndex <= items.length ? true : false);
+            sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + 8 < items.length ? true : false);
             sessionStorage.setItem('hasPreviousPage', 0 * pageIndex < pageSize * pageIndex ? true : false)
+
+            console.log(pageSize * pageIndex);  
+
+            items = items.slice(pageIndex * pageSize, pageSize * pageIndex + pageSize);
 
             buildPortfolio(items);
         }
@@ -114,19 +116,19 @@ function buildPortfolio(items) {
             )
     });
 
-    $("#currentPageIndex").text(parseInt(sessionStorage.getItem('currentPage')) + 1);
+    $("#currentPortfolioPageIndex").text(parseInt(sessionStorage.getItem('currentPage')) + 1);
 
-    if (sessionStorage.getItem('hasNextpage') === 'true') {
-        $("#nextPageButtosn").removeClass('hidden');
+    if (sessionStorage.getItem('hasNextPage') === 'true') {
+        $("#nextPortfolioPageButton").removeClass('hidden');
     }
     else {
-        $("#nextPageButton").addClass('hidden');
+        $("#nextPortfolioPageButton").addClass('hidden');
     }
 
     if (sessionStorage.getItem('hasPreviousPage') === 'true') {
-        $("#previousPageButton").removeClass('hidden');
+        $("#previousPortfolioPageButton").removeClass('hidden');
     }
     else {
-        $("#previousPageButton").addClass('hidden');
+        $("#previousPortfolioPageButton").addClass('hidden');
     }
 }

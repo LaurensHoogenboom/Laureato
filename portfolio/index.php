@@ -53,16 +53,16 @@
 
         <div class="itemPaging">
             <div class="pageNumber">
-                <label class="button grey round" id="previousPageButton">
+                <label class="button grey round" id="previousPortfolioPageButton">
                     <div class="chevron left">
                         <span></span>
                         <span></span>
                     </div>
                 </label>
-                <label class="button blue square" id="currentPageIndex">
+                <label class="button blue square" id="currentPortfolioPageIndex">
                     1
                 </label>
-                <label class="button grey round" id="nextPageButton">
+                <label class="button grey round" id="nextPortfolioPageButton">
                     <div class="chevron right">
                         <span></span>
                         <span></span>
