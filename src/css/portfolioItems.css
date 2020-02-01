@@ -188,7 +188,7 @@ section.right, section.left {
     align-items: center;
 }
 
-section.right .content, section.left .content {
+section.right .content, section.left .content, section.projectTitle .content {
     justify-content: center;
 }
 

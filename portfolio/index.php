@@ -30,7 +30,7 @@
                         <option value="submitDate">Date</option>
                         <option value="type">Type</option>
                     </select>
-                    <a class="button transparent blue">Delete Filters</a>
+                    <a class="button transparent blue" id="removePortfolioFilters">Delete Filters</a>
                 </form>
 
                 <label class="button blue mobileFilterButton">
@@ -79,15 +79,15 @@
 
                 <form id="portfolioSizeForm">
                     <select>
-                        <option>
-                            08
+                        <option value="8">
+                            8
                         </option>
 
-                        <option>
+                        <option value="12">
                             12
                         </option>
 
-                        <option>
+                        <option value="16">
                             16
                         </option>
                     </select>

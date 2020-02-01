@@ -58,6 +58,12 @@ function filterPortfolio(pageIndex) {
     getPortfolioItems(pageSize, page, sortValue, categoryValue, searchValue);
 }
 
+$(document).ready(function(){
+    $(document).on('click', "#removePortfolioFilters", function() {
+        $("#portfolioSizeForm select").val(8);
 
+        getPortfolioItems(8, 0, null, null, null, null, null);
+    });
+})
 
 

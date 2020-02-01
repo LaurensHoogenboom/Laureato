@@ -50,8 +50,6 @@ function getPortfolioItems(amount, page, sort, category, search) {
             sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + 8 < items.length ? true : false);
             sessionStorage.setItem('hasPreviousPage', 0 * pageIndex < pageSize * pageIndex ? true : false)
 
-            console.log(pageSize * pageIndex);  
-
             items = items.slice(pageIndex * pageSize, pageSize * pageIndex + pageSize);
 
             buildPortfolio(items);
