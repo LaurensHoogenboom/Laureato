@@ -1,10 +1,58 @@
-function getPortfolioItems() {
+function getPortfolioItems(amount, page, sort, category, search) {
     $.ajax({
         type: "POST",
         url: '/src/php/portfolio.php',
         data: { action: "get" },
         success: function (response) {
-            buildPortfolio(response);
+            var items = response;
+            var pageSize = 8;
+            var pageIndex = 0;
+
+            if (search != null) {
+                items = items.filter(function (item) {
+                    return item.title.toLowerCase().includes(search.toLowerCase());
+                });
+            }
+
+            if (category != "default" && category != null) {
+                items = items.filter(function (item) {
+                    return item.type == category;
+                });
+            }
+
+            if (sort != "default" && sort != null) {
+                if (sort == "submitDate") {
+                    items = items.sort(function (a, b) {
+                        return new Date(b.itemDate) - new Date(a.itemDate);
+                    });
+                }
+                if (sort == "type") {
+                    items = items.sort(function (a, b) {
+                        if (a.type < b.type) {
+                            return -1;
+                        }
+                        if (a.type > b.type) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                }
+            }
+
+            if (amount != null) {
+                pageSize = amount;
+            }
+            if (page != null) {
+                pageIndex = page;
+            }
+
+            items = items.slice(pageIndex * pageSize, pageSize * pageIndex + pageSize);
+
+            sessionStorage.setItem('currentPage', pageIndex);
+            sessionStorage.setItem('hasNextpage', pageSize * pageIndex <= items.length ? true : false);
+            sessionStorage.setItem('hasPreviousPage', 0 * pageIndex < pageSize * pageIndex ? true : false)
+
+            buildPortfolio(items);
         }
     })
 }
@@ -12,6 +60,8 @@ function getPortfolioItems() {
 //populate portfolio
 
 function buildPortfolio(items) {
+    $('#portfolioList').html("");
+
     items.forEach(function (item) {
         var tumbnailPath = "/portfolio/content/" + item.title + "/tumbnail.jpg";
         var pagePath = "/portfolio/content/" + item.title + '/';
@@ -63,4 +113,20 @@ function buildPortfolio(items) {
                     )
             )
     });
+
+    $("#currentPageIndex").text(parseInt(sessionStorage.getItem('currentPage')) + 1);
+
+    if (sessionStorage.getItem('hasNextpage') === 'true') {
+        $("#nextPageButtosn").removeClass('hidden');
+    }
+    else {
+        $("#nextPageButton").addClass('hidden');
+    }
+
+    if (sessionStorage.getItem('hasPreviousPage') === 'true') {
+        $("#previousPageButton").removeClass('hidden');
+    }
+    else {
+        $("#previousPageButton").addClass('hidden');
+    }
 }

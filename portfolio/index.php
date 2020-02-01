@@ -12,24 +12,23 @@
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
-                <form>
+                <form id="portfolioFilterForm">
                     <div class="buttonTextInput">
-                        <input type="text" placeholder="Search">
-                        <label class="icon" for="submitSearch">
+                        <input type="text" placeholder="Search" id="portfolioSearchInput">
+                        <label class="icon">
                             &#xe901;
                         </label>
-                        <input type="submit" class="hidden" id="submitSearch">
                     </div>
-                    <select>
+                    <select id="portfolioCategoryInput">
                         <option value="default">Category</option>
-                        <option>UX / UI</option>
+                        <option value="UI/UX">UX / UI</option>
                         <option>Web</option>
                         <option>Art</option>
                     </select>
-                    <select>
+                    <select id="portfolioSortInput">
                         <option value="default">Sort</option>
-                        <option>Date</option>
-                        <option>Type</option>
+                        <option value="submitDate">Date</option>
+                        <option value="type">Type</option>
                     </select>
                     <a class="button transparent blue">Delete Filters</a>
                 </form>
@@ -54,16 +53,16 @@
 
         <div class="itemPaging">
             <div class="pageNumber">
-                <label class="button grey round">
+                <label class="button grey round" id="previousPageButton">
                     <div class="chevron left">
                         <span></span>
                         <span></span>
                     </div>
                 </label>
-                <label class="button blue square">
+                <label class="button blue square" id="currentPageIndex">
                     1
                 </label>
-                <label class="button grey round">
+                <label class="button grey round" id="nextPageButton">
                     <div class="chevron right">
                         <span></span>
                         <span></span>
@@ -78,18 +77,18 @@
                     Items per page:
                 </label>
 
-                <form>
+                <form id="portfolioSizeForm">
                     <select>
                         <option>
-                            10
+                            08
                         </option>
 
                         <option>
-                            15
+                            12
                         </option>
 
                         <option>
-                            25
+                            16
                         </option>
                     </select>
                 </form>

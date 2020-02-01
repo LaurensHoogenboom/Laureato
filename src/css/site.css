@@ -1318,9 +1318,12 @@ main section .content .contentFilter {
     cursor: pointer;
 }
 
+.button.hidden {
+    display: none;
+}
+
 .button.round,
 .button.square {
-    display: inline-block;
     height: 38px;
     width: 38px;
     text-align: center;

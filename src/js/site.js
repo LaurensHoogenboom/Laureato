@@ -100,7 +100,7 @@ $('.mobileFilterButton').click(function () {
     }
 });
 
-//select
+//select input
 
 $("select").change(function () {
     if ($(this).val() == "default") {

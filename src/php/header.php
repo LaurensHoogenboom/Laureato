@@ -12,6 +12,7 @@
 
     <script src="/src/js/jquery-min.js"></script>
     <script src="/src/js/data.js"></script>
+    <script src="/src/js/form.js"></script>
 </head>
 
 <body>
