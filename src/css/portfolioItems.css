@@ -403,12 +403,17 @@ section .content>img.small {
     }
 
     section:nth-child(odd) .infoBlock.transparent .block {
-        padding: 0;
+        padding: 0px;
     }
 
     section:nth-child(odd) .infoBlock {
         grid-gap: 0;
     }
+    
+    section:nth-child(odd) .infoBlock.transparent {
+        grid-gap: 40px;
+    }
+
     .infoBlock.atomicBlock, section:nth-child(odd) .infoBlock.atomicBlock {
         grid-gap: 40px;
     }
