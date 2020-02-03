@@ -7,8 +7,16 @@ function getPortfolioItems(amount, page, sort, category, search) {
             var items = response;
             var pageSize = 8;
             var pageIndex = 0;
+            var alienSearch = sessionStorage.getItem('alienSearch');
 
-            if (search != null) {
+            sessionStorage.removeItem('alienSearch');
+
+            if (alienSearch != null) {
+                items = items.filter(function (item) {
+                    return item.title.toLowerCase().includes(alienSearch.toLowerCase());
+                });
+            }
+            else if (search != null) {
                 items = items.filter(function (item) {
                     return item.title.toLowerCase().includes(search.toLowerCase());
                 });

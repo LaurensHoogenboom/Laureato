@@ -1,23 +1,23 @@
 //add portfolio item
 
-$("#portfolioAdd").submit(function(e) {
-    e.preventDefault();
+// $("#portfolioAdd").submit(function(e) {
+//     e.preventDefault();
 
-    var form = $(this);
+//     var form = $(this);
 
-    console.log('fire');
+//     console.log('fire');
 
-    $.ajax({
-        type: "POST",
-        url: '/src/php/portfolio.php',
-        data: form.serialize(),
-        success: function(response) {
-            console.log(response);
-        }
-    });
-});
+//     $.ajax({
+//         type: "POST",
+//         url: '/src/php/portfolio.php',
+//         data: form.serialize(),
+//         success: function(response) {
+//             console.log(response);
+//         }
+//     });
+// });
 
-//filter data
+//filter portfolio items
 
 $(document).ready(function() {
     $(document).on('change', "#portfolioFilterForm input, #portfolioFilterForm select, #portfolioSizeForm select", function() {
@@ -70,5 +70,68 @@ $(document).ready(function(){
         getPortfolioItems(8, 0, null, null, null, null, null);
     });
 })
+
+//portfolio outside search
+
+$(document).ready(function() {
+    $(document).on('submit', '#alienPortfolioSearchForm', function(e) {
+        e.preventDefault();
+
+        console.log('fire');
+
+        var alienSearch = $('#alienPortfolioSearchInput').val();
+
+        sessionStorage.setItem('alienSearch', alienSearch);
+
+        window.location.href = "/portfolio/";
+    })
+})
+
+//contact form
+
+$(document).ready(function() {
+    $(document).on('submit', '#contactForm', function(e) {
+        e.preventDefault();
+
+        Notify("Processing...");
+
+        $.ajax({
+            type: 'post',
+            url: '/src/php/contactMail.php',
+            data: $('#contactForm').serialize(),
+            success: function(response) {
+                if ($.trim(response) == "succes") {
+                    NotifySucces("Your message has been sent succesfully.");
+                } else {
+                    NotifyFail("Something went wrong. Please try again.");
+                }
+            },
+            error: function() {
+                NotifyFail("Something went wrong. Please try again.");
+            }
+        });
+
+        function Notify(message) {
+            $('#contactFormStatus').removeClass('succes');
+            $('#contactFormStatus').removeClass('fail');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(message);
+        }
+
+        function NotifyFail(error) {
+            $('#contactFormStatus').addClass('fail');
+            $('#contactFormStatus').removeClass('succes');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(error);
+        }
+
+        function NotifySucces(succes) {
+            $('#contactFormStatus').addClass('succes');
+            $('#contactFormStatus').removeClass('fail');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(succes);
+        }
+    });
+});
 
 

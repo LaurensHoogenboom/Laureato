@@ -101,13 +101,20 @@
     <div class="overlay">
         <article>
             <h1>
-                Nog meer weten over wat ik doe?
+                Do you want to know more about me or what I do?
             </h1>
             <p>
-                Kijk dan eens naar de diensten die ik lever.
-                Ik doe alles wat met User Interface Design, User Experience Design en het web te maken heeft.
-                Daarnaast ben ik ook op expressief vlak actief.
+                Have a look at my about page. If you still have questions 
+                you can contact me using the information below.
             </p>
+            <ul>
+                <li>
+                    info@laureato.nl
+                </li>
+                <li>
+                    (+31) 6 22 85 48 00
+                </li>
+            </ul>
         </article>
         <div class="content center">
             <div class="iconSet">

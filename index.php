@@ -108,13 +108,13 @@
                 Browse my portfolio
             </h1>
         </article>
-        <form>
+        <form id="alienPortfolioSearchForm">
             <div class="buttonTextInput larger">
-                <input type="text" placeholder="Search">
-                <label class="icon" for="submitSearch">
+                <input type="text" placeholder="Search" id="alienPortfolioSearchInput">
+                <label class="icon" for="submitPortfolioSearch">
                     &#xe901;
                 </label>
-                <input type="submit" class="hidden" id="submitSearch">
+                <input type="submit" class="hidden" id="submitPortfolioSearch">
             </div>
         </form>
     </div>
@@ -142,11 +142,13 @@
         </article>
 
         <div class="content">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email Address">
-                <textarea placeholder="Message"></textarea>
-                <label class="button blue">Send</label>
+            <form id="contactForm">
+                <label id="contactFormStatus" class="formStatus hidden">test</label>
+                <input type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Email Address" name="email">
+                <textarea placeholder="Message" name="message"></textarea>
+                <input type="submit" id="submitContactForm" class="hidden">
+                <label class="button blue" for="submitContactForm">Send</label>
             </form>
         </div>
     </div>

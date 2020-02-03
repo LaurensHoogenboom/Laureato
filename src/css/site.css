@@ -19,6 +19,7 @@
     --text-blue: rgb(38, 128, 235);
     --text-blue-dark: rgb(30, 102, 188);
     --text-green: rgb(13, 129, 54);
+    --text-orange: rgb(251,86,7);
     --shadow-input: rgba(0, 0, 0, 0.1);
     --shadow-nav: rgba(0, 0, 0, 0.03);
     --light-shadow: rgba(226, 226, 226);
@@ -1623,6 +1624,7 @@ main section:nth-child(even) .buttonTextInput,
 /*input*/
 
 input[type="text"],
+input[type="email"],
 textarea,
 select {
     padding: 3px 20px 6px 20px;
@@ -1632,6 +1634,7 @@ select {
 }
 
 input::placeholder,
+input[type="email"]::placeholder,
 textarea::placeholder {
     color: var(--text-grey-light);
 }
@@ -1676,6 +1679,32 @@ form .button {
     margin-top: 27px;
 }
 
+.formStatus {
+    display: block;
+    padding: 4px 20px 7px 20px;
+    background-color: var(--text-blue);
+    color: var(--background-white);
+    border-radius: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.formStatus.hidden {
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.formStatus.fail {
+    background-color: var(--text-orange);
+}
+
+.formStatus.succes {
+    background-color: var(--text-green);
+}
 
 /*font*/
 

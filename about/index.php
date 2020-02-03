@@ -27,14 +27,15 @@
                 About Me.
             </h3>
             <p>
-                19 years old, born in the Netherlands, adventurous cyclist, purely dutch and... 
+                19 years old, born in the Netherlands, adventurous cyclist, purely dutch and...
                 Ah right, a designer, artist, and developer. <br>
-                In short, I create human-centered stuff using technology and create art to express my vision on our beautiful world.
+                In short, I create human-centered stuff using technology and create art to express my vision on our
+                beautiful world.
             </p>
-            <p>   
-                The passion for the things I do right now was born in my childhood. 
-                The oldest drawings, luckily saved from the bin, are made at the age of 10. 
-                User Experience and User Interface design was something I started doing at 
+            <p>
+                The passion for the things I do right now was born in my childhood.
+                The oldest drawings, luckily saved from the bin, are made at the age of 10.
+                User Experience and User Interface design was something I started doing at
                 the age of 11 - although I won't name it like that at that time.
             </p>
 
@@ -42,7 +43,7 @@
                 Design Philosophy
             </h3>
             <p>
-                I do believe in design as a process of thinking through and applying gathered 
+                I do believe in design as a process of thinking through and applying gathered
                 information in a product. Outer beauty serves or is a consequence of this progress.
             </p>
             <a class="button" href="#">Curiculum Vitae</a>
@@ -141,13 +142,13 @@
                 Browse my portfolio
             </h1>
         </article>
-        <form>
+        <form id="alienPortfolioSearchForm">
             <div class="buttonTextInput larger">
-                <input type="text" placeholder="Search">
-                <label class="icon" for="submitSearch">
+                <input type="text" placeholder="Search" id="alienPortfolioSearchInput">
+                <label class="icon" for="submitPortfolioSearch">
                     &#xe901;
                 </label>
-                <input type="submit" class="hidden" id="submitSearch">
+                <input type="submit" class="hidden" id="submitPortfolioSearch">
             </div>
         </form>
     </div>
@@ -160,8 +161,8 @@
                 Do you like it here?
             </h1>
             <p>
-                Missing any information, or having any questions or tips about my work or this website? 
-                Or do you want to submit a commission or just want to have a chat? 
+                Missing any information, or having any questions or tips about my work or this website?
+                Or do you want to submit a commission or just want to have a chat?
                 Feel free to contact me using the information below.
             </p>
             <ul>
@@ -175,11 +176,13 @@
         </article>
 
         <div class="content">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email Address">
-                <textarea placeholder="Message"></textarea>
-                <label class="button blue">Send</label>
+            <form id="contactForm">
+                <label id="contactFormStatus" class="formStatus hidden">test</label>
+                <input type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Email Address" name="email">
+                <textarea placeholder="Message" name="message"></textarea>
+                <input type="submit" id="submitContactForm" class="hidden">
+                <label class="button blue" for="submitContactForm">Send</label>
             </form>
         </div>
     </div>
