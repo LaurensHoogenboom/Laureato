@@ -1,0 +1,621 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*colors*/
+
+:root {
+    --background-white: rgb(2255, 255, 255);
+    --background-grey-lightest: rgb(250, 250, 250);
+    --background-grey-light: rgb(240, 240, 240);
+    --background-grey-normal: rgb(220, 220, 220);
+    --text-grey-light: rgb(180, 180, 180);
+    --text-grey-normal: rgb(112, 112, 112);
+    --text-grey-dark: rgb(51, 51, 51);
+    --text-blue-light: rgb(81, 153, 239);
+    --text-blue: rgb(38, 128, 235);
+    --text-blue-dark: rgb(30, 102, 188);
+    --text-green: rgb(13, 129, 54);
+    --text-orange: rgb(251,86,7);
+    --shadow-input: rgba(0, 0, 0, 0.1);
+    --shadow-nav: rgba(0, 0, 0, 0.03);
+    --light-shadow: rgba(226, 226, 226);
+}
+
+
+/*text*/
+
+p,
+a,
+label,
+span,
+input,
+li,
+textarea,
+select {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: SegoeUI;
+    color: var(--text-grey-normal);
+}
+
+h1 {
+    font-size: 55px;
+    font-family: SegoeUI;
+    font-weight: 100;
+    color: var(--text-grey-dark);
+}
+
+h2 {
+    font-family: SegoeUI;
+    font-weight: 100;
+    font-size: 40px;
+    color: var(--text-grey-dark)
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: SegoeUI;
+    color: var(--text-green);
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    p,
+    a,
+    label,
+    span,
+    input,
+    li,
+    textarea {
+        font-size: 18px;
+    }
+}
+
+
+/*list*/
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding-left: 60px;
+    text-indent: -60px;
+    padding-bottom: 16px;
+}
+
+ul li:last-child {
+    padding-bottom: 0;
+}
+
+ul li::before {
+    content: '';
+    display: inline-block;
+    height: 30px;
+    width: 35px;
+    background-image: url(/home/img/Laurel.svg);
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*article*/
+
+article {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+article:last-of-type {
+    margin-bottom: 0;
+}
+
+article:last-of-type.forceMargin {
+    margin-bottom: 40px;
+}
+
+article h1,
+article h2,
+article p {
+    padding-bottom: 17px;
+}
+
+article h3 {
+    padding-bottom: 5px;
+}
+
+article ul {
+    padding: 23px 0px 17px 0px;
+}
+
+article .button {
+    margin: 23px 0px 17px 0px;
+}
+
+article h1:last-child,
+article p:last-child,
+article ul:last-child {
+    padding-bottom: 0;
+}
+
+article .button:last-child {
+    margin-bottom: 0;
+}
+
+
+/*misc*/
+
+.icon {
+    font-family: Icons;
+}
+
+.hidden {
+    display: none;
+}
+
+/*login*/
+
+.loginWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--background-white);
+    overflow-y: auto;
+}
+
+.loginWrapper form {
+    padding: 40px;
+    border-radius: 4px;
+    background-color: var(--background-grey-lightest);
+}
+
+.loginWrapper .formTitle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.loginWrapper form .button.blue {
+    margin-right: 40px;
+}
+
+/*button*/
+
+.button {
+    display: inline-block;
+    padding: 1px 20px 4px 20px;
+    background-color: var(--text-blue);
+    color: var(--background-white);
+    border-radius: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button.hidden {
+    display: none;
+}
+
+.button.round,
+.button.square {
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    padding: 0;
+    line-height: 36px;
+}
+
+.button.square {
+    border-radius: 4px;
+}
+
+.button.round {
+    border-radius: 50%;
+}
+
+.button.square .icon,
+.button.round .icon {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.button.blue {
+    background-color: var(--text-blue);
+}
+
+.button.blue:hover {
+    background-color: var(--text-blue-dark);
+}
+
+.button.blue .chevron span {
+    background-color: var(--background-white);
+}
+
+.button.blue span {
+    color: var(--background-white);
+}
+
+.button.grey {
+    background-color: var(--background-grey-light);
+    color: var(--text-grey-normal);
+}
+
+.button.grey:hover {
+    background-color: var(--background-grey-normal);
+}
+
+.button.transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.button.transparent:hover {
+    background-color: var(--background-grey-light);
+    cursor: pointer;
+}
+
+.button.transparent.blue {
+    color: var(--text-blue);
+}
+
+.button .chevron.left,
+.button .chevron.right {
+    margin-bottom: 3px;
+}
+
+.button .chevron.down {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.button .chevron.left {
+    margin-left: 3px;
+}
+
+.button .chevron.right {
+    margin-right: 3px;
+}
+
+@media only screen and (max-width: 640px) {
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 3px 20px 6px 20px;
+    }
+}
+
+
+/*button text input*/
+
+.buttonTextInput {
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    align-items: center;
+    background-color: var(--background-grey-light);
+    border: 1px solid var(--background-grey-light);
+    padding: 0px 20px;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+
+.buttonTextInput:focus-within {
+    box-shadow: 0px 0px 15px var(--shadow-input);
+    border: 1px solid var(--text-grey-light);
+}
+
+.buttonTextInput input[type="text"] {
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 110px;
+    margin-bottom: 0;
+    padding: 3px 0px 6px 0px;
+    transition: max-width 0.3s;
+}
+
+.buttonTextInput input[type="text"]:focus {
+    max-width: 150px;
+    box-shadow: none;
+}
+
+.buttonTextInput .icon {
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px;
+    width: 44px;
+    margin-right: -20px;
+    text-align: center;
+    border-radius: 0px 18px 18px 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.buttonTextInput .icon:hover {
+    background-color: var(--text-blue-light);
+    color: var(--background-white);
+}
+
+.buttonTextInput.larger input[type="text"] {
+    max-width: 160px;
+}
+
+.buttonTextInput.larger input[type="text"]:focus {
+    max-width: 200px;
+    box-shadow: none;
+}
+
+/*hamburgerbutton*/
+
+.hamburgerButton {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.hamburgerButton span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--text-grey-normal);
+    height: 3px;
+    width: 35px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.hamburgerButton span:first-of-type {
+    top: 0;
+}
+
+.hamburgerButton span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.hamburgerButton span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburgerButton span:last-of-type {
+    bottom: 0;
+}
+
+.hamburgerButton.clicked span:first-of-type {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.hamburgerButton.clicked span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    opacity: 1;
+}
+
+.hamburgerButton.clicked span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburgerButton.clicked span:last-of-type {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .hamburgerButton {
+        height: 25px;
+        width: 30px;
+    }
+    .hamburgerButton span {
+        width: 30px;
+    }
+}
+
+
+/*chevron*/
+
+.chevron {
+    display: inline-block;
+    position: relative;
+    height: 8px;
+    width: 16px;
+}
+
+.chevron span {
+    position: absolute;
+    background-color: var(--text-grey-normal);
+    height: 2px;
+    width: 10px;
+    border-radius: 1px;
+    transition: all 0.4s;
+}
+
+.chevron.left {
+    transform: rotate(-90deg);
+}
+
+.chevron.right {
+    transform: rotate(90deg);
+}
+
+.chevron.down {
+    transform: rotate(180deg);
+}
+
+.chevron span:first-of-type {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.chevron span:last-of-type {
+    right: 0;
+    transform: rotate(45deg);
+}
+
+
+/*cross*/
+
+.cross {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.cross span {
+    height: 2px;
+    width: 27px;
+    background-color: var(--text-grey-normal);
+    border-radius: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.cross span:first-of-type {
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+
+.cross span:last-of-type {
+    transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+}
+
+
+/*input*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    padding: 3px 20px 6px 20px;
+    background-color: var(--background-grey-light);
+    border: 1px solid var(--background-grey-light);
+    border-radius: 4px;
+}
+
+input::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: var(--text-grey-light);
+}
+
+textarea {
+    min-height: 172px;
+    resize: vertical;
+}
+
+select.placeHolder {
+    color: var(--text-grey-light);
+}
+
+select option {
+    color: var(--text-grey-normal);
+}
+
+
+/*form*/
+
+form {
+    max-width: 672px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    margin-bottom: 17px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    box-shadow: 0px 0px 15px var(--shadow-input);
+    border: 1px solid var(--text-grey-light);
+}
+
+form .button {
+    margin-top: 27px;
+}
+
+.formStatus {
+    display: block;
+    padding: 4px 20px 7px 20px;
+    background-color: var(--text-blue);
+    color: var(--background-white);
+    border-radius: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.formStatus.hidden {
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.formStatus.fail {
+    background-color: var(--text-orange);
+}
+
+.formStatus.succes {
+    background-color: var(--text-green);
+}
+
+/*font*/
+
+@font-face {
+    font-family: SegoeUI;
+    font-weight: 400;
+    src: url(/src/font/SegoeUI/Regular.woff);
+}
+
+@font-face {
+    font-family: SegoeUI;
+    font-weight: 100;
+    src: url(/src/font/SegoeUI/Light.woff);
+}
+
+@font-face {
+    font-family: Icons;
+    src: url(/src/font/Icons.woff);
+}

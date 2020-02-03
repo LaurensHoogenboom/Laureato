@@ -37,21 +37,21 @@
         </section>
 
         <section class="menu">
-            <form>
-                <div class="buttonTextInput">
-                    <input type="text" placeholder="Search">
-                    <label class="icon" for="submitSearch">
+            <form id="headerPortfolioSearchForm">
+                <div class="buttonTextInput larger">
+                    <input type="text" placeholder="Search" id="headerPortfolioSearchInput">
+                    <label class="icon" for="submitHeaderPortfolioSearch">
                         &#xe901;
                     </label>
-                    <input type="submit" class="hidden" id="submitSearch">
+                    <input type="submit" class="hidden" id="submitHeaderPortfolioSearch">
                 </div>
             </form>
 
-            <div class="button transparent square">
+            <a class="button transparent square" href="/cms/">
                 <span class="icon">
                     &#xe900;
                 </span>
-            </div>
+            </a>
         </section>
     </nav>
 
