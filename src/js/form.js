@@ -61,6 +61,11 @@ function filterPortfolio(pageIndex) {
 $(document).ready(function(){
     $(document).on('click', "#removePortfolioFilters", function() {
         $("#portfolioSizeForm select").val(8);
+        $("#portfolioSearchInput").val("");
+        $('#portfolioCategoryInput').val("default");
+        $("#portfolioSortInput").val("default");
+
+        $("select").change();
 
         getPortfolioItems(8, 0, null, null, null, null, null);
     });
