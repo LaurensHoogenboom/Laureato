@@ -27,7 +27,7 @@
         </section>
 
         <section class="navMenu">
-            <img src="/home/img/logo.svg">
+            <img src="/home/img/logo.svg" id="headerLogo">
 
             <div class="navLinks" id="navMenu">
                 <a href="/">Home</a>

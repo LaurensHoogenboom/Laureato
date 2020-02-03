@@ -209,6 +209,7 @@ nav .menu {
 nav .navMenu img {
     height: 100%;
     max-height: 100%;
+    cursor: pointer;
 }
 
 nav .navMenu .navLinks {
@@ -703,6 +704,7 @@ main section.home .chevron {
     width: 41px;
     transform: rotate(180deg) translateX(-50%);
     animation: homeChevronBounce 2s linear 0s infinite;
+    cursor: pointer;
 }
 
 main section.home .chevron span {

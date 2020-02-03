@@ -18,7 +18,7 @@
                 Craftmanschip. Redefined.
             </h1>
             <h3>
-                Good design means well thought. Beauty is a side product.
+                Good design means thought through. Beauty is a side product.
             </h3>
             <div class="sliderDots" slider="homeSlider">
                 <span class="active" id="0"></span>
@@ -28,13 +28,13 @@
         </div>
     </div>
 
-    <div class="chevron down">
+    <div class="chevron down" id="homePageScroll">
         <span></span>
         <span></span>
     </div>
 </section>
 
-<section class="largeMargin center laurelLeft">
+<section class="largeMargin center laurelLeft" id="skillSet">
     <div class="overlay">
         <div class="iconSet">
             <label>
@@ -73,8 +73,8 @@
             </h1>
             <p>
                 Hi! My name is Laurens Hoogenboom, 19 years old, born in the Netherlands,
-                cyclist and a pure dutch fellow. My main activities are User Interface and
-                User Experience Design, Web development and the creation of classic art.
+                cyclist and a dutch fellow at heart. My main activities are user interface and
+                user experience Design, Web development and the creation of classic art.
                 In terms of design, I do focus on a well thought functional experience,
                 were outer beauty a consequence.
             </p>
@@ -90,7 +90,7 @@
                 </li>
             </ul>
             <a class="button blue" href="/about/">
-                Tell me more
+                I want to know more
             </a>
         </article>
 
@@ -127,9 +127,9 @@
                 Do you like it here?
             </h1>
             <p>
-                Missing any information, or having any questions or tips about my work or this website? 
-                Or do you want to submit a commission or just want to have a chat? 
-                Feel free to contact me using the information below.
+                Missing any information or having questions or tips about my work or this website?
+                Feel free to contact me! Similarly, if you want to submit an order or if you just want
+                to have a chat, use the information below and I’ll get back to you as soon as possible!
             </p>
             <ul>
                 <li>

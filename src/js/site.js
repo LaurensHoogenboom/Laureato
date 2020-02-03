@@ -29,6 +29,14 @@ $(document).ready(function () {
     });
 })
 
+//nav logo
+
+$(document).ready(function() {
+    $(document).on('click', '#headerLogo', function() {
+        window.location.href = "/";
+    });
+});
+
 //slider
 
 var sliders = $('.slider');
@@ -84,6 +92,26 @@ $('.sliderDots span').click(function () {
 
     clearInterval(slideShowTimer);
     slideShowTimer = window.setInterval(switchSlides, slideSpeed);
+});
+
+//homePage arrow scroll
+
+$(document).ready(function() {
+    $(document).on('click', '#homePageScroll', function() {
+        windowOfset = 106;
+
+        if (window.innerWidth > 640) {
+            windowOfset = 106;
+        } else if (window.innerWidth > 480) {
+            windowOfset = 80;
+        } else {
+            windowOfset = 60;
+        }
+
+        $("html, body").animate({
+            scrollTop: $('#skillSet').offset().top - windowOfset
+        }, 300);
+    });
 });
 
 //filterbutton
