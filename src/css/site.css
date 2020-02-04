@@ -777,6 +777,13 @@ footer section:last-child {
     text-align: right;
 }
 
+footer section:last-child .icon {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 30px;
+    vertical-align: top;
+}
+
 @media only screen and (max-width: 1440px) {
     footer {
         padding: 40px 80px;
