@@ -1636,6 +1636,7 @@ input[type="text"],
 input[type="email"],
 textarea,
 select {
+    -webkit-appearance: none;
     padding: 3px 20px 6px 20px;
     background-color: var(--background-grey-light);
     border: 1px solid var(--background-grey-light);
