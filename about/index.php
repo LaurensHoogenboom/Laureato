@@ -36,7 +36,7 @@
                 The passion for the things I do right now was born in my childhood.
                 The oldest drawings, luckily saved from the bin, are made at the age of 10.
                 User Experience and User Interface design was something I started doing at
-                the age of 11 - although I won't name it like that at that time.
+                the age of 11 - although I wouldn't name it like that at that time.
             </p>
 
             <h3>
@@ -161,9 +161,9 @@
                 Do you like it here?
             </h1>
             <p>
-                Missing any information, or having any questions or tips about my work or this website?
-                Or do you want to submit a commission or just want to have a chat?
-                Feel free to contact me using the information below.
+                Missing any information or having questions or tips about my work or this website?
+                Feel free to contact me! Similarly, if you want to submit an order or if you just want
+                to have a chat, use the information below and I’ll get back to you as soon as possible!
             </p>
             <ul>
                 <li>
