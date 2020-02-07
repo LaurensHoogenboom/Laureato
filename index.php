@@ -1,4 +1,10 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; ?>
+<?php 
+    $pgKeywords="Design UI UX Classic Art About Laurens Hoogenboom Laureato";
+    $pgDesc="Design Redifined. Good design means thought through, whereas beautity is a concequence.";
+    $pgName="Home";
+
+    include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; 
+?>
 
 <section class="home">
     <div class="slider" id="homeSlider">

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Laureato</title>
+    <meta name="keywords" content="<?php echo $pgKeywords ?>">
+    <meta name="description" content="<?php echo $pgDesc ?>">
+
+    <title>Laureato - <?php echo $pgName ?></title>
 
     <link rel="stylesheet" type="text/css" href="/src/css/site.css">
 

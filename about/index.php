@@ -1,4 +1,10 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; ?>
+<?php 
+    $pgKeywords="About Me My Work Design Philosophy Portfolio";
+    $pgDesc="Learn about me, my work and my design philosophy. I do everything what has to do with UX and/or UI design, webdevelopment and classic art.";
+    $pgName="About";
+
+    include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; 
+?>
 
 <section class="smallMargin left background pageTitle" style="background-image: url(/about/img/header.jpg);">
     <div class="overlay">
