@@ -277,7 +277,7 @@ section .content>img.small {
         margin: -25px -25px 0px -25px;
     }
     section.projectTitle {
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
     section.projectTitle .content {
         align-items: flex-end;
