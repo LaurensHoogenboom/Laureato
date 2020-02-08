@@ -11,6 +11,10 @@ function getPortfolioItems(amount, page, sort, category, search) {
 
             sessionStorage.removeItem('alienSearch');
 
+            items = items.sort(function (a, b) {
+                return new Date(a.itemDate) > new Date(b.itemDate) ? 1 : -1;
+            });
+
             if (alienSearch != null) {
                 items = items.filter(function (item) {
                     return item.title.toLowerCase().includes(alienSearch.toLowerCase());
@@ -30,8 +34,10 @@ function getPortfolioItems(amount, page, sort, category, search) {
 
             if (sort != "default" && sort != null) {
                 if (sort == "submitDate") {
+                    console.log('fire');
+
                     items = items.sort(function (a, b) {
-                        return new Date(b.itemDate) - new Date(a.itemDate);
+                        return new Date(a.itemDate) < new Date(b.itemDate) ? 1 : -1;
                     });
                 }
                 if (sort == "type") {
@@ -55,10 +61,10 @@ function getPortfolioItems(amount, page, sort, category, search) {
             }
 
             sessionStorage.setItem('currentPage', pageIndex);
-            sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + 8 < items.length ? true : false);
+            sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + parseInt(pageSize) < items.length ? true : false);
             sessionStorage.setItem('hasPreviousPage', 0 * pageIndex < pageSize * pageIndex ? true : false)
 
-            items = items.slice(pageIndex * pageSize, pageSize * pageIndex + pageSize);
+            items = items.slice(pageIndex * pageSize, pageSize * pageIndex + parseInt(pageSize));
 
             buildPortfolio(items);
         }

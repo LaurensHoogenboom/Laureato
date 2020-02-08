@@ -1,21 +1,21 @@
 //add portfolio item
 
-// $("#portfolioAdd").submit(function(e) {
-//     e.preventDefault();
+$("#portfolioAdd").submit(function(e) {
+    e.preventDefault();
 
-//     var form = $(this);
+    var form = $(this);
 
-//     console.log('fire');
+    console.log('fire');
 
-//     $.ajax({
-//         type: "POST",
-//         url: '/src/php/portfolio.php',
-//         data: form.serialize(),
-//         success: function(response) {
-//             console.log(response);
-//         }
-//     });
-// });
+    $.ajax({
+        type: "POST",
+        url: '/src/php/portfolio.php',
+        data: form.serialize(),
+        success: function(response) {
+            console.log(response);
+        }
+    });
+});
 
 //filter portfolio items
 
