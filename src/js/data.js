@@ -21,10 +21,10 @@ function getPortfolioItems(amount, page, sort, category, search) {
                 return new Date(a.itemDate) > new Date(b.itemDate) ? 1 : -1;
             });
 
-            if (alienSearch != null) {
+            if (alienSearch) {
                 searchByString(alienSearch);
             }
-            else if (search != null) {
+            else if (search) {
                 searchByString(search);
             }
 
@@ -88,6 +88,8 @@ function getPortfolioItems(amount, page, sort, category, search) {
             if (page != null) {
                 pageIndex = page;
             }
+
+            console.log(items.length);
 
             sessionStorage.setItem('currentPage', pageIndex);
             sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + parseInt(pageSize) < items.length ? true : false);
