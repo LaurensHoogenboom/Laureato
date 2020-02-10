@@ -50,8 +50,8 @@ function getPortfolioItems(amount, page, sort, category, search) {
                     return item.title.toLowerCase().includes(searchTerm.toLowerCase());
                 });
 
-                keywordItems.forEach(function(item) {
-                    items.push(item);
+                keywordItems.forEach(function(keywordItem) {
+                    items.push(keywordItem);
                 })
             }
 
