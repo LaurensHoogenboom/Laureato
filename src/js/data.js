@@ -3,7 +3,7 @@ function getPortfolioItems(amount, page, sort, category, search) {
         type: "POST",
         url: '/src/php/portfolio.php',
         data: { action: "get" },
-        success: function (response) {
+        success: function (response) {  
             var items = response;
             var pageSize = 8;
             var pageIndex = 0;
@@ -11,19 +11,48 @@ function getPortfolioItems(amount, page, sort, category, search) {
 
             sessionStorage.removeItem('alienSearch');
 
+            items.forEach(function(item) {
+                if (item.tags != null) {
+                    console.log(item.tags.split(','));
+                }
+            })
+
             items = items.sort(function (a, b) {
                 return new Date(a.itemDate) > new Date(b.itemDate) ? 1 : -1;
             });
 
             if (alienSearch != null) {
-                items = items.filter(function (item) {
-                    return item.title.toLowerCase().includes(alienSearch.toLowerCase());
-                });
+                searchByString(alienSearch);
             }
             else if (search != null) {
+                searchByString(search);
+            }
+
+            function searchByString(searchTerm) {
+                var keywordItems = [];
+
+                items.forEach(function(item) {
+                    var keywords = item.tags.split(',');
+                    var matched = false;
+
+                    keywords.forEach(function(keyword) {
+                        if (keyword.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            matched = true;
+                        }
+                    })
+
+                    if (matched == true) {
+                        keywordItems.push(item);
+                    }
+                })
+
                 items = items.filter(function (item) {
-                    return item.title.toLowerCase().includes(search.toLowerCase());
+                    return item.title.toLowerCase().includes(searchTerm.toLowerCase());
                 });
+
+                keywordItems.forEach(function(item) {
+                    items.push(item);
+                })
             }
 
             if (category != "default" && category != null) {
