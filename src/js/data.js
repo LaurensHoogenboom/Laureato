@@ -3,19 +3,13 @@ function getPortfolioItems(amount, page, sort, category, search) {
         type: "POST",
         url: '/src/php/portfolio.php',
         data: { action: "get" },
-        success: function (response) {  
+        success: function (response) {
             var items = response;
             var pageSize = 8;
             var pageIndex = 0;
             var alienSearch = sessionStorage.getItem('alienSearch');
 
             sessionStorage.removeItem('alienSearch');
-
-            items.forEach(function(item) {
-                if (item.tags != null) {
-                    console.log(item.tags.split(','));
-                }
-            })
 
             items = items.sort(function (a, b) {
                 return new Date(a.itemDate) > new Date(b.itemDate) ? 1 : -1;
@@ -31,11 +25,11 @@ function getPortfolioItems(amount, page, sort, category, search) {
             function searchByString(searchTerm) {
                 var keywordItems = [];
 
-                items.forEach(function(item) {
+                items.forEach(function (item) {
                     var keywords = item.tags.split(',');
                     var matched = false;
 
-                    keywords.forEach(function(keyword) {
+                    keywords.forEach(function (keyword) {
                         if (keyword.toLowerCase().includes(searchTerm.toLowerCase())) {
                             matched = true;
                         }
@@ -50,7 +44,7 @@ function getPortfolioItems(amount, page, sort, category, search) {
                     return item.title.toLowerCase().includes(searchTerm.toLowerCase());
                 });
 
-                keywordItems.forEach(function(keywordItem) {
+                keywordItems.forEach(function (keywordItem) {
                     items.push(keywordItem);
                 })
             }
@@ -63,8 +57,6 @@ function getPortfolioItems(amount, page, sort, category, search) {
 
             if (sort != "default" && sort != null) {
                 if (sort == "submitDate") {
-                    console.log('fire');
-
                     items = items.sort(function (a, b) {
                         return new Date(a.itemDate) < new Date(b.itemDate) ? 1 : -1;
                     });
@@ -88,8 +80,6 @@ function getPortfolioItems(amount, page, sort, category, search) {
             if (page != null) {
                 pageIndex = page;
             }
-
-            console.log(items.length);
 
             sessionStorage.setItem('currentPage', pageIndex);
             sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + parseInt(pageSize) < items.length ? true : false);
