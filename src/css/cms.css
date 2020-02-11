@@ -204,8 +204,12 @@ article .button:last-child {
     width: 100%;
 }
 
+.loginWrapper form .button {
+    float: right;
+}
+
 .loginWrapper form .button.blue {
-    margin-right: 40px;
+    margin-left : 40px;
 }
 
 /*button*/

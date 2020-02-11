@@ -1426,7 +1426,7 @@ main section .content .contentFilter {
 }
 
 .buttonTextInput.larger input[type="text"] {
-    max-width: 160px;
+    max-width: 140px;
 }
 
 .buttonTextInput.larger input[type="text"]:focus {
