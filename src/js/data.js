@@ -12,7 +12,7 @@ function getPortfolioItems(amount, page, sort, category, search) {
             sessionStorage.removeItem('alienSearch');
 
             items = items.sort(function (a, b) {
-                return new Date(a.submitDate) < new Date(b.submitDate) ? 1 : -1;
+                return new Date(a.submitDate) > new Date(b.submitDate) ? 1 : -1;
             });
 
             if (alienSearch) {
