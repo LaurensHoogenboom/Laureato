@@ -12,7 +12,7 @@ function getPortfolioItems(amount, page, sort, category, search) {
             sessionStorage.removeItem('alienSearch');
 
             items = items.sort(function (a, b) {
-                return new Date(a.itemDate) > new Date(b.itemDate) ? 1 : -1;
+                return new Date(a.submitDate) < new Date(b.submitDate) ? 1 : -1;
             });
 
             if (alienSearch) {
@@ -60,7 +60,7 @@ function getPortfolioItems(amount, page, sort, category, search) {
             if (sort != "default" && sort != null) {
                 if (sort == "submitDate") {
                     items = items.sort(function (a, b) {
-                        return new Date(a.itemDate) < new Date(b.itemDate) ? 1 : -1;
+                        return new Date(a.submitDate) < new Date(b.submitDate) ? 1 : -1;
                     });
                 }
                 if (sort == "type") {

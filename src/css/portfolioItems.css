@@ -262,7 +262,6 @@ section .content>img.small {
     section .content>img.small {
         margin: 0px 0px 20px 0px;
     }
-
     section .content>video {
         max-width: initial;
         max-height: 80vh;
@@ -272,6 +271,9 @@ section .content>img.small {
         max-height: 100%;
         width: initial;
         margin: 0;
+    }
+    section.right.art .content>img {
+        margin: -40px -40px 0px -40px;
     }
 }
 
@@ -291,6 +293,9 @@ section .content>img.small {
     }
     section.projectTitle .content {
         align-items: flex-end;
+    }
+    section.right.art .content>img {
+        margin: -30px -25px 0px -25px;
     }
 }
 
