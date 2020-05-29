@@ -104,8 +104,16 @@ ul li::before {
     margin-right: 20px;
 }
 
+/*links*/
+
 a {
     text-decoration: none;
+}
+
+/*video*/
+
+video {
+    outline: none;
 }
 
 /*article*/
@@ -635,7 +643,7 @@ main section.home .overlay {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.63));
+    background: linear-gradient(to right, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0.63));
 }
 
 main section.home .overlay .caption {
@@ -1189,6 +1197,7 @@ main section .content .contentFilter {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 17px;
+        margin-bottom: 40px;
     }
     .contentFilter form .button {
         text-align: center;
@@ -1211,9 +1220,6 @@ main section .content .contentFilter {
         height: calc(100vh - 80px);
         top: 80px;
         padding: 40px 25px;
-    }
-    .contentFilter.active form {
-        margin-bottom: 40px;
     }
 }
 
@@ -1331,6 +1337,7 @@ main section .content .contentFilter {
 
 .button.grey {
     background-color: var(--background-grey-light);
+    color: var(--text-grey-normal);
 }
 
 .button.grey:hover {

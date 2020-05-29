@@ -26,17 +26,19 @@ function getPortfolioItems(amount, page, sort, category, search) {
                 var keywordItems = [];
 
                 items.forEach(function (item) {
-                    var keywords = item.tags.split(',');
-                    var matched = false;
-
-                    keywords.forEach(function (keyword) {
-                        if (keyword.toLowerCase().includes(searchTerm.toLowerCase())) {
-                            matched = true;
+                    if (item.tags) {
+                        var keywords = item.tags.split(',');
+                        var matched = false;
+    
+                        keywords.forEach(function (keyword) {
+                            if (keyword.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                matched = true;
+                            }
+                        })
+    
+                        if (matched == true) {
+                            keywordItems.push(item);
                         }
-                    })
-
-                    if (matched == true) {
-                        keywordItems.push(item);
                     }
                 })
 
