@@ -464,18 +464,17 @@ section:nth-child(even) .infoBlock {
     margin-bottom: 0;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1152px) {
     .interfaceBlock {
-        display: flex;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        max-height: 500px;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .interfaceBlock .mobileInterface {
         grid-template-columns: 1fr;
+        grid-gap: 40px;
     }
     .interfaceBlock img {
         width: 100%;
