@@ -537,10 +537,6 @@ section:nth-child(even) .infoBlock {
     margin: 23px auto 17px auto;
 }
 
-.timeline:last-child {
-    padding-bottom: 20px;
-}
-
 .timeline:before {
     content: '';
     display: block;
@@ -698,29 +694,39 @@ section:nth-child(even) .infoBlock {
 }
 
 @media only screen and (max-width: 480px) {
-    .timeline {
-        margin-left: -10px;
-    }
-
     .timeline:before {
-        left: 60px;
+        left: 8px;
     }
     .timeline li {
-        width: calc(100% - 55px);
+        width: calc(100% - 15px);
     }
     .timeline li:nth-child(odd), .timeline li:nth-child(even) {
-        left: 80px;
-        right: -25px;
+        left: 40px;
+        right: -15px;
         border-radius: 10px 0px 0px 10px;
     }
     .timeline li:nth-child(odd) .illustration, .timeline li:nth-child(even) .illustration {
-        left: 80px;
+        left: 30px;
         right: -25px;
         border-radius: 10px 0px 0px 0px;
     }
+
+    .timeline li:nth-child(odd):before, .timeline li:nth-child(even):before {
+        display: none;
+    }
+
     .timeline li:nth-child(odd) h2, .timeline li:nth-child(even) h2 {
-        max-width: 40px;
+        display: inline-block;
+        background-color: var(--background-grey-normal);
+        line-height: 42px;
+        font-weight: normal;
+        left: -10px;
+        z-index: 4;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
         font-size: 16px;
+        text-align: center;
     }
 }
 
