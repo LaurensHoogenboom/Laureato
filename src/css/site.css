@@ -199,7 +199,7 @@ nav .navMenu img {
 nav .navMenu .navLinks {
     width: calc(100% - 177px);
     float: right;
-    padding-left: 47px;
+    padding-left: 20px;
 }
 
 nav .navMenu .navLinks a {
