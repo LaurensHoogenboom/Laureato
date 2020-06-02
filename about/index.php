@@ -145,7 +145,7 @@
     <div class="overlay">
         <article class="forceMargin">
             <h1>
-                Browse my portfolio
+                Search my portfolio
             </h1>
         </article>
         <form id="alienPortfolioSearchForm">
