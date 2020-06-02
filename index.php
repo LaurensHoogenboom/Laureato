@@ -14,7 +14,7 @@
         <div class="slide" style="background-image: url(/home/img/Slide2.jpg);" id="1">
         </div>
 
-        <div class="slide" style="background-image: url(/home/img/Slide3.png);" id="2">
+        <div class="slide" style="background-image: url(/home/img/Slide3.jpg);" id="2">
         </div>
     </div>
 
@@ -111,7 +111,7 @@
     <div class="overlay">
         <article class="forceMargin">
             <h1>
-                Browse my portfolio
+                Search my portfolio
             </h1>
         </article>
         <form id="alienPortfolioSearchForm">
