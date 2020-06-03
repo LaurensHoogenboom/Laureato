@@ -6,7 +6,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; 
 ?>
 
-<section class="smallMargin left pageTitle">
+<section class="smallMargin left background pageTitle" style="background-image: url(/portfolio/img/header.jpg);">
     <div class="overlay">
         <article>
             <h1>
@@ -37,14 +37,19 @@
                         <option value="type">Type</option>
                     </select>
                     <a class="button transparent blue" id="removePortfolioFilters">Delete Filters</a>
+                    <label class="button blue mobileCloseFilterButton">
+                        <span class="text">
+                            Close
+                        </span>
+                    </label>
                 </form>
-
-                <label class="button blue mobileFilterButton">
-                    <span class="text">
-                        Filters
-                    </span>
-                </label>
             </div>
+
+            <label class="button blue mobileFilterButton">
+                <span class="text">
+                    Filters
+                </span>
+            </label>
         </div>
     </div>
 </section>
@@ -110,7 +115,7 @@
                 Do you want to know more about me or what I do?
             </h1>
             <p>
-                Have a look at my about page. If you still have questions 
+                Have a look at my about page. If you still have questions
                 you can contact me using the information below.
             </p>
             <ul>

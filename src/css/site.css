@@ -73,7 +73,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
-    p, a, label, span, input, li, textarea {
+    p, a, label, span, input, li, textarea, select {
         font-size: 18px;
     }
 }
@@ -475,13 +475,13 @@ main section:nth-child(even).laurelLeft .overlay, main section:nth-child(even).l
 }
 
 main section.left.background {
-    background-size: 80% auto;
-    background-position: 160% 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 main section.right.background {
-    background-size: 80% auto;
-    background-position: 0% 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 main section.left.background .overlay {
@@ -513,7 +513,7 @@ main section.contentList .overlay {
         margin: -80px 0 -80px -80px;
     }
     main section.laurelRight {
-        background-position: 80% 50%;
+        background-position: center;
     }
 }
 
@@ -535,14 +535,6 @@ main section.contentList .overlay {
 @media only screen and (max-width: 1152px) {
     main section.left .overlay {
         grid-template-columns: 1.5fr 1fr;
-    }
-    main section.left.background {
-        background-size: auto 100%;
-        background-position: 160% 50%;
-    }
-    main section.right.background {
-        background-size: auto 100%;
-        background-position: 0% 50%;
     }
 }
 
@@ -585,10 +577,6 @@ main section.contentList .overlay {
         width: 100%;
         background-size: cover;
         background-position: 50%;
-    }
-    main section.left.background, main section.right.background {
-        background-size: cover;
-        background-position: center;
     }
     main section.left.pageTitle article, main section.right.pageTitle article {
         text-align: center;
@@ -1116,8 +1104,14 @@ footer section:last-child .icon:first-of-type {
 
 /*contentFilter*/
 
+.contentFilterWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 main section .content .contentFilter {
-    height: 100%;
+    height: 80px;
     padding: 0px 40px;
     display: flex;
     flex-wrap: wrap;
@@ -1125,12 +1119,13 @@ main section .content .contentFilter {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0px 1px 2px var(--light-shadow);
+    background-color: var(--background-white);
     max-width: initial;
 }
 
 .contentFilter form {
     display: grid;
-    grid-template-columns: repeat(4, max-content);
+    grid-auto-flow: column;
     grid-gap: 40px;
     max-width: initial;
     align-items: center;
@@ -1144,62 +1139,88 @@ main section .content .contentFilter {
     margin-bottom: 0;
 }
 
-.contentFilterWrapper .mobileFilterButton {
+.contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton {
     display: none;
     width: 100%;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1280px) {
     .contentFilterWrapper {
         grid-row: 2;
         grid-column: 1 / 3;
     }
     main section .content .contentFilter {
-        width: 100%;
-        padding: 40px;
+        width: calc(100% + 160px);
+        margin: 0px -80px -60px -80px;
+        padding: 0 80px;
+        border-radius: 0;
+        justify-content: flex-start;
     }
-    .contentFilter form {
-        width: 100%;
-        grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1024px) {
+    main section .content .contentFilter {
+        width: calc(100% + 80px);
+        margin: 0px -40px -60px -40px;
+        padding: 0 40px;
     }
 }
 
 @media only screen and (max-width: 960px) {
+    main section .content .contentFilter {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
     .contentFilterWrapper {
-        margin: -50px -40px -40px -40px;
         grid-column: 1 / 2;
     }
     main section .content .contentFilter {
-        border-radius: 0;
+        position: fixed;
         box-shadow: none;
-        padding: 0px 40px;
-        height: 138px;
+        height: 0;
         transition: all 0.3s;
         top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
         overflow: auto;
+        background-color: var(--background-grey-light);
+        justify-content: center;
+        align-items: start;
+        z-index: 90;
+        overflow: hidden;
+        padding: 40px;
+        opacity: 0;
+        pointer-events: none;
     }
-    .contentFilterWrapper .mobileFilterButton {
+    .contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton  {
         display: inline-block;
         text-align: center;
     }
     .contentFilter form {
-        display: none;
-    }
-    main section .content .contentFilter.active {
-        position: fixed;
-        display: block;
-        height: calc(100vh - 106px);
-        background-color: var(--background-grey-light);
-        top: 106px;
-        bottom: 0;
-        padding: 40px;
-        z-index: 90;
-    }
-    .contentFilter.active form {
         display: grid;
+        grid-auto-flow: row;
         grid-template-columns: 1fr;
         grid-gap: 17px;
         margin-bottom: 40px;
+        opacity: 0;
+        pointer-events: all;
+        width: 100%;
+    }
+    main section .content .contentFilter.active {
+        height: calc(100vh - 106px);
+        top: 106px;
+        bottom: 0;
+        opacity: 1;
+        pointer-events: all;
+        overflow: auto;
+    }
+    .contentFilter.active form {
+        opacity: 1;
+        pointer-events: all;
     }
     .contentFilter form .button {
         text-align: center;
@@ -1211,12 +1232,9 @@ main section .content .contentFilter {
 }
 
 @media only screen and (max-width: 640px) {
-    .contentFilterWrapper {
-        margin: -40px -25px -40px -25px;
-    }
     main section .content .contentFilter {
         padding: 0px 25px;
-        height: 118px;
+        height: 36px;
     }
     main section .content .contentFilter.active {
         height: calc(100vh - 80px);
@@ -1381,6 +1399,7 @@ main section .content .contentFilter {
         width: 100%;
         text-align: center;
         padding: 3px 20px 6px 20px;
+        border-radius: 18px;
     }
 }
 

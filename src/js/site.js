@@ -117,16 +117,16 @@ $(document).ready(function() {
 //filterbutton
 
 $('.mobileFilterButton').click(function () {
+    var contentFilter = $(this).closest('.contentFilterWrapper').find('.contentFilter');
+
+    $(contentFilter).addClass('active');
+});
+
+$('.mobileCloseFilterButton').click(function() {
     var contentFilter = $(this).closest('.contentFilter');
 
-    $(contentFilter).toggleClass('active');
-
-    if ($(this).closest('.contentFilter').hasClass('active')) {
-        $(this).children(".text").text("Sluiten");
-    } else {
-        $(this).children(".text").text("Filters");
-    }
-});
+    $(contentFilter).removeClass('active');
+})
 
 //select input
 
