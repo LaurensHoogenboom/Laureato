@@ -21,7 +21,7 @@
     --text-orange: rgb(251, 86, 7);
     --shadow-input: rgba(0, 0, 0, 0.1);
     --shadow-nav: rgba(0, 0, 0, 0.03);
-    --light-shadow: rgba(0,0,0,0.15);
+    --light-shadow: rgba(0, 0, 0, 0.15);
 }
 
 /*text*/
@@ -468,6 +468,7 @@ main section:nth-child(even).laurelLeft {
 
 main section:nth-child(even).laurelRight {
     background-image: url(/home/img/LaurelRight.svg);
+    background-position: 100% 50%;
 }
 
 main section:nth-child(even).laurelLeft .overlay, main section:nth-child(even).laurelRight .overlay {
@@ -512,8 +513,8 @@ main section.contentList .overlay {
     main section.right .content.breakMargin {
         margin: -80px 0 -80px -80px;
     }
-    main section.laurelRight {
-        background-position: center;
+    main section:nth-child(even).laurelRight {
+        background-position: 80% 50%;
     }
 }
 
@@ -1190,7 +1191,7 @@ main section .content .contentFilter {
         opacity: 0;
         pointer-events: none;
     }
-    .contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton  {
+    .contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton {
         display: inline-block;
         text-align: center;
     }
