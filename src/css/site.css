@@ -260,6 +260,7 @@ nav .navButton {
         overflow: hidden;
         transition: max-height 0.3s;
         overflow: auto;
+        will-change: max-height;
     }
     nav .navMenu .navLinks a {
         display: block;
@@ -273,6 +274,7 @@ nav .navButton {
         opacity: 0;
         transition: all 0.4s;
         overflow: hidden;
+        will-change: height, opacity;
     }
     nav .menu .buttonTextInput input[type="text"] {
         max-width: 65px;
