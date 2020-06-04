@@ -17,9 +17,16 @@ function getPortfolioItems(amount, page, sort, category, search) {
 
             if (alienSearch) {
                 searchByString(alienSearch);
+                populateLocalSearch();
             }
             else if (search) {
                 searchByString(search);
+            }
+
+            function populateLocalSearch() {
+                $("#portfolioSearchInput").val(alienSearch)
+
+                $("#portfolioSearchInput").closest('form').find('.removeFilterButton').removeClass('hidden')
             }
 
             function searchByString(searchTerm) {
