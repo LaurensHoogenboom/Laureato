@@ -51,7 +51,7 @@
 
         <section class="menu">
             <form id="headerPortfolioSearchForm">
-                <div class="buttonTextInput larger">
+                <div class="buttonTextInput">
                     <input type="text" placeholder="Search" id="headerPortfolioSearchInput">
                     <label class="icon" for="submitHeaderPortfolioSearch">
                         &#xe901;

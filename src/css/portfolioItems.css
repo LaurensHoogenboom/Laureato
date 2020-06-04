@@ -563,7 +563,7 @@ section:nth-child(even) .infoBlock {
     padding: 20px;
     background-color: var(--background-white);
     border-radius: 10px;
-    box-shadow: 0px 1px 2px var(--light-shadow);
+    filter: drop-shadow(0px 1px 2px var(--light-shadow));
     text-align: left;
     text-indent: 0;
 }
