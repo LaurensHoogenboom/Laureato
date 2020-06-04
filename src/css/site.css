@@ -1011,7 +1011,7 @@ footer section:last-child .icon:first-of-type {
 
 .itemList .item.opened {
     grid-column: 1 / 5;
-    height: calc(var(--vh, 1vh) * 100 - 186px);
+    height: calc(var(--vh, 1vh) * 100 - 184px);
     overflow: hidden;
     box-shadow: 0px 0px 15px var(--shadow-input);
     border: 1px solid var(--text-grey-light);

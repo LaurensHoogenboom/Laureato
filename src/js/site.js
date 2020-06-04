@@ -165,11 +165,11 @@ $(document).ready(function() {
         $(item).addClass('opened');
     
         if (window.innerWidth > 640) {
-            windowOfset = 145;
+            windowOfset = 146;
         } else if (window.innerWidth > 480) {
-            windowOfset = 119;
+            windowOfset = 120;
         } else {
-            windowOfset = 99;
+            windowOfset = 100;
         }
     
         setTimeout(function () {
@@ -189,11 +189,11 @@ $(document).ready(function() {
         $(item).removeClass('opened');
     
         if (window.innerWidth > 640) {
-            windowOfset = 145;
+            windowOfset = 146;
         } else if (window.innerWidth > 480) {
-            windowOfset = 119;
+            windowOfset = 120;
         } else {
-            windowOfset = 99;
+            windowOfset = 100;
         }
     
         setTimeout(function () {
