@@ -20,14 +20,21 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#navMenuButton').click(function () {
         $('#navMenu').toggleClass('active');
+        toggleScroll('body');
     });
 });
 
-$(document).ready(function () {
-    $('.hamburgerButton').click(function () {
-        $(this).toggleClass('clicked');
-    });
-})
+function toggleScroll(container) {
+    $(container).toggleClass('noScroll');
+}
+
+function enableScroll(container) {
+    $(container).removeClass('noScroll');
+}
+
+function disableScroll(container) {
+    $(container).addClass('noScroll');
+}
 
 //nav logo
 
@@ -120,12 +127,14 @@ $('.mobileFilterButton').click(function () {
     var contentFilter = $(this).closest('.contentFilterWrapper').find('.contentFilter');
 
     $(contentFilter).addClass('active');
+    disableScroll('body');
 });
 
 $('.mobileCloseFilterButton').click(function() {
     var contentFilter = $(this).closest('.contentFilter');
 
     $(contentFilter).removeClass('active');
+    enableScroll('body');
 })
 
 //select input
@@ -156,11 +165,11 @@ $(document).ready(function() {
         $(item).addClass('opened');
     
         if (window.innerWidth > 640) {
-            windowOfset = 146;
+            windowOfset = 145;
         } else if (window.innerWidth > 480) {
-            windowOfset = 120;
+            windowOfset = 119;
         } else {
-            windowOfset = 100;
+            windowOfset = 99;
         }
     
         setTimeout(function () {
@@ -180,11 +189,11 @@ $(document).ready(function() {
         $(item).removeClass('opened');
     
         if (window.innerWidth > 640) {
-            windowOfset = 146;
+            windowOfset = 145;
         } else if (window.innerWidth > 480) {
-            windowOfset = 120;
+            windowOfset = 119;
         } else {
-            windowOfset = 100;
+            windowOfset = 99;
         }
     
         setTimeout(function () {

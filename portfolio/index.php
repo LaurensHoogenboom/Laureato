@@ -36,10 +36,10 @@
                         <option value="submitDate">Date</option>
                         <option value="type">Type</option>
                     </select>
-                    <a class="button transparent blue" id="removePortfolioFilters">Delete Filters</a>
-                    <label class="button blue mobileCloseFilterButton">
+                    <a class="button transparent blue removeFilterButton hidden" id="removePortfolioFilters">Delete Filters</a>
+                    <label class="button blue mobileCloseFilterButton" id="closePortfolioFilterMenu">
                         <span class="text">
-                            Close
+                            View items
                         </span>
                     </label>
                 </form>

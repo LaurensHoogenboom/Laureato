@@ -87,6 +87,8 @@ function getPortfolioItems(amount, page, sort, category, search) {
             sessionStorage.setItem('hasNextPage', pageSize < items.length && pageSize * pageIndex + parseInt(pageSize) < items.length ? true : false);
             sessionStorage.setItem('hasPreviousPage', 0 * pageIndex < pageSize * pageIndex ? true : false)
 
+            $("#closePortfolioFilterMenu").text(`View items (${items.length})`)
+
             items = items.slice(pageIndex * pageSize, pageSize * pageIndex + parseInt(pageSize));
 
             buildPortfolio(items);

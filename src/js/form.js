@@ -22,12 +22,14 @@ $("#portfolioAdd").submit(function(e) {
 $(document).ready(function () {
     $(document).on('change', "#portfolioFilterForm input, #portfolioFilterForm select, #portfolioSizeForm select", function () {
         filterPortfolio();
+        toggleRemoveFilterButton($(this).closest('form'));
     });
 
     $(document).on('submit', "#portfolioFilterForm", function (e) {
         e.preventDefault();
 
         filterPortfolio();
+        toggleRemoveFilterButton($(this).closest('form'));
     });
 
     $(document).on('click', '#nextPortfolioPageButton', function () {
@@ -40,6 +42,7 @@ $(document).ready(function () {
         }, 300)
 
         filterPortfolio(newIndex);
+        toggleRemoveFilterButton($(this).closest('form'));
     });
 
     $(document).on('click', '#previousPortfolioPageButton', function () {
@@ -52,6 +55,7 @@ $(document).ready(function () {
         }, 300)
 
         filterPortfolio(newIndex);
+        toggleRemoveFilterButton($(this).closest('form'));
     });
 })
 
@@ -80,8 +84,25 @@ $(document).ready(function () {
         $("select").change();
 
         getPortfolioItems(8, 0, null, null, null, null, null);
+        toggleRemoveFilterButton($(this).closest('form'));
     });
 })
+
+function toggleRemoveFilterButton(form) {
+    var noFilter = true;
+
+    $(form).find("input[type='text'], select").each(function() {
+        if ($(this).val() && $(this).val() !== "default") {
+            noFilter = false;
+        }
+    })
+
+    if (noFilter) {
+        $(form).find(".removeFilterButton").addClass('hidden')
+    } else {
+        $(form).find(".removeFilterButton").removeClass('hidden')
+    }
+}
 
 //portfolio outside search
 
