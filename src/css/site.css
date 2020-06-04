@@ -1168,8 +1168,13 @@ main section .content .contentFilter {
 }
 
 @media only screen and (max-width: 960px) {
-    .contentFilterWrapper {
+    main section .overlay .contentFilterWrapper {
+        height: 80px;
+        margin: 0px -40px -60px -40px;
+        padding: 0px 40px;
         grid-column: 1 / 2;
+        background-color: var(--background-white);
+        box-shadow: 0px 1px 2px var(--light-shadow);
     }
     main section .content .contentFilter {
         position: fixed;
@@ -1227,6 +1232,12 @@ main section .content .contentFilter {
 }
 
 @media only screen and (max-width: 640px) {
+    main section .overlay .contentFilterWrapper {
+        height: 60px;
+        margin: 0px -25px -40px -25px;
+        padding: 0 25px;
+    }
+
     main section .content .contentFilter {
         padding: 0px 25px;
         height: 36px;
