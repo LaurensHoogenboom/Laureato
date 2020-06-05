@@ -20,6 +20,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#navMenuButton').click(function () {
         $('#navMenu').toggleClass('active');
+        $(this).find('.hamburgerButton').addClass('clicked');
+        $(this).toggleClass('clicked');
         toggleScroll('body');
     });
 });
