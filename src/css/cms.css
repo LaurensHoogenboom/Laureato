@@ -204,6 +204,11 @@ article .button:last-child {
     width: 100%;
 }
 
+.loginWrapper .formTitle img {
+    max-width: 100%;
+    max-height: 70px;
+}
+
 .loginWrapper form .button {
     float: right;
 }
@@ -228,8 +233,7 @@ article .button:last-child {
     display: none;
 }
 
-.button.round,
-.button.square {
+.button.round, .button.square {
     height: 38px;
     width: 38px;
     text-align: center;
@@ -245,8 +249,7 @@ article .button:last-child {
     border-radius: 50%;
 }
 
-.button.square .icon,
-.button.round .icon {
+.button.square .icon, .button.round .icon {
     font-size: 28px;
     line-height: 38px;
 }
@@ -289,8 +292,7 @@ article .button:last-child {
     color: var(--text-blue);
 }
 
-.button .chevron.left,
-.button .chevron.right {
+.button .chevron.left, .button .chevron.right {
     margin-bottom: 3px;
 }
 
@@ -312,9 +314,9 @@ article .button:last-child {
         width: 100%;
         text-align: center;
         padding: 3px 20px 6px 20px;
+        border-radius: 18px;
     }
 }
-
 
 /*button text input*/
 
@@ -323,7 +325,7 @@ article .button:last-child {
     grid-template-columns: 1fr 24px;
     align-items: center;
     background-color: var(--background-grey-light);
-    border: 1px solid var(--background-grey-light);
+    border: 1px solid var(--background-grey-normal);
     padding: 0px 20px;
     border-radius: 40px;
     transition: all 0.3s;
@@ -362,12 +364,12 @@ article .button:last-child {
 }
 
 .buttonTextInput .icon:hover {
-    background-color: var(--text-blue-light);
+    background-color: var(--text-blue);
     color: var(--background-white);
 }
 
 .buttonTextInput.larger input[type="text"] {
-    max-width: 160px;
+    max-width: 140px;
 }
 
 .buttonTextInput.larger input[type="text"]:focus {
@@ -448,7 +450,6 @@ article .button:last-child {
     }
 }
 
-
 /*chevron*/
 
 .chevron {
@@ -489,7 +490,6 @@ article .button:last-child {
     transform: rotate(45deg);
 }
 
-
 /*cross*/
 
 .cross {
@@ -518,30 +518,20 @@ article .button:last-child {
     transform: translateY(-50%) translateX(-50%) rotate(-45deg);
 }
 
-
 /*input*/
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
     padding: 3px 20px 6px 20px;
     background-color: var(--background-grey-light);
-    border: 1px solid var(--background-grey-light);
+    border: 1px solid var(--background-grey-normal);
     border-radius: 4px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
     -webkit-appearance: none;
 }
 
-input::placeholder,
-input[type="email"]::placeholder,
-textarea::placeholder {
+input::placeholder, input[type="email"]::placeholder, input[type="password"], textarea::placeholder {
     color: var(--text-grey-light);
 }
 
@@ -558,25 +548,20 @@ select option {
     color: var(--text-grey-normal);
 }
 
-
 /*form*/
 
 form {
     max-width: 672px;
 }
 
-form input,
-form textarea,
-form select {
+form input, form textarea, form select {
     width: 100%;
     margin-bottom: 17px;
     outline: none;
     transition: box-shadow 0.3s;
 }
 
-form input:focus,
-form textarea:focus,
-form select:focus {
+form input:focus, form textarea:focus, form select:focus {
     box-shadow: 0px 0px 15px var(--shadow-input);
     border: 1px solid var(--text-grey-light);
 }
@@ -611,6 +596,7 @@ form .button {
 .formStatus.succes {
     background-color: var(--text-green);
 }
+
 
 /*font*/
 
