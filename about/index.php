@@ -22,7 +22,7 @@
 <section class="right">
     <div class="overlay">
         <div class="content center">
-            <img src="/about/img/CardSet.png">
+            <img src="/about/img/Me.png">
         </div>
 
         <article>
@@ -30,7 +30,7 @@
                 Hey, I am Laurens Hoogenboom.
             </h1>
             <h3>
-                About Me.
+                About Me
             </h3>
             <p>
                 19 years old, born in the Netherlands, adventurous cyclist, dutch fellow at heart and...
