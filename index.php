@@ -150,9 +150,9 @@
         <div class="content">
             <form id="contactForm">
                 <label id="contactFormStatus" class="formStatus hidden">test</label>
-                <input type="text" placeholder="Name" name="name">
-                <input type="email" placeholder="Email Address" name="email">
-                <textarea placeholder="Message" name="message"></textarea>
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email Address" name="email" required>
+                <textarea placeholder="Message" name="message" required></textarea>
                 <input type="submit" id="submitContactForm" class="hidden">
                 <label class="button blue" for="submitContactForm">Send</label>
             </form>
