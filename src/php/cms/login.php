@@ -5,7 +5,7 @@
     //release
     //$db = new mysqli('localhost', 'i100603_laurens', '10522848', 'i100603_laureato') or die(mysqli_error($conn));
 
-    if ($_POST) {
+    if (isset($_POST)) {
         $formUsername = $_POST['username'];
         $formPassword = $_POST['password'];
 
@@ -19,6 +19,7 @@
                 session_start();
                 $_SESSION['user_name'] = $user['username'];
                 $_SESSION['user_id'] = $user['id'];
+                $_SESSION['db'] = $db;
 
                 echo 'OK';
                 exit;

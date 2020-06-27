@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/src/css/cms.css">
 
     <script src="/src/js/jquery-min.js"></script>
-    <script src="/src/js/cms.js"></script>
+    <script src="/src/js/cms/cms.js"></script>
 </head>
 <body>
     <div class="loginWrapper">

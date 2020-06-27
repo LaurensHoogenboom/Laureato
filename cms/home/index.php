@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION['user_name']) || !isset($_SESSION['user_id']))
+    if (!isset($_SESSION['user_name']) || !isset($_SESSION['user_id']) || !isset($_SESSION['db']))
     {
       header("location: /");
     }
@@ -16,7 +16,7 @@
     <title>Document</title>
 
     <script src="/src/js/jquery-min.js"></script>
-    <script src="/src/js/cms.js"></script>
+    <script src="/src/js/cms/cms.js"></script>
 </head>
 <body>
     <h1>This is the Laureato CMS</h1>
