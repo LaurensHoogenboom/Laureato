@@ -7,15 +7,20 @@
     <title>PageXpress</title>
 
     <link rel="stylesheet" type="text/css" href="/src/css/cms.css">
+
+    <script src="/src/js/jquery-min.js"></script>
+    <script src="/src/js/cms.js"></script>
 </head>
 <body>
     <div class="loginWrapper">
-        <form>
+        <form id="loginForm">
             <div class="formTitle">
                 <img src="/home/img/logo.svg">
             </div>
 
-            <input type="text" name="name" placeholder="Username">
+            <label id="contactFormStatus" class="formStatus hidden">test</label>
+            
+            <input type="text" name="username" placeholder="Username">
             <input type="password" name="password" placeholder="Password">
 
             <input type="submit" id="cmsLogin" class="hidden">

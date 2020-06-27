@@ -149,7 +149,7 @@
 
         <div class="content">
             <form id="contactForm">
-                <label id="contactFormStatus" class="formStatus hidden">test</label>
+                <label id="contactFormStatus" class="formStatus hidden"></label>
                 <input type="text" placeholder="Name" name="name" required>
                 <input type="email" placeholder="Email Address" name="email" required>
                 <textarea placeholder="Message" name="message" required></textarea>

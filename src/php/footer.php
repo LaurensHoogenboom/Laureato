@@ -14,8 +14,8 @@
         </section>
 
         <section>
-            <a class="icon" target="_blank" href="https://web.facebook.com/profile.php?id=100009665716821">&#xe905;</a>
-            <a class="icon" target="_blank" href="https://www.linkedin.com/in/laurens-hoogenboom-3aa78515a/">&#xe906;</a>
+            <a class="icon" target="_blank" href="https://www.linkedin.com/in/laurens-hoogenboom-3aa78515a/">&#xe905;</a>
+            <a class="icon" target="_blank" href="https://www.instagram.com/laureato_/">&#xe906;</a>
         </section>
     </footer>
 

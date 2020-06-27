@@ -5,8 +5,6 @@ $("#portfolioAdd").submit(function(e) {
 
     var form = $(this);
 
-    console.log('fire');
-
     $.ajax({
         type: "POST",
         url: '/src/php/portfolio.php',

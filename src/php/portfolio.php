@@ -1,5 +1,4 @@
 <?php 
-
     //dev
     $db = new mysqli('localhost', 'root', '', 'laureato') or die(mysqli_error($conn));
 
