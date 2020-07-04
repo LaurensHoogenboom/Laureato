@@ -80,3 +80,82 @@ $(document).ready(function () {
         })
     }
 });
+
+//button actions
+
+$(document).on('click', 'label.button', function() {
+    let action = $(this).data('action')
+
+    if (action === "open-dialog") {
+        let dialogName = $(this).data('action-context')
+
+        $('.dialog').each(function() {
+            let name = $(this).attr('id')
+
+            if (name === dialogName) {
+                $(this).removeClass('hidden')
+            }
+        })
+    } else if (action === "close-dialog") {
+        let dialogName = $(this).data('action-context')
+
+        $('.dialog').each(function() {
+            let name = $(this).attr('id')
+
+            if (name === dialogName) {
+                $(this).addClass('hidden')
+            }
+        })
+    }
+})
+
+//select possible new option
+
+$(document).on('change', '.possible-new-select', function() {
+    let value = $(this).val()
+    let name = $(this).attr('id')
+
+    if (value === "new-option") {
+        let valueLabel = $(this).attr('name')
+
+        $('.possible-new-input').each(function() {
+            let inputName = $(this).attr('id')
+            
+            if (name === inputName) {
+                $(this).attr('name', valueLabel)
+                $(this).removeClass('hidden')
+            }
+        })
+
+        $(this).attr('name', '')
+    } else {
+        let valueLabel
+
+        $('.possible-new-input').each(function() {
+            let inputName = $(this).attr('id')
+
+            if (name === inputName) {
+                $(this).addClass('hidden')
+                valueLabel = $(this).attr('name')
+                $(this).attr('name', '')
+            }
+        })
+
+        $(this).attr('name', valueLabel)
+    }
+})
+
+//select highlight
+
+$(document).ready(function() {
+    $("select").change(function () {
+        if ($(this).val() == "default") {
+            $(this).addClass("placeHolder");
+        } else {
+            $(this).removeClass("placeHolder")
+        }
+    });
+    
+    $("select").change();
+})
+

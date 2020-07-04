@@ -34,7 +34,7 @@ input,
 li,
 textarea,
 select {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   font-family: SegoeUI;
   color: var(--text-grey-normal);
@@ -50,12 +50,12 @@ h1 {
 h2 {
   font-family: SegoeUI;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 20px;
   color: var(--text-grey-dark);
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
   font-family: SegoeUI;
   color: var(--text-green);
@@ -249,7 +249,7 @@ nav .pages {
   display: grid;
   grid-gap: 20px;
   grid-auto-rows: min-content;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 nav .logo {
@@ -288,22 +288,90 @@ nav a span {
   padding: 40px;
   overflow-y: auto;
   overflow-x: hidden;
+  position: relative;
 }
 
 .section-toolbar {
+  display: grid;
+  position: sticky;
+  top: -40px;
+  z-index: 20;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 40px;
+  align-items: center;
   width: calc(100% + 80px);
-  height: 40px;
+  height: 50px;
   border-top: 1px solid var(--background-grey-normal);
   margin: -40px -40px 40px -40px;
   background-color: var(--background-grey-lightest);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 40px;
+}
+
+.section-toolbar .left {
+  justify-self: start;
+}
+
+.section-toolbar .middle {
+  justify-self: center;
+}
+
+.section-toolbar .right {
+  justify-self: end;
+}
+
+/*dialog*/
+
+.dialog {
+  position: absolute;
+  z-index: 19;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  max-width: 600px;
+  padding: 40px 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 10px 10px;
+  transition: all 0.3s;
+  transform: scale(1) translateY(0);
+}
+
+.dialog.hidden {
+  display: block;
+  transform: scale(0.8) translateY(calc(-100% - 70px));
+}
+
+.dialog .title {
+  background-color: var(--background-grey-lightest);
+  margin: -40px -20px 20px -20px;
+  padding: 20px;
+  border-bottom: 1px solid var(--background-grey-normal);
+}
+
+.dialog .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--background-grey-lightest);
+  margin: 20px -20px -40px -20px;
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 0px 0px 10px 10px;
+  border-top: 1px solid var(--background-grey-normal);
+}
+
+.dialog .actions .button {
+  margin-left: 20px;
 }
 
 /*button*/
 
 .button {
   display: inline-block;
-  padding: 1px 20px 4px 20px;
+  padding: 2px 20px 4px 20px;
   background-color: var(--text-blue);
   color: var(--background-white);
   border-radius: 16px;
@@ -365,6 +433,7 @@ nav a span {
 
 .button.transparent {
   background-color: rgba(0, 0, 0, 0);
+  color: var(--text-grey-normal);
 }
 
 .button.transparent:hover {
@@ -378,7 +447,7 @@ nav a span {
 
 .button .chevron.left,
 .button .chevron.right {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 
 .button .chevron.down {
@@ -667,6 +736,11 @@ form select:focus {
 
 form .button {
   margin-top: 27px;
+}
+
+form label {
+  display: inline-block;
+  padding: 0px 0px 10px 0px;
 }
 
 .formStatus {
