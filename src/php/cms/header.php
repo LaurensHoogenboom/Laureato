@@ -10,6 +10,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,41 +21,51 @@
     <script src="/src/js/jquery-min.js"></script>
     <script src="/src/js/cms/cms.js"></script>
 </head>
+
 <body>
     <header>
-        <img src="/home/img/logo.svg" class="logo">
         <section class="navigation">
-            <h2>
+            <h1>
                 <?php echo $pgName ?>
-            </h2>
+            </h1>
         </section>
         <section class="toolbar middle">
-            
+
         </section>
         <section class="toolbar left">
             <div class="avatar">
 
             </div>
-            
+
         </section>
     </header>
 
     <nav>
-        <a class="button transparent square" href="/cms/home/">
-            <span class="cms-icon">
-                &#xe902;
-            </span>
-        </a>
-        <a class="button transparent square" href="/cms/portfolio/">
-            <span class="cms-icon">
-                &#xe900;
-            </span>
-        </a>
-        <a class="button transparent square" href="/cms/blog/">
-            <span class="cms-icon">
-                &#xe901;
-            </span>
-        </a>
+        <div class="logo">
+            <img class="logo" src="/home/img/Laurel_white.svg">
+        </div>
+
+        <div class="pages">
+            <a class="button transparent square" href="/cms/home/">
+                <span class="cms-icon">
+                    &#xe902;
+                </span>
+            </a>
+            <a class="button transparent square" href="/cms/portfolio/">
+                <span class="cms-icon">
+                    &#xe900;
+                </span>
+            </a>
+            <a class="button transparent square" href="/cms/blog/">
+                <span class="cms-icon">
+                    &#xe901;
+                </span>
+            </a>
+        </div>
+
+        <div class="tools">
+
+        </div>
     </nav>
 
     <div class="content-section">

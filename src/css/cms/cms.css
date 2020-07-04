@@ -41,7 +41,7 @@ select {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 30px;
   font-family: SegoeUI;
   font-weight: 100;
   color: var(--text-grey-dark);
@@ -224,24 +224,44 @@ header {
   width: calc(100% - 60px);
   float: right;
   height: 70px;
-  background-color: (var(--background-white));
+  background-color: var(--background-white);
   grid-gap: 40px;
   padding: 11px 40px;
+  align-items: center;
 }
 
-header img {
-  height: 48px;
+header h1 {
+  color: var(--text-green);
 }
 
 nav {
   display: grid;
-  grid-gap: 30px;
-  grid-auto-rows: min-content;
+  grid-gap: 70px;
+  grid-template-rows: 70px 1fr max-content;
   width: 60px;
   height: 100vh;
   background-color: var(--text-blue);
   float: left;
-  padding: 110px 11px 40px 11px;
+  padding: 0px 11px 40px 11px;
+}
+
+nav .pages {
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-rows: min-content;
+  margin-top: 10px;
+}
+
+nav .logo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--text-blue-dark);
+  margin: 0px -11px 0px -11px;
+}
+
+nav .logo img {
+  width: 38px;
 }
 
 nav a.button.square {
@@ -273,9 +293,10 @@ nav a span {
 .section-toolbar {
   width: calc(100% + 80px);
   height: 40px;
-  border-bottom: 1px solid var(--background-grey-normal);
+  border-top: 1px solid var(--background-grey-normal);
   margin: -40px -40px 40px -40px;
   background-color: var(--background-grey-lightest);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /*button*/

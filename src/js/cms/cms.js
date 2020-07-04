@@ -69,9 +69,9 @@ const updateFormStatus = {
 $(document).ready(function () {
     var current = location.pathname;
     if (current == "/") {
-        $('nav a').first().addClass('current');
+        $('nav .pages a').first().addClass('current');
     } else {
-        $('nav a').each(function () {
+        $('nav .pages a').each(function () {
             var $this = $(this);
             // if the current path is like this link, make it active
             if ($this.attr('href').indexOf(current) !== -1) {
