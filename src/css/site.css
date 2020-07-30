@@ -1,1730 +1,1820 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /*colors*/
 
 :root {
-    --background-white: rgb(2255, 255, 255);
-    --background-grey-lightest: rgb(250, 250, 250);
-    --background-grey-light: rgb(240, 240, 240);
-    --background-grey-normal: rgb(220, 220, 220);
-    --text-grey-light: rgb(180, 180, 180);
-    --text-grey-normal: rgb(112, 112, 112);
-    --text-grey-dark: rgb(51, 51, 51);
-    --text-blue-light: rgb(81, 153, 239);
-    --text-blue: rgb(38, 128, 235);
-    --text-blue-dark: rgb(30, 102, 188);
-    --text-green: rgb(13, 129, 54);
-    --text-orange: rgb(251, 86, 7);
-    --shadow-input: rgba(0, 0, 0, 0.1);
-    --shadow-nav: rgba(0, 0, 0, 0.03);
-    --light-shadow: rgba(0, 0, 0, 0.15);
+  --background-white: rgb(2255, 255, 255);
+  --background-grey-lightest: rgb(250, 250, 250);
+  --background-grey-light: rgb(240, 240, 240);
+  --background-grey-normal: rgb(220, 220, 220);
+  --text-grey-light: rgb(180, 180, 180);
+  --text-grey-normal: rgb(112, 112, 112);
+  --text-grey-dark: rgb(51, 51, 51);
+  --text-blue-light: rgb(81, 153, 239);
+  --text-blue: rgb(38, 128, 235);
+  --text-blue-dark: rgb(30, 102, 188);
+  --text-green: rgb(13, 129, 54);
+  --text-orange: rgb(251, 86, 7);
+  --shadow-input: rgba(0, 0, 0, 0.1);
+  --shadow-nav: rgba(0, 0, 0, 0.03);
+  --light-shadow: rgba(0, 0, 0, 0.15);
 }
 
 /*text*/
 
-p, a, label, span, input, li, textarea, select {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: SegoeUI;
-    color: var(--text-grey-normal);
+p,
+a,
+label,
+span,
+input,
+li,
+textarea,
+select {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: SegoeUI;
+  color: var(--text-grey-normal);
 }
 
 h1 {
-    font-size: 55px;
-    font-family: SegoeUI;
-    font-weight: 100;
-    color: var(--text-grey-dark);
+  font-size: 55px;
+  font-family: SegoeUI;
+  font-weight: 100;
+  color: var(--text-grey-dark);
 }
 
 h2 {
-    font-family: SegoeUI;
-    font-weight: 100;
-    font-size: 40px;
-    color: var(--text-grey-dark)
+  font-family: SegoeUI;
+  font-weight: 100;
+  font-size: 40px;
+  color: var(--text-grey-dark);
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 100;
-    font-family: SegoeUI;
-    color: var(--text-green);
+  font-size: 20px;
+  font-weight: 100;
+  font-family: SegoeUI;
+  color: var(--text-green);
 }
 
 @media only screen and (max-width: 800px) {
-    h1 {
-        font-size: 45px;
-    }
-    h2 {
-        font-size: 35px;
-    }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 35px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    h1 {
-        font-size: 35px;
-    }
-    h2 {
-        font-size: 25px;
-    }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    p, a, label, span, input, li, textarea, select {
-        font-size: 18px;
-    }
+  p,
+  a,
+  label,
+  span,
+  input,
+  li,
+  textarea,
+  select {
+    font-size: 18px;
+  }
 }
 
 /*list*/
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ul li {
-    padding-left: 60px;
-    text-indent: -60px;
-    padding-bottom: 16px;
+  padding-left: 60px;
+  text-indent: -60px;
+  padding-bottom: 16px;
 }
 
 ul li:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 ul li::before {
-    content: '';
-    display: inline-block;
-    height: 30px;
-    width: 35px;
-    background-image: url(/home/img/Laurel.svg);
-    vertical-align: middle;
-    margin-right: 20px;
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 35px;
+  background-image: url(/home/img/Laurel.svg);
+  vertical-align: middle;
+  margin-right: 20px;
 }
 
 /*links*/
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*video*/
 
 video {
-    outline: none;
+  outline: none;
 }
 
 /*article*/
 
 article {
-    width: 100%;
-    margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 article:last-of-type {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 article:last-of-type.forceMargin {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
-article h1, article h2, article p {
-    padding-bottom: 17px;
+article h1,
+article h2,
+article p {
+  padding-bottom: 17px;
 }
 
 article h3 {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 article ul {
-    padding: 23px 0px 17px 0px;
+  padding: 23px 0px 17px 0px;
 }
 
 article .button {
-    margin: 23px 0px 17px 0px;
+  margin: 23px 0px 17px 0px;
 }
 
-article h1:last-child, article p:last-child, article ul:last-child {
-    padding-bottom: 0;
+article h1:last-child,
+article p:last-child,
+article ul:last-child {
+  padding-bottom: 0;
 }
 
 article .button:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /*misc*/
 
 .icon {
-    font-family: Icons;
+  font-family: Icons;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .noScroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /*nav*/
 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: grid;
-    grid-template-columns: 1fr 276px;
-    height: 106px;
-    width: 100%;
-    background-color: rgba(250,250,250,1.0);
-    padding: 23px 168px;
-    box-shadow: 0px 10px 20px var(--shadow-nav);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 276px;
+  height: 106px;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 1);
+  padding: 23px 168px;
+  box-shadow: 0px 10px 20px var(--shadow-nav);
 }
 
-nav .menu, nav .navMenu {
-    display: flex;
-    align-items: center;
-    height: 100%;
+nav .menu,
+nav .navMenu {
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
 nav .menu {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 nav .navMenu img {
-    height: 100%;
-    max-height: 100%;
-    cursor: pointer;
+  height: 100%;
+  max-height: 100%;
+  cursor: pointer;
 }
 
 nav .navMenu .navLinks {
-    width: calc(100% - 177px);
-    float: right;
-    padding-left: 20px;
+  width: calc(100% - 177px);
+  float: right;
+  padding-left: 20px;
 }
 
 nav .navMenu .navLinks a {
-    padding: 3px 20px 6px 20px;
-    border-radius: 18px;
-    transition: background-color 0.3s;
+  padding: 3px 20px 6px 20px;
+  border-radius: 18px;
+  transition: background-color 0.3s;
 }
 
 nav .navMenu .navLinks a:hover {
-    background-color: var(--background-grey-light);
+  background-color: var(--background-grey-light);
 }
 
 nav .navMenu a.current {
-    color: var(--text-blue);
+  color: var(--text-blue);
 }
 
 nav .menu form {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 nav .menu .buttonTextInput {
-    border-color: var(--background-grey-normal)
+  border-color: var(--background-grey-normal);
 }
 
 nav .menu .buttonTextInput:focus-within {
-    border-color: var(--text-grey-light);
+  border-color: var(--text-grey-light);
 }
 
 nav .navButton {
-    display: none;
-    align-items: center;
+  display: none;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1440px) {
-    nav {
-        padding: 23px 80px;
-    }
+  nav {
+    padding: 23px 80px;
+  }
 }
 
 @media only screen and (max-width: 1152px) {
-    nav {
-        grid-template-columns: 276px 1fr 276px;
-    }
-    nav .navButton {
-        display: flex;
-    }
-    nav .navMenu {
-        justify-content: center;
-    }
-    nav .navMenu .navLinks {
-        max-height: 0;
-        position: fixed;
-        top: 106px;
-        left: 0px;
-        right: 0px;
-        height: calc(100vh - 106px);
-        width: 100%;
-        background-color: var(--background-grey-light);
-        box-shadow: 0px 10px 20px var(--shadow-nav);
-        padding: 0;
-        overflow: hidden;
-        transition: max-height 0.3s;
-        overflow: auto;
-        will-change: max-height;
-    }
-    nav .navMenu .navLinks a {
-        display: block;
-        width: 100%;
-        height: 0px;
-        line-height: 80px;
-        padding: 0 80px;
-        text-align: left;
-        border-top: 1px solid var(--text-grey-light);
-        border-radius: 0;
-        opacity: 0;
-        transition: all 0.4s;
-        overflow: hidden;
-        will-change: height, opacity;
-    }
-    nav .menu .buttonTextInput input[type="text"] {
-        max-width: 65px;
-    }
-    nav .menu .buttonTextInput input[type="text"]:focus {
-        max-width: 85px;
-    }
-    nav .navMenu .navLinks.active {
-        max-height: calc(100vh - 106px);
-    }
-    nav .navMenu .navLinks.active a {
-        height: 80px;
-        opacity: 1;
-    }
+  nav {
+    grid-template-columns: 276px 1fr 276px;
+  }
+  nav .navButton {
+    display: flex;
+  }
+  nav .navMenu {
+    justify-content: center;
+  }
+  nav .navMenu .navLinks {
+    max-height: 0;
+    position: fixed;
+    top: 106px;
+    left: 0px;
+    right: 0px;
+    height: calc(100vh - 106px);
+    width: 100%;
+    background-color: var(--background-grey-light);
+    box-shadow: 0px 10px 20px var(--shadow-nav);
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    overflow: auto;
+    will-change: max-height;
+  }
+  nav .navMenu .navLinks a {
+    display: block;
+    width: 100%;
+    height: 0px;
+    line-height: 80px;
+    padding: 0 80px;
+    text-align: left;
+    border-top: 1px solid var(--text-grey-light);
+    border-radius: 0;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    will-change: height, opacity;
+  }
+  nav .menu .buttonTextInput input[type="text"] {
+    max-width: 65px;
+  }
+  nav .menu .buttonTextInput input[type="text"]:focus {
+    max-width: 85px;
+  }
+  nav .navMenu .navLinks.active {
+    max-height: calc(100vh - 106px);
+  }
+  nav .navMenu .navLinks.active a {
+    height: 80px;
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    nav {
-        padding: 23px 40px;
-    }
-    nav .navMenu .navLinks a {
-        padding: 0 40px;
-    }
+  nav {
+    padding: 23px 40px;
+  }
+  nav .navMenu .navLinks a {
+    padding: 0 40px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    nav {
-        grid-template-columns: 40px 1fr 40px
-    }
-    nav .menu .buttonTextInput {
-        display: none;
-    }
+  nav {
+    grid-template-columns: 40px 1fr 40px;
+  }
+  nav .menu .buttonTextInput {
+    display: none;
+  }
 }
 
 @media only screen and (max-height: 800px) {
-    nav {
-        height: 80px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
+  nav {
+    height: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  nav .menu,
+  nav .navMenu {
+      height: 50px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    nav {
-        height: 80px;
-        width: 100%;
-        padding: 15px 25px;
-    }
-    nav .navMenu .navLinks {
-        height: calc(100vh - 80px);
-        top: 80px;
-    }
-    nav .navMenu .navLinks.active {
-        max-height: calc(100vh - 80px);
-    }
-    nav .navMenu .navLinks a {
-        padding: 0 25px;
-    }
+  nav {
+    height: 80px;
+    width: 100%;
+    padding: 15px 25px;
+  }
+  nav .menu,
+  nav .navMenu {
+      height: 50px;
+  }
+
+  nav .navMenu .navLinks {
+    height: calc(100vh - 80px);
+    top: 80px;
+  }
+  nav .navMenu .navLinks.active {
+    max-height: calc(100vh - 80px);
+  }
+  nav .navMenu .navLinks a {
+    padding: 0 25px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    nav {
-        height: 60px;
-        width: 100%;
-        padding: 10px 25px;
-    }
-    nav .navMenu .navLinks {
-        height: calc(100vh - 60px);
-        top: 60px;
-    }
-    nav .navMenu .navLinks a {
-        line-height: 60px;
-    }
-    nav .navMenu .navLinks.active {
-        max-height: calc(100vh - 60px);
-    }
-    nav .navMenu .navLinks.active a {
-        height: 60px;
-    }
+  nav {
+    height: 60px;
+    width: 100%;
+    padding: 10px 25px;
+  }
+  nav .menu,
+  nav .navMenu {
+      height: 40px;
+  }
+  nav .navMenu .navLinks {
+    height: calc(100vh - 60px);
+    top: 60px;
+  }
+  nav .navMenu .navLinks a {
+    line-height: 60px;
+  }
+  nav .navMenu .navLinks.active {
+    max-height: calc(100vh - 60px);
+  }
+  nav .navMenu .navLinks.active a {
+    height: 60px;
+  }
 }
 
 /*main*/
 
 main section {
-    display: flex;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 main section .overlay {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    padding: 80px 168px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  padding: 80px 168px;
 }
 
 main section:nth-child(even) .overlay {
-    background-color: var(--background-grey-light);
+  background-color: var(--background-grey-light);
 }
 
 main section:nth-child(odd) .overlay {
-    background-color: var(--background-white);
+  background-color: var(--background-white);
 }
 
 main section .overlay article p {
-    max-width: 738px;
+  max-width: 738px;
 }
 
 main section .overlay .content {
-    height: 100%;
+  height: 100%;
 }
 
 main section .overlay .content.center {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 main section .content .image {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: 50%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
 }
 
-main section .overlay .content>img {
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px var(--shadow-input));
+main section .overlay .content > img {
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px var(--shadow-input));
 }
 
-main section .overlay .content>* {
-    max-width: 672px;
+main section .overlay .content > * {
+  max-width: 672px;
 }
 
 main section.largeMargin .overlay {
-    padding: 117px 168px;
+  padding: 117px 168px;
 }
 
 main section.smallMargin .overlay {
-    padding: 60px 168px;
+  padding: 60px 168px;
 }
 
-main section.smallMargin.left .overlay, main section.smallMargin.right .overlay {
-    grid-gap: 60px;
+main section.smallMargin.left .overlay,
+main section.smallMargin.right .overlay {
+  grid-gap: 60px;
 }
 
 main section.center .overlay {
-    justify-content: center;
-    flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 main section.center .overlay article {
-    text-align: center;
+  text-align: center;
 }
 
 main section.center .overlay article p {
-    margin: auto;
+  margin: auto;
 }
 
 main section.left .overlay {
-    display: grid;
-    grid-gap: 80px;
-    grid-template-columns: fit-content(738px) 1fr;
+  display: grid;
+  grid-gap: 80px;
+  grid-template-columns: fit-content(738px) 1fr;
 }
 
 main section.right .overlay {
-    display: grid;
-    grid-gap: 80px;
-    grid-template-columns: fit-content(672px) 1fr;
+  display: grid;
+  grid-gap: 80px;
+  grid-template-columns: fit-content(672px) 1fr;
 }
 
-main section.right .overlay .content>* {
-    float: left;
+main section.right .overlay .content > * {
+  float: left;
 }
 
-main section.left .overlay .content>* {
-    float: right;
+main section.left .overlay .content > * {
+  float: right;
 }
 
 main section.left article {
-    float: left;
+  float: left;
 }
 
 main section.right article {
-    float: right;
+  float: right;
 }
 
 main section.left .content.breakMargin {
-    height: calc(100% + 160px);
-    margin: -80px -168px -80px 0;
+  height: calc(100% + 160px);
+  margin: -80px -168px -80px 0;
 }
 
 main section.right .content.breakMargin {
-    height: calc(100% + 160px);
-    margin: -80px 0 -80px -168px;
+  height: calc(100% + 160px);
+  margin: -80px 0 -80px -168px;
 }
 
 main section:nth-child(even).laurelLeft {
-    background-image: url(/home/img/LaurelLeft.svg);
+  background-image: url(/home/img/LaurelLeft.svg);
 }
 
 main section:nth-child(even).laurelRight {
-    background-image: url(/home/img/LaurelRight.svg);
-    background-position: 100% 50%;
+  background-image: url(/home/img/LaurelRight.svg);
+  background-position: 100% 50%;
 }
 
-main section:nth-child(even).laurelLeft .overlay, main section:nth-child(even).laurelRight .overlay {
-    background: none;
+main section:nth-child(even).laurelLeft .overlay,
+main section:nth-child(even).laurelRight .overlay {
+  background: none;
 }
 
 main section.left.background {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 main section.right.background {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 main section.left.background .overlay {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1.0), 80%, rgba(255, 255, 255, 0.63));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    80%,
+    rgba(255, 255, 255, 0.63)
+  );
 }
 
 main section.right.background .overlay {
-    background: linear-gradient(to left, rgba(255, 255, 255, 1.0), 80%, rgba(255, 255, 255, 0.63));
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    80%,
+    rgba(255, 255, 255, 0.63)
+  );
 }
 
 main section.contentList .overlay {
-    background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(250, 250, 250));
+  background: linear-gradient(
+    to bottom,
+    rgb(240, 240, 240),
+    rgb(250, 250, 250)
+  );
 }
 
 @media only screen and (max-width: 1440px) {
-    main section .overlay {
-        padding: 80px;
-    }
-    main section.largeMargin .overlay {
-        padding: 117px 80px;
-    }
-    main section.smallMargin .overlay {
-        padding: 60px 80px;
-    }
-    main section.left .content.breakMargin {
-        margin: -80px -80px -80px 0;
-    }
-    main section.right .content.breakMargin {
-        margin: -80px 0 -80px -80px;
-    }
-    main section:nth-child(even).laurelRight {
-        background-position: 80% 50%;
-    }
+  main section .overlay {
+    padding: 80px;
+  }
+  main section.largeMargin .overlay {
+    padding: 117px 80px;
+  }
+  main section.smallMargin .overlay {
+    padding: 60px 80px;
+  }
+  main section.left .content.breakMargin {
+    margin: -80px -80px -80px 0;
+  }
+  main section.right .content.breakMargin {
+    margin: -80px 0 -80px -80px;
+  }
+  main section:nth-child(even).laurelRight {
+    background-position: 80% 50%;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
-    main section.left .overlay {
-        grid-template-columns: fit-content(600px) 1fr;
-    }
-    main section.right .overlay {
-        grid-template-columns: 1fr fit-content(600px);
-    }
-    main section.right .overlay {
-        grid-template-columns: 1fr;
-    }
-    main section.right .overlay .content {
-        grid-row: 2;
-    }
+  main section.left .overlay {
+    grid-template-columns: fit-content(600px) 1fr;
+  }
+  main section.right .overlay {
+    grid-template-columns: 1fr fit-content(600px);
+  }
+  main section.right .overlay {
+    grid-template-columns: 1fr;
+  }
+  main section.right .overlay .content {
+    grid-row: 2;
+  }
 }
 
 @media only screen and (max-width: 1152px) {
-    main section.left .overlay {
-        grid-template-columns: 1.5fr 1fr;
-    }
+  main section.left .overlay {
+    grid-template-columns: 1.5fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    main section .overlay {
-        padding: 80px 40px;
-    }
-    main section.largeMargin .overlay {
-        padding: 100px 40px;
-    }
-    main section.smallMargin .overlay {
-        padding: 60px 40px;
-    }
-    main section.left .content.breakMargin {
-        height: calc(100% + 160px);
-        margin: -80px -40px -80px 0;
-    }
-    main section.right .content.breakMargin {
-        height: calc(100% + 160px);
-        margin: -80px 0 -80px -40px;
-    }
+  main section .overlay {
+    padding: 80px 40px;
+  }
+  main section.largeMargin .overlay {
+    padding: 100px 40px;
+  }
+  main section.smallMargin .overlay {
+    padding: 60px 40px;
+  }
+  main section.left .content.breakMargin {
+    height: calc(100% + 160px);
+    margin: -80px -40px -80px 0;
+  }
+  main section.right .content.breakMargin {
+    height: calc(100% + 160px);
+    margin: -80px 0 -80px -40px;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-    main section.left .overlay {
-        grid-template-columns: 1fr;
-    }
-    main section.left .content.breakMargin, main section.right .content.breakMargin {
-        height: calc(100% + 80px);
-        width: calc(100% + 80px);
-        margin: 0 -40px -80px -40px;
-    }
-    main section.left .overlay .content>* {
-        float: left;
-        max-width: initial;
-    }
-    main section .content .image {
-        height: 600px;
-        max-height: 80vh;
-        width: 100%;
-        background-size: cover;
-        background-position: 50%;
-    }
-    main section.left.pageTitle article, main section.right.pageTitle article {
-        text-align: center;
-    }
-    main section.left.background .overlay, main section.right.background .overlay {
-        background: linear-gradient(to top, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.8));
-    }
-    main section .overlay .content.center {
-        justify-content: center;
-    }
+  main section.left .overlay {
+    grid-template-columns: 1fr;
+  }
+  main section.left .content.breakMargin,
+  main section.right .content.breakMargin {
+    height: calc(100% + 80px);
+    width: calc(100% + 80px);
+    margin: 0 -40px -80px -40px;
+  }
+  main section.left .overlay .content > * {
+    float: left;
+    max-width: initial;
+  }
+  main section .content .image {
+    height: 600px;
+    max-height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+  }
+  main section.left.pageTitle article,
+  main section.right.pageTitle article {
+    text-align: center;
+  }
+  main section.left.background .overlay,
+  main section.right.background .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.8)
+    );
+  }
+  main section .overlay .content.center {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    main section.laurelLeft {
-        background-position: 40% 50%;
-    }
+  main section.laurelLeft {
+    background-position: 40% 50%;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    main section .overlay {
-        padding: 50px 25px;
-    }
-    main section.largeMargin .overlay {
-        padding: 60px 25px;
-    }
-    main section.smallMargin .overlay {
-        padding: 40px 25px;
-    }
-    main section.smallMargin.left .overlay, main section.smallMargin.right .overlay {
-        grid-gap: 40px;
-    }
-    main section.left .content.breakMargin, main section.right .content.breakMargin {
-        height: calc(100% + 50px);
-        width: calc(100% + 50px);
-        margin: 0 -25px -50px -25px;
-    }
-    main section.left .overlay, main section.right .overlay {
-        grid-gap: 50px;
-    }
+  main section .overlay {
+    padding: 50px 25px;
+  }
+  main section.largeMargin .overlay {
+    padding: 60px 25px;
+  }
+  main section.smallMargin .overlay {
+    padding: 40px 25px;
+  }
+  main section.smallMargin.left .overlay,
+  main section.smallMargin.right .overlay {
+    grid-gap: 40px;
+  }
+  main section.left .content.breakMargin,
+  main section.right .content.breakMargin {
+    height: calc(100% + 50px);
+    width: calc(100% + 50px);
+    margin: 0 -25px -50px -25px;
+  }
+  main section.left .overlay,
+  main section.right .overlay {
+    grid-gap: 50px;
+  }
 }
 
 /*home section*/
 
 main section.home {
-    position: relative;
-    height: calc(100vh - 106px);
+  position: relative;
+  height: calc(100vh - 106px);
 }
 
 main section.home .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0.63));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.63)
+  );
 }
 
 main section.home .overlay .caption {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    text-align: center;
-    float: left;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  float: left;
+  justify-content: center;
 }
 
 main section.home .overlay .caption h1 {
-    font-size: 80px;
-    margin-bottom: 10px;
+  font-size: 80px;
+  margin-bottom: 10px;
 }
 
 main section.home .overlay .caption h3 {
-    font-size: 30px;
-    font-weight: 100;
+  font-size: 30px;
+  font-weight: 100;
 }
 
 main section.home .overlay .caption .sliderDots {
-    margin-top: 22px;
+  margin-top: 22px;
 }
 
 main section.home .chevron {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    height: 20px;
-    width: 41px;
-    transform: rotate(180deg) translateX(-50%);
-    animation: homeChevronBounce 2s linear 0s infinite;
-    cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  height: 20px;
+  width: 41px;
+  transform: rotate(180deg) translateX(-50%);
+  animation: homeChevronBounce 2s linear 0s infinite;
+  cursor: pointer;
 }
 
 main section.home .chevron span {
-    width: 24px;
+  width: 24px;
 }
 
 @keyframes homeChevronBounce {
-    0% {
-        transform: translateY(0%) rotate(180deg) translateX(50%);
-    }
-    25% {
-        transform: translateY(-30%) rotate(180deg) translateX(50%);
-    }
-    75% {
-        transform: translateY(30%) rotate(180deg) translateX(50%);
-    }
-    100% {
-        transform: translateY(0%) rotate(180deg) translateX(50%);
-    }
+  0% {
+    transform: translateY(0%) rotate(180deg) translateX(50%);
+  }
+  25% {
+    transform: translateY(-30%) rotate(180deg) translateX(50%);
+  }
+  75% {
+    transform: translateY(30%) rotate(180deg) translateX(50%);
+  }
+  100% {
+    transform: translateY(0%) rotate(180deg) translateX(50%);
+  }
 }
 
 @media only screen and (max-width: 1152px) {
-    main section.home .overlay .caption {
-        width: 100%;
-    }
-    main section.home .overlay {
-        background: linear-gradient(to top, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.8));
-    }
+  main section.home .overlay .caption {
+    width: 100%;
+  }
+  main section.home .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.8)
+    );
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    main section.home .overlay .caption h1 {
-        font-size: 55px;
-    }
-    main section.home .overlay .caption h3 {
-        font-size: 25px;
-    }
+  main section.home .overlay .caption h1 {
+    font-size: 55px;
+  }
+  main section.home .overlay .caption h3 {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    main section.home .overlay .caption h1 {
-        font-size: 45px;
-    }
-    main section.home .overlay .caption h3 {
-        font-size: 20px;
-    }
+  main section.home .overlay .caption h1 {
+    font-size: 45px;
+  }
+  main section.home .overlay .caption h3 {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    main section.home .overlay .caption h1 {
-        font-size: 35px;
-    }
+  main section.home .overlay .caption h1 {
+    font-size: 35px;
+  }
 }
 
 /*footer*/
 
 footer {
-    display: grid;
-    grid-template-columns: 304px 1fr 304px;
-    background-color: var(--text-grey-light);
-    padding: 40px 168px;
+  display: grid;
+  grid-template-columns: 304px 1fr 304px;
+  background-color: var(--text-grey-light);
+  padding: 40px 168px;
 }
 
 footer section:nth-child(2) {
-    text-align: center;
+  text-align: center;
 }
 
 footer section:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 footer section:last-child .icon {
-    display: inline-block;
-    padding-left: 20px;
-    font-size: 30px;
-    vertical-align: top;
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 30px;
+  vertical-align: top;
 }
 
 footer section:last-child .icon:first-of-type {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 @media only screen and (max-width: 1440px) {
-    footer {
-        padding: 40px 80px;
-    }
+  footer {
+    padding: 40px 80px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    footer {
-        padding: 40px;
-    }
+  footer {
+    padding: 40px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    footer {
-        grid-template-columns: 304px 1fr 1fr;
-    }
+  footer {
+    grid-template-columns: 304px 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    footer {
-        grid-template-columns: 1fr;
-        padding: 20px 40px;
-    }
-    footer section, footer section:nth-child(2), footer section:last-child {
-        text-align: center;
-        padding: 20px 0px;
-    }
+  footer {
+    grid-template-columns: 1fr;
+    padding: 20px 40px;
+  }
+  footer section,
+  footer section:nth-child(2),
+  footer section:last-child {
+    text-align: center;
+    padding: 20px 0px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    footer {
-        padding: 20px 25px;
-    }
+  footer {
+    padding: 20px 25px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    footer section, footer section:nth-child(2), footer section:last-child {
-        padding: 15px 0px;
-    }
+  footer section,
+  footer section:nth-child(2),
+  footer section:last-child {
+    padding: 15px 0px;
+  }
 }
 
 /*slider*/
 
 .slider {
-    display: flex;
-    position: relative;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .slider .slide {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 1s;
-    background-size: cover;
-    background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  background-size: cover;
+  background-position: center;
 }
 
 .slider .slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .sliderDots span {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    background-color: var(--text-blue);
-    border: 4px solid var(--text-blue);
-    border-radius: 50%;
-    margin-left: 10px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: var(--text-blue);
+  border: 4px solid var(--text-blue);
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: background-color 0.3s;
 }
 
 .sliderDots span.active {
-    background-color: var(--background-white);
+  background-color: var(--background-white);
 }
 
 .sliderDots span:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .sliderDots span:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*Iconset*/
 
 .iconSet {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
 }
 
 .iconSet.detail {
-    margin: 40px -80px 0px -80px;
-    width: initial;
+  margin: 40px -80px 0px -80px;
+  width: initial;
 }
 
 .iconSet label {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .iconSet label .icon {
-    display: inline-block;
-    width: 100%;
-    font-size: 50px;
-    padding-bottom: 14px;
-    color: var(--text-grey-dark);
+  display: inline-block;
+  width: 100%;
+  font-size: 50px;
+  padding-bottom: 14px;
+  color: var(--text-grey-dark);
 }
 
 .iconSet label h2 {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
 .iconSet label ul {
-    margin-top: 40px;
-    text-align: left;
-    margin-right: 75px;
+  margin-top: 40px;
+  text-align: left;
+  margin-right: 75px;
 }
 
 .iconSet label ul:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 @media only screen and (max-width: 1440px) {
-    .iconSet.detail {
-        margin: 40px -60px 0px -60px;
-        width: initial;
-    }
+  .iconSet.detail {
+    margin: 40px -60px 0px -60px;
+    width: initial;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
-    .iconSet.detail {
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin: 40px 0px 0px 0px;
-    }
-    .iconSet.detail label:last-of-type {
-        grid-row-start: 3;
-        grid-column: 1 / 3;
-    }
+  .iconSet.detail {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 40px 0px 0px 0px;
+  }
+  .iconSet.detail label:last-of-type {
+    grid-row-start: 3;
+    grid-column: 1 / 3;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-    .iconSet.detail {
-        grid-template-columns: 1fr;
-    }
-    .iconSet.detail label:last-of-type {
-        grid-row-start: initial;
-        grid-column: initial;
-    }
+  .iconSet.detail {
+    grid-template-columns: 1fr;
+  }
+  .iconSet.detail label:last-of-type {
+    grid-row-start: initial;
+    grid-column: initial;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .iconSet {
-        margin: 0px -40px 0px -40px;
-        width: calc(100% + 80px);
-    }
+  .iconSet {
+    margin: 0px -40px 0px -40px;
+    width: calc(100% + 80px);
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    .iconSet {
-        margin: 0px -25px 0px -25px;
-        width: calc(100% + 50px);
-    }
-    .iconSet label .icon {
-        font-size: 35px;
-    }
-    .iconSet.detail {
-        margin-top: 10px;
-    }
+  .iconSet {
+    margin: 0px -25px 0px -25px;
+    width: calc(100% + 50px);
+  }
+  .iconSet label .icon {
+    font-size: 35px;
+  }
+  .iconSet.detail {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .iconSet label .icon {
-        font-size: 30px;
-    }
-    .iconSet label h2 {
-        font-size: 20px;
-    }
-    .iconSet label ul {
-        margin-top: 40px;
-        text-align: left;
-        margin-right: 40px;
-    }
-    .iconSet.detail label {
-        justify-content: initial;
-    }
+  .iconSet label .icon {
+    font-size: 30px;
+  }
+  .iconSet label h2 {
+    font-size: 20px;
+  }
+  .iconSet label ul {
+    margin-top: 40px;
+    text-align: left;
+    margin-right: 40px;
+  }
+  .iconSet.detail label {
+    justify-content: initial;
+  }
 }
 
 /*itemList*/
 
 .itemList {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
 }
 
 .itemList .item {
-    position: relative;
-    height: 268px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 2px var(--light-shadow);
-    background-color: var(--background-white);
-    display: grid;
-    grid-template-rows: 1fr 60px;
-    transition: all 0.3s;
+  position: relative;
+  height: 268px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px var(--light-shadow);
+  background-color: var(--background-white);
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  transition: all 0.3s;
 }
 
 .itemList .item:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .itemList .item .tumbnail {
-    height: 100%;
-    width: 100%;
-    max-width: initial;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px 10px 0px 0px;
-    opacity: 1;
-    transition: opacity 0.3s;
-    cursor: pointer;
+  height: 100%;
+  width: 100%;
+  max-width: initial;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  cursor: pointer;
 }
 
 .itemList .item:hover .tumbnail {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .itemList .item .title {
-    line-height: 60px;
-    padding: 0px 20px;
-    opacity: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
+  line-height: 60px;
+  padding: 0px 20px;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .itemList .item .title .icon {
-    padding-right: 20px;
-    vertical-align: top;
+  padding-right: 20px;
+  vertical-align: top;
 }
 
 .itemList .item.opened {
-    grid-column: 1 / 5;
-    height: calc(var(--vh, 1vh) * 100 - 184px);
-    overflow: hidden;
-    box-shadow: 0px 0px 15px var(--shadow-input);
-    border: 1px solid var(--text-grey-light);
+  grid-column: 1 / 5;
+  height: calc(var(--vh, 1vh) * 100 - 184px);
+  overflow: hidden;
+  box-shadow: 0px 0px 15px var(--shadow-input);
+  border: 1px solid var(--text-grey-light);
 }
 
-.itemList .item.opened .tumbnail, .itemList .item.opened .title {
-    opacity: 0;
+.itemList .item.opened .tumbnail,
+.itemList .item.opened .title {
+  opacity: 0;
 }
 
 .itemList .item .contentControls {
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    padding: 10px;
-    background-color: var(--background-white);
-    transition: background-color 0.3s;
-    box-shadow: 0px 1px 2px var(--light-shadow);
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--background-white);
+  transition: background-color 0.3s;
+  box-shadow: 0px 1px 2px var(--light-shadow);
 }
 
 .itemList .item .contentControls:hover {
-    background-color: var(--background-grey-light);
+  background-color: var(--background-grey-light);
 }
 
 .itemList .item .content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
 }
 
 .itemList .item.opened .content {
-    display: block;
+  display: block;
 }
 
 .itemList .item.opened .contentControls {
-    display: block;
+  display: block;
 }
 
 .itemList .item.opened .content iframe {
-    height: 100%;
-    width: 100%;
-    max-width: initial;
-    border: none;
+  height: 100%;
+  width: 100%;
+  max-width: initial;
+  border: none;
 }
 
 @media only screen and (max-width: 1280px) {
-    .itemList {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .itemList .item.opened {
-        grid-column: 1 / 4;
-    }
+  .itemList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .itemList .item.opened {
+    grid-column: 1 / 4;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-    .itemList {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .itemList .item.opened {
-        grid-column: 1 / 3;
-    }
+  .itemList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .itemList .item.opened {
+    grid-column: 1 / 3;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .itemList .item .contentControls {
-        top: 10px;
-        right: 10px;
-    }
+  .itemList .item .contentControls {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    .itemList {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .itemList .item.opened {
-        grid-column: 1 / 2;
-        height: calc(var(--vh, 1vh) * 100 - 160px);
-    }
+  .itemList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .itemList .item.opened {
+    grid-column: 1 / 2;
+    height: calc(var(--vh, 1vh) * 100 - 160px);
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .itemList .item.opened {
-        height: calc(var(--vh, 1vh) * 100 - 140px);
-    }
+  .itemList .item.opened {
+    height: calc(var(--vh, 1vh) * 100 - 140px);
+  }
 }
 
 /*contentFilter*/
 
 .contentFilterWrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 main section .content .contentFilter {
-    height: 80px;
-    padding: 0px 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 1px 2px var(--light-shadow);
-    background-color: var(--background-white);
-    max-width: initial;
+  height: 80px;
+  padding: 0px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px var(--light-shadow);
+  background-color: var(--background-white);
+  max-width: initial;
 }
 
 .contentFilter form {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 40px;
-    max-width: initial;
-    align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 40px;
+  max-width: initial;
+  align-items: center;
 }
 
 .contentFilter form .button {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .contentFilter form select {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton {
-    display: none;
-    width: 100%;
+.contentFilterWrapper .mobileFilterButton,
+.contentFilterWrapper .mobileCloseFilterButton {
+  display: none;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1280px) {
-    .contentFilterWrapper {
-        grid-row: 2;
-        grid-column: 1 / 3;
-    }
-    main section .content .contentFilter {
-        width: calc(100% + 160px);
-        margin: 0px -80px -60px -80px;
-        padding: 0 80px;
-        border-radius: 0;
-        justify-content: flex-start;
-    }
+  .contentFilterWrapper {
+    grid-row: 2;
+    grid-column: 1 / 3;
+  }
+  main section .content .contentFilter {
+    width: calc(100% + 160px);
+    margin: 0px -80px -60px -80px;
+    padding: 0 80px;
+    border-radius: 0;
+    justify-content: flex-start;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    main section .content .contentFilter {
-        width: calc(100% + 80px);
-        margin: 0px -40px -60px -40px;
-        padding: 0 40px;
-    }
+  main section .content .contentFilter {
+    width: calc(100% + 80px);
+    margin: 0px -40px -60px -40px;
+    padding: 0 40px;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-    main section .overlay .contentFilterWrapper {
-        height: 80px;
-        margin: 0px -40px -60px -40px;
-        padding: 0px 40px;
-        grid-column: 1 / 2;
-        background-color: var(--background-white);
-        box-shadow: 0px 1px 2px var(--light-shadow);
-    }
-    main section .content .contentFilter {
-        position: fixed;
-        box-shadow: none;
-        height: 0;
-        transition: all 0.3s;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin: 0;
-        overflow: auto;
-        background-color: var(--background-grey-light);
-        justify-content: center;
-        align-items: start;
-        z-index: 90;
-        overflow: hidden;
-        padding: 40px;
-        opacity: 0;
-        pointer-events: none;
-    }
-    .contentFilterWrapper .mobileFilterButton, .contentFilterWrapper .mobileCloseFilterButton {
-        display: inline-block;
-        text-align: center;
-    }
-    .contentFilter form {
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: 1fr;
-        grid-gap: 17px;
-        margin-bottom: 40px;
-        opacity: 0;
-        pointer-events: all;
-        width: 100%;
-    }
-    main section .content .contentFilter.active {
-        height: calc(100vh - 106px);
-        top: 106px;
-        bottom: 0;
-        opacity: 1;
-        pointer-events: all;
-        overflow: auto;
-    }
-    .contentFilter.active form {
-        opacity: 1;
-        pointer-events: all;
-    }
-    .contentFilter form .button {
-        text-align: center;
-        margin-top: 23px;
-    }
-    .contentFilter .buttonTextInput input[type="text"] {
-        max-width: initial;
-    }
+  main section .overlay .contentFilterWrapper {
+    height: 80px;
+    margin: 0px -40px -60px -40px;
+    padding: 0px 40px;
+    grid-column: 1 / 2;
+    background-color: var(--background-white);
+    box-shadow: 0px 1px 2px var(--light-shadow);
+  }
+  main section .content .contentFilter {
+    position: fixed;
+    box-shadow: none;
+    height: 0;
+    transition: all 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+    background-color: var(--background-grey-light);
+    justify-content: center;
+    align-items: start;
+    z-index: 90;
+    overflow: hidden;
+    padding: 40px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .contentFilterWrapper .mobileFilterButton,
+  .contentFilterWrapper .mobileCloseFilterButton {
+    display: inline-block;
+    text-align: center;
+  }
+  .contentFilter form {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-gap: 17px;
+    margin-bottom: 40px;
+    opacity: 0;
+    pointer-events: all;
+    width: 100%;
+  }
+  main section .content .contentFilter.active {
+    height: calc(100vh - 106px);
+    top: 106px;
+    bottom: 0;
+    opacity: 1;
+    pointer-events: all;
+    overflow: auto;
+  }
+  .contentFilter.active form {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .contentFilter form .button {
+    text-align: center;
+    margin-top: 23px;
+  }
+  .contentFilter .buttonTextInput input[type="text"] {
+    max-width: initial;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    main section .overlay .contentFilterWrapper {
-        height: 60px;
-        margin: 0px -25px -40px -25px;
-        padding: 0 25px;
-    }
+  main section .overlay .contentFilterWrapper {
+    height: 60px;
+    margin: 0px -25px -40px -25px;
+    padding: 0 25px;
+  }
 
-    main section .content .contentFilter {
-        padding: 0px 25px;
-        height: 36px;
-    }
-    main section .content .contentFilter.active {
-        height: calc(100vh - 80px);
-        top: 80px;
-        padding: 40px 25px;
-    }
+  main section .content .contentFilter {
+    padding: 0px 25px;
+    height: 36px;
+  }
+  main section .content .contentFilter.active {
+    height: calc(100vh - 80px);
+    top: 80px;
+    padding: 40px 25px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    main section .content .contentFilter.active {
-        height: calc(100vh - 60px);
-        top: 60px;
-        padding: 40px 25px;
-    }
+  main section .content .contentFilter.active {
+    height: calc(100vh - 60px);
+    top: 60px;
+    padding: 40px 25px;
+  }
 }
 
 /*itemPaging*/
 
 .itemPaging {
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    width: 100%;
-    margin-top: 80px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 1px 2px var(--light-shadow);
-    padding: 20px;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  width: 100%;
+  margin-top: 80px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px var(--light-shadow);
+  padding: 20px;
 }
 
 .itemPaging:first-child {
-    margin-top: 0;
-    margin-bottom: 80px;
+  margin-top: 0;
+  margin-bottom: 80px;
 }
 
 .itemPaging .button {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .itemPaging .button:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .itemPaging .pageSize label {
-    padding-right: 20px;
-    line-height: 38px;
+  padding-right: 20px;
+  line-height: 38px;
 }
 
 .itemPaging form {
-    float: right;
+  float: right;
 }
 
 .itemPaging form select {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 640px) {
-    .itemPaging {
-        margin-top: 50px;
-    }
-    .itemPaging .button:nth-child(2) {
-        display: none;
-    }
-    .itemPaging .pageSize label {
-        display: none;
-    }
+  .itemPaging {
+    margin-top: 50px;
+  }
+  .itemPaging .button:nth-child(2) {
+    display: none;
+  }
+  .itemPaging .pageSize label {
+    display: none;
+  }
 }
 
 /*button*/
 
 .button {
-    display: inline-block;
-    padding: 1px 20px 4px 20px;
-    background-color: var(--text-blue);
-    color: var(--background-white);
-    border-radius: 16px;
-    transition: background-color 0.3s;
-    cursor: pointer;
+  display: inline-block;
+  padding: 1px 20px 4px 20px;
+  background-color: var(--text-blue);
+  color: var(--background-white);
+  border-radius: 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .button.hidden {
-    display: none;
+  display: none;
 }
 
-.button.round, .button.square {
-    height: 38px;
-    width: 38px;
-    text-align: center;
-    padding: 0;
-    line-height: 36px;
+.button.round,
+.button.square {
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  padding: 0;
+  line-height: 36px;
 }
 
 .button.square {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .button.round {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-.button.square .icon, .button.round .icon {
-    font-size: 28px;
-    line-height: 38px;
+.button.square .icon,
+.button.round .icon {
+  font-size: 28px;
+  line-height: 38px;
 }
 
 .button.blue {
-    background-color: var(--text-blue);
+  background-color: var(--text-blue);
 }
 
 .button.blue:hover {
-    background-color: var(--text-blue-dark);
+  background-color: var(--text-blue-dark);
 }
 
 .button.blue .chevron span {
-    background-color: var(--background-white);
+  background-color: var(--background-white);
 }
 
 .button.blue span {
-    color: var(--background-white);
+  color: var(--background-white);
 }
 
 .button.grey {
-    background-color: var(--background-grey-light);
-    color: var(--text-grey-normal);
+  background-color: var(--background-grey-light);
+  color: var(--text-grey-normal);
 }
 
 .button.grey:hover {
-    background-color: var(--background-grey-normal);
+  background-color: var(--background-grey-normal);
 }
 
 .button.transparent {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .button.transparent:hover {
-    background-color: var(--background-grey-light);
-    cursor: pointer;
+  background-color: var(--background-grey-light);
+  cursor: pointer;
 }
 
 .button.transparent.blue {
-    color: var(--text-blue);
+  color: var(--text-blue);
 }
 
-.button .chevron.left, .button .chevron.right {
-    margin-bottom: 3px;
+.button .chevron.left,
+.button .chevron.right {
+  margin-bottom: 3px;
 }
 
 .button .chevron.down {
-    margin-bottom: 5px;
-    margin-left: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .button .chevron.left {
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
 .button .chevron.right {
-    margin-right: 3px;
+  margin-right: 3px;
 }
 
 @media only screen and (max-width: 640px) {
-    .button {
-        width: 100%;
-        text-align: center;
-        padding: 3px 20px 6px 20px;
-        border-radius: 18px;
-    }
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 3px 20px 6px 20px;
+    border-radius: 18px;
+  }
 }
 
 /*button text input*/
 
 .buttonTextInput {
-    display: grid;
-    grid-template-columns: 1fr 24px;
-    align-items: center;
-    background-color: var(--background-grey-light);
-    border: 1px solid var(--background-grey-normal);
-    padding: 0px 20px;
-    border-radius: 40px;
-    transition: all 0.3s;
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  align-items: center;
+  background-color: var(--background-grey-light);
+  border: 1px solid var(--background-grey-normal);
+  padding: 0px 20px;
+  border-radius: 40px;
+  transition: all 0.3s;
 }
 
 .buttonTextInput:focus-within {
-    box-shadow: 0px 0px 15px var(--shadow-input);
-    border: 1px solid var(--text-grey-light);
+  box-shadow: 0px 0px 15px var(--shadow-input);
+  border: 1px solid var(--text-grey-light);
 }
 
 .buttonTextInput input[type="text"] {
-    background: none;
-    border: none;
-    outline: none;
-    max-width: 110px;
-    margin-bottom: 0;
-    padding: 3px 0px 6px 0px;
-    transition: max-width 0.3s;
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 110px;
+  margin-bottom: 0;
+  padding: 3px 0px 6px 0px;
+  transition: max-width 0.3s;
 }
 
 .buttonTextInput input[type="text"]:focus {
-    max-width: 150px;
-    box-shadow: none;
+  max-width: 150px;
+  box-shadow: none;
 }
 
 .buttonTextInput .icon {
-    font-size: 18px;
-    height: 36px;
-    line-height: 36px;
-    width: 44px;
-    margin-right: -20px;
-    text-align: center;
-    border-radius: 0px 18px 18px 0px;
-    transition: all 0.3s;
-    cursor: pointer;
+  font-size: 18px;
+  height: 36px;
+  line-height: 36px;
+  width: 44px;
+  margin-right: -20px;
+  text-align: center;
+  border-radius: 0px 18px 18px 0px;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .buttonTextInput .icon:hover {
-    background-color: var(--text-blue);
-    color: var(--background-white);
+  background-color: var(--text-blue);
+  color: var(--background-white);
 }
 
 .buttonTextInput.larger input[type="text"] {
-    max-width: 140px;
+  max-width: 140px;
 }
 
 .buttonTextInput.larger input[type="text"]:focus {
-    max-width: 200px;
-    box-shadow: none;
+  max-width: 200px;
+  box-shadow: none;
 }
 
-main section:nth-child(even) .buttonTextInput, .contentFilter.active form .buttonTextInput, .contentFilter.active form input, .contentFilter.active form select {
-    background-color: var(--background-grey-lightest);
+main section:nth-child(even) .buttonTextInput,
+.contentFilter.active form .buttonTextInput,
+.contentFilter.active form input,
+.contentFilter.active form select {
+  background-color: var(--background-grey-lightest);
 }
 
 /*hamburgerbutton*/
 
 .hamburgerButton {
-    display: inline-block;
-    position: relative;
-    height: 30px;
-    width: 35px;
-    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 35px;
+  cursor: pointer;
 }
 
 .hamburgerButton span {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: var(--text-grey-normal);
-    height: 3px;
-    width: 35px;
-    border-radius: 2px;
-    transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--text-grey-normal);
+  height: 3px;
+  width: 35px;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
 
 .hamburgerButton span:first-of-type {
-    top: 0;
+  top: 0;
 }
 
 .hamburgerButton span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
 }
 
 .hamburgerButton span:nth-child(3) {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hamburgerButton span:last-of-type {
-    bottom: 0;
+  bottom: 0;
 }
 
 .hamburgerButton.clicked span:first-of-type {
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
 }
 
 .hamburgerButton.clicked span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-    opacity: 1;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  opacity: 1;
 }
 
 .hamburgerButton.clicked span:nth-child(3) {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .hamburgerButton.clicked span:last-of-type {
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
 }
 
 @media only screen and (max-width: 480px) {
-    .hamburgerButton {
-        height: 25px;
-        width: 30px;
-    }
-    .hamburgerButton span {
-        width: 30px;
-    }
+  .hamburgerButton {
+    height: 25px;
+    width: 30px;
+  }
+  .hamburgerButton span {
+    width: 30px;
+  }
 }
 
 /*chevron*/
 
 .chevron {
-    display: inline-block;
-    position: relative;
-    height: 8px;
-    width: 16px;
+  display: inline-block;
+  position: relative;
+  height: 8px;
+  width: 16px;
 }
 
 .chevron span {
-    position: absolute;
-    background-color: var(--text-grey-normal);
-    height: 2px;
-    width: 10px;
-    border-radius: 1px;
-    transition: all 0.4s;
+  position: absolute;
+  background-color: var(--text-grey-normal);
+  height: 2px;
+  width: 10px;
+  border-radius: 1px;
+  transition: all 0.4s;
 }
 
 .chevron.left {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .chevron.right {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .chevron.down {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .chevron span:first-of-type {
-    left: 0;
-    transform: rotate(-45deg);
+  left: 0;
+  transform: rotate(-45deg);
 }
 
 .chevron span:last-of-type {
-    right: 0;
-    transform: rotate(45deg);
+  right: 0;
+  transform: rotate(45deg);
 }
 
 /*cross*/
 
 .cross {
-    display: inline-block;
-    position: relative;
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 
 .cross span {
-    height: 2px;
-    width: 27px;
-    background-color: var(--text-grey-normal);
-    border-radius: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  height: 2px;
+  width: 27px;
+  background-color: var(--text-grey-normal);
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .cross span:first-of-type {
-    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
 }
 
 .cross span:last-of-type {
-    transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
 }
 
 /*input*/
 
-input[type="text"], input[type="email"], textarea, select {
-    padding: 3px 20px 6px 20px;
-    background-color: var(--background-grey-light);
-    border: 1px solid var(--background-grey-normal);
-    border-radius: 4px;
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  padding: 3px 20px 6px 20px;
+  background-color: var(--background-grey-light);
+  border: 1px solid var(--background-grey-normal);
+  border-radius: 4px;
 }
 
-input[type="text"], input[type="email"], textarea {
-    -webkit-appearance: none;
+input[type="text"],
+input[type="email"],
+textarea {
+  -webkit-appearance: none;
 }
 
-input::placeholder, input[type="email"]::placeholder, textarea::placeholder {
-    color: var(--text-grey-light);
+input::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: var(--text-grey-light);
 }
 
 textarea {
-    min-height: 172px;
-    resize: vertical;
+  min-height: 172px;
+  resize: vertical;
 }
 
 select.placeHolder {
-    color: var(--text-grey-light);
+  color: var(--text-grey-light);
 }
 
 select option {
-    color: var(--text-grey-normal);
+  color: var(--text-grey-normal);
 }
 
 /*form*/
 
 form {
-    max-width: 672px;
+  max-width: 672px;
 }
 
-form input, form textarea, form select {
-    width: 100%;
-    margin-bottom: 17px;
-    outline: none;
-    transition: box-shadow 0.3s;
+form input,
+form textarea,
+form select {
+  width: 100%;
+  margin-bottom: 17px;
+  outline: none;
+  transition: box-shadow 0.3s;
 }
 
-form input:focus, form textarea:focus, form select:focus {
-    box-shadow: 0px 0px 15px var(--shadow-input);
-    border: 1px solid var(--text-grey-light);
+form input:focus,
+form textarea:focus,
+form select:focus {
+  box-shadow: 0px 0px 15px var(--shadow-input);
+  border: 1px solid var(--text-grey-light);
 }
 
 form .button {
-    margin-top: 27px;
+  margin-top: 27px;
 }
 
 .formStatus {
-    display: block;
-    padding: 4px 20px 7px 20px;
-    background-color: var(--text-blue);
-    color: var(--background-white);
-    border-radius: 4px;
-    transition: all 0.3s;
-    cursor: pointer;
-    margin-bottom: 40px;
-    width: 100%;
+  display: block;
+  padding: 4px 20px 7px 20px;
+  background-color: var(--text-blue);
+  color: var(--background-white);
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .formStatus.hidden {
-    margin-bottom: 0;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
+  margin-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
 .formStatus.fail {
-    background-color: var(--text-orange);
+  background-color: var(--text-orange);
 }
 
 .formStatus.succes {
-    background-color: var(--text-green);
+  background-color: var(--text-green);
 }
 
 /*font*/
 
 @font-face {
-    font-family: SegoeUI;
-    font-weight: 400;
-    src: url(/src/font/SegoeUI/Regular.woff);
+  font-family: SegoeUI;
+  font-weight: 400;
+  src: url(/src/font/SegoeUI/Regular.woff);
 }
 
 @font-face {
-    font-family: SegoeUI;
-    font-weight: 100;
-    src: url(/src/font/SegoeUI/Light.woff);
+  font-family: SegoeUI;
+  font-weight: 100;
+  src: url(/src/font/SegoeUI/Light.woff);
 }
 
 @font-face {
-    font-family: Icons;
-    src: url(/src/font/Icons.woff);
+  font-family: Icons;
+  src: url(/src/font/Icons.woff);
 }
