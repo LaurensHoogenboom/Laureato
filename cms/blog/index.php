@@ -4,6 +4,8 @@
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/cms/header.php"; 
 ?>
 
+<script src="/src/js/cms/blog.js"></script>
+
 <div class="section-toolbar">
     <section class="right">
         
@@ -18,6 +20,14 @@
     <section class="left">
 
     </section>
+</div>
+
+<script>
+    getBlogItems(buildBlogList)
+</script>
+
+<div id="blog-list" class="item-list">
+    
 </div>
 
 <div class="dialog hidden" id="add-blog-post">

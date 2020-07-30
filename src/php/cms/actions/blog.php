@@ -18,7 +18,7 @@
         }
 
         if ($action == 'get') {
-            $result = $db->query("SELECT * FROM portfolioitems");
+            $result = $db->query("SELECT * FROM blogs");
 
             $portfolioItems = array();
 

@@ -19,7 +19,7 @@
   --text-blue-dark: rgb(30, 102, 188);
   --text-green: rgb(13, 129, 54);
   --text-orange: rgb(251, 86, 7);
-  --shadow-input: rgba(0, 0, 0, 0.1);
+  --shadow-input: rgba(0, 0, 0, 0.16);
   --shadow-nav: rgba(0, 0, 0, 0.03);
   --light-shadow: rgba(226, 226, 226);
 }
@@ -289,7 +289,9 @@ nav a span {
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
+  background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(250, 250, 250));
 }
+
 
 .section-toolbar {
   display: grid;
@@ -304,7 +306,7 @@ nav a span {
   border-top: 1px solid var(--background-grey-normal);
   margin: -40px -40px 40px -40px;
   background-color: var(--background-grey-lightest);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 20px var(--shadow-nav);
   padding: 0px 40px;
 }
 
@@ -365,6 +367,39 @@ nav a span {
 
 .dialog .actions .button {
   margin-left: 20px;
+}
+
+/*item-list*/
+
+.item-list {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.item-list .item {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  background-color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px var(--shadow-input);
+  transition: background-color 0.2s;
+  grid-gap: 20px;
+}
+
+.item-list .item:hover {
+  background-color: var(--background-grey-lightest);
+}
+
+.item-list .item .title {
+  font-weight: bold;
+}
+
+/*list-item-types*/
+
+.item-list .item.blog {
+  grid-template-columns: max-content minmax(200px, 1fr) minmax(0, 200px) minmax(0, 200px);
 }
 
 /*button*/
@@ -710,6 +745,39 @@ select.placeHolder {
 
 select option {
   color: var(--text-grey-normal);
+}
+
+/*checkbox*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]+label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"]+label::before {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  background-color: var(--background-grey-light);
+  border-radius: 10px;
+  border: 1px solid var(--background-grey-normal);
+  transition: all 0.2s;
+  font-family: CMS-icons;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked+label::before {
+  background-color: var(--text-green);
+  content: '\e906';
+  color: white;
 }
 
 /*form*/

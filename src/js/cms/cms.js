@@ -1,3 +1,5 @@
+//login logout
+
 $(document).on('submit', '#loginForm', function(e) {
     e.preventDefault()
 
@@ -36,6 +38,8 @@ $(document).on('submit', '#logout', function(e) {
         }
     });
 })
+
+//form status
 
 const updateFormStatus = {
     notify: (form, message) => {
@@ -157,5 +161,17 @@ $(document).ready(function() {
     });
     
     $("select").change();
+})
+
+//select item in list
+
+$(document).on('click', '.item-list .item', function() {
+    let checkbox = $(this).find('.actions input[type="checkbox"]')
+
+    if (checkbox.is(':checked')) {
+        $(checkbox).prop( "checked", false )
+    } else {
+        $(checkbox).prop( "checked", true )
+    }
 })
 
