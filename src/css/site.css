@@ -256,7 +256,7 @@ nav .navButton {
   align-items: center;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px), (max-height: 800px) {
   nav {
     padding: 23px 80px;
   }
@@ -566,7 +566,7 @@ main section.contentList .overlay {
   );
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px), (max-height: 800px) {
   main section .overlay {
     padding: 80px;
   }
@@ -850,7 +850,7 @@ footer section:last-child .icon:first-of-type {
   padding-left: 0;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px), (max-height: 800px) {
   footer {
     padding: 40px 80px;
   }
@@ -989,7 +989,7 @@ footer section:last-child .icon:first-of-type {
   margin-right: 0;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1440px), (max-height: 800px) {
   .iconSet.detail {
     margin: 40px -60px 0px -60px;
     width: initial;
