@@ -65,6 +65,7 @@ h3 {
   h1 {
     font-size: 45px;
   }
+
   h2 {
     font-size: 35px;
   }
@@ -74,12 +75,14 @@ h3 {
   h1 {
     font-size: 35px;
   }
+
   h2 {
     font-size: 25px;
   }
 }
 
 @media only screen and (max-width: 480px) {
+
   p,
   a,
   label,
@@ -292,13 +295,14 @@ nav a span {
   background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(250, 250, 250));
 }
 
+/*toolbar*/
 
 .section-toolbar {
   display: grid;
   position: sticky;
   top: -40px;
   z-index: 20;
-  grid-template-columns: max-content 1fr max-content;
+  grid-template-columns: 1fr max-content 1fr;
   grid-gap: 40px;
   align-items: center;
   width: calc(100% + 80px);
@@ -319,7 +323,33 @@ nav a span {
 }
 
 .section-toolbar .right {
-  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*action group*/
+
+.action-group {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.action-group.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.action-group .button,
+.action-group .button.square {
+  border-radius: 0;
+  border-right: 1px solid var(--background-grey-normal);
+}
+
+.action-group .button:last-child,
+.action-group .button.square:last-child {
+  border-right: none;
 }
 
 /*dialog*/
@@ -384,8 +414,17 @@ nav a span {
   padding: 10px 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 2px var(--shadow-input);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, height 0.2s, opacity 0.2s, padding 0.2s;
   grid-gap: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item-list .item.hidden {
+  height: 0;
+  opacity: 0;
+  margin-top: -20px;
+  padding: 0 40px;
 }
 
 .item-list .item:hover {
@@ -634,6 +673,7 @@ nav a span {
     height: 25px;
     width: 30px;
   }
+
   .hamburgerButton span {
     width: 30px;
   }

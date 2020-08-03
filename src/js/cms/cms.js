@@ -1,6 +1,6 @@
 //login logout
 
-$(document).on('submit', '#loginForm', function(e) {
+$(document).on('submit', '#loginForm', function (e) {
     e.preventDefault()
 
     let form = $(this)
@@ -11,7 +11,7 @@ $(document).on('submit', '#loginForm', function(e) {
         type: "POST",
         url: '/src/php/cms/login.php',
         data: form.serialize(),
-        success: function(response) {
+        success: function (response) {
             if (response === "OK") {
                 window.location.href = "/cms/home";
             } else if (response === "WRONG_PASSWORD") {
@@ -23,13 +23,13 @@ $(document).on('submit', '#loginForm', function(e) {
     });
 })
 
-$(document).on('submit', '#logout', function(e) {
+$(document).on('submit', '#logout', function (e) {
     e.preventDefault()
 
     $.ajax({
         type: "POST",
         url: '/src/php/cms/logout.php',
-        success: function(response) {
+        success: function (response) {
             console.log(response)
 
             if (response === "OK") {
@@ -87,13 +87,13 @@ $(document).ready(function () {
 
 //button actions
 
-$(document).on('click', 'label.button', function() {
+$(document).on('click', 'label.button', function () {
     let action = $(this).data('action')
 
     if (action === "open-dialog") {
         let dialogName = $(this).data('action-context')
 
-        $('.dialog').each(function() {
+        $('.dialog').each(function () {
             let name = $(this).attr('id')
 
             if (name === dialogName) {
@@ -103,31 +103,61 @@ $(document).on('click', 'label.button', function() {
     } else if (action === "close-dialog") {
         let dialogName = $(this).data('action-context')
 
-        $('.dialog').each(function() {
+        $('.dialog').each(function () {
             let name = $(this).attr('id')
 
             if (name === dialogName) {
                 $(this).addClass('hidden')
             }
         })
+    } else if (action === "select-all") {
+        let itemList = $(this).data('action-context')
+        let itemListId = `#${itemList}`
+        let actionGroupId = `#${$(itemList).data('action-group')}`
+
+        $(itemListId).find('.item').each(function () {
+            $(this).find('.actions input[type="checkbox"]').prop('checked', true)
+        })
+
+        actionGroup.show(actionGroupId)
+
+        $(this).data('action', 'deselect-all')
+        $(this).removeClass('grey')
+        $(this).addClass('blue')
+    } else if (action === "deselect-all") {
+        let itemList = $(this).data('action-context')
+        let itemListId = `#${itemList}`
+        let actionGroupId = `#${$(itemListId).data('action-group')}`
+
+        $(itemListId).find('.item').each(function () {
+            $(this).find('.actions input[type="checkbox"]').prop('checked', false)
+        })
+
+        actionGroup.hide(actionGroupId)
+
+        $(this).data('action', 'select-all')
+        $(this).addClass('grey')
+        $(this).removeClass('blue')
     }
 })
 
 //select possible new option
 
-$(document).on('change', '.possible-new-select', function() {
+$(document).on('change', '.possible-new-select', function () {
     let value = $(this).val()
     let name = $(this).attr('id')
 
     if (value === "new-option") {
         let valueLabel = $(this).attr('name')
 
-        $('.possible-new-input').each(function() {
+        $('.possible-new-input').each(function () {
             let inputName = $(this).attr('id')
-            
+
             if (name === inputName) {
-                $(this).attr('name', valueLabel)
-                $(this).removeClass('hidden')
+                if ($(this).hasClass('hidden')) {
+                    $(this).attr('name', valueLabel)
+                    $(this).removeClass('hidden')
+                }
             }
         })
 
@@ -135,13 +165,15 @@ $(document).on('change', '.possible-new-select', function() {
     } else {
         let valueLabel
 
-        $('.possible-new-input').each(function() {
+        $('.possible-new-input').each(function () {
             let inputName = $(this).attr('id')
 
             if (name === inputName) {
-                $(this).addClass('hidden')
-                valueLabel = $(this).attr('name')
-                $(this).attr('name', '')
+                if (!$(this).hasClass('hidden')) {
+                    $(this).addClass('hidden')
+                    valueLabel = $(this).attr('name')
+                    $(this).attr('name', '')
+                }
             }
         })
 
@@ -151,7 +183,7 @@ $(document).on('change', '.possible-new-select', function() {
 
 //select highlight
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("select").change(function () {
         if ($(this).val() == "default") {
             $(this).addClass("placeHolder");
@@ -159,19 +191,49 @@ $(document).ready(function() {
             $(this).removeClass("placeHolder")
         }
     });
-    
+
     $("select").change();
 })
 
 //select item in list
 
-$(document).on('click', '.item-list .item', function() {
+$(document).on('click', '.item-list .item', function () {
     let checkbox = $(this).find('.actions input[type="checkbox"]')
+    let checkboxId = $(checkbox).attr('id')
+    let actionGroupId = `#${$(this).closest('.item-list').data('action-group')}`
+    let otherItemSelected = false
+
+    $(this).closest('.item-list').find('.item .actions input[type="checkbox"]:checked').each(function() {
+        if (checkboxId !== $(this).attr('id')) {
+            otherItemSelected = true
+        }
+    })
 
     if (checkbox.is(':checked')) {
-        $(checkbox).prop( "checked", false )
+        if (!otherItemSelected) {
+            actionGroup.hide(actionGroupId)
+        }
+
+        $(checkbox).prop("checked", false)
     } else {
-        $(checkbox).prop( "checked", true )
+        actionGroup.show(actionGroupId)
+        $(checkbox).prop("checked", true)
     }
 })
+
+//action group
+
+const actionGroup = {
+    toggle: (actionGroupId) => {
+        $(actionGroupId).toggleClass('hidden')
+    },
+    hide: (actionGroupId) => {
+        $(actionGroupId).addClass('hidden')
+    },
+    show: (actionGroupId) => {
+        $(actionGroupId).removeClass('hidden')
+    }
+}
+
+
 

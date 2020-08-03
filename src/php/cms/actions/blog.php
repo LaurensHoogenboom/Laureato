@@ -29,5 +29,12 @@
             header('Content-Type: application/json');
             echo json_encode($portfolioItems, JSON_PRETTY_PRINT);
         }
+
+        if ($action == 'delete') {
+            $id = $_POST['blogId'];
+
+            $db->query("DELETE FROM `blogs` WHERE `id` = '$id'")
+                    or die($db->error);
+        }
     }
 ?>
