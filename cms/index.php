@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PageXpress</title>
 
-    <link rel="stylesheet" type="text/css" href="/src/css/cms/cms.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/site.css">
 
     <script src="/src/js/jquery-min.js"></script>
     <script src="/src/js/cms/cms.js"></script>

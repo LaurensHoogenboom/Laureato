@@ -345,6 +345,9 @@ nav .navButton {
   nav .navMenu {
       height: 50px;
   }
+  nav .navMenu img {
+    max-height: 45px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -790,7 +793,17 @@ main section.home .chevron span {
   }
 }
 
+@media only screen and (max-height: 800px) {
+  main section.home {
+    height: calc(100vh - 80px);
+  }
+}
+
 @media only screen and (max-width: 640px) {
+  main section.home {
+    height: calc(100vh - 80px);
+  }
+
   main section.home .overlay .caption h1 {
     font-size: 45px;
   }
@@ -800,6 +813,10 @@ main section.home .chevron span {
 }
 
 @media only screen and (max-width: 480px) {
+  main section.home {
+    height: calc(100vh - 60px);
+  }
+
   main section.home .overlay .caption h1 {
     font-size: 35px;
   }
@@ -1714,6 +1731,7 @@ main section:nth-child(even) .buttonTextInput,
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea,
 select {
   padding: 3px 20px 6px 20px;
@@ -1724,12 +1742,14 @@ select {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
   -webkit-appearance: none;
 }
 
 input::placeholder,
 input[type="email"]::placeholder,
+input[type="password"]::placeholder,
 textarea::placeholder {
   color: var(--text-grey-light);
 }
@@ -1798,6 +1818,44 @@ form .button {
 
 .formStatus.succes {
   background-color: var(--text-green);
+}
+
+/*login*/
+
+.loginWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--background-white);
+  overflow-y: auto;
+}
+
+.loginWrapper form {
+  padding: 40px;
+  border-radius: 4px;
+  background-color: var(--background-grey-lightest);
+}
+
+.loginWrapper .formTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.loginWrapper .formTitle img {
+  max-width: 100%;
+  max-height: 70px;
+}
+
+.loginWrapper form .button {
+  float: right;
+}
+
+.loginWrapper form .button.blue {
+  margin-left: 40px;
 }
 
 /*font*/

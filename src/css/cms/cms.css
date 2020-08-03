@@ -181,44 +181,6 @@ article .button:last-child {
   display: none;
 }
 
-/*login*/
-
-.loginWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: var(--background-white);
-  overflow-y: auto;
-}
-
-.loginWrapper form {
-  padding: 40px;
-  border-radius: 4px;
-  background-color: var(--background-grey-lightest);
-}
-
-.loginWrapper .formTitle {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.loginWrapper .formTitle img {
-  max-width: 100%;
-  max-height: 70px;
-}
-
-.loginWrapper form .button {
-  float: right;
-}
-
-.loginWrapper form .button.blue {
-  margin-left: 40px;
-}
-
 /*layout*/
 
 header {
