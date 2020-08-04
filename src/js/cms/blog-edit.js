@@ -12,25 +12,36 @@ let editor
 const url_string = window.location.href
 const url = new URL(url_string)
 const blogId = url.searchParams.get("id").trim()
-const blogTitle = url.searchParams.get("itemTitle")
 
 //get the blog items
 
-getBlogItems(loadEditor, { id: blogId })
+getBlogItems(initialize, { id: blogId })
 
-function loadEditor(blogItems) {
-    //get the content of the right blog item
-    let contentToEdit;
+//get the blog item to edit
 
-    for (const blog of blogItems) {
-        if (blog.id === blogId) {
-            contentToEdit = JSON.parse(blog.content)
+let blog
+
+function initialize(blogs) {
+    for (const item of blogs) {
+        if (item.id === blogId) {
+            blog = item
             break
         }
     }
 
-    //initialize the editor
+    setEditorWrapper(blog)
+    loadEditor(JSON.parse(blog.content))
+}
 
+//set the wrapper content
+
+function setEditorWrapper(blog) {
+    $('#blogTitle').html(`<b>${blog.title}</b> - ${blog.category}`)
+}
+
+//load editor.js
+
+function loadEditor(contentToEdit) {
     editor = new EditorJS({
         holder: 'blog-editor',
 

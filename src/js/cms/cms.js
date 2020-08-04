@@ -71,14 +71,15 @@ const updateFormStatus = {
 //highlight the current nav item
 
 $(document).ready(function () {
-    var current = location.pathname;
-    if (current == "/") {
+    var currentMainSection = location.pathname.split('/')[2];
+
+    if (currentMainSection == "/") {
         $('nav .pages a').first().addClass('current');
     } else {
         $('nav .pages a').each(function () {
             var $this = $(this);
             // if the current path is like this link, make it active
-            if ($this.attr('href').indexOf(current) !== -1) {
+            if ($this.attr('href').indexOf(currentMainSection) !== -1) {
                 $this.addClass('current');
             }
         })
@@ -226,10 +227,9 @@ $(document).on('click', '.item-list .item', function () {
 $(document).on('dblclick', '.item-list .item', function() {
     let itemId = $(this).attr('id')
     let itemAction = $(this).data('url')
-    let itemTitle = $(this).data('title')
     let websiteOrigin = window.location.origin
 
-    let url = websiteOrigin + '/cms/' + itemAction + `/?id=${itemId}&itemTitle=${itemTitle}`
+    let url = websiteOrigin + '/cms/' + itemAction + `/?id=${itemId}`
 
     window.location.href = url
 })

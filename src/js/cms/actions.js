@@ -51,8 +51,6 @@ function getBlogCategories(callback) {
 
 function updateBlogItem(id, pairs) {
     pairs.forEach(pair => {
-        console.log(pair)
-
         $.ajax({
             type: "POST",
             url: '/src/php/cms/actions/blog.php',

@@ -109,7 +109,7 @@ $(document).ready(function() {
     $(document).on('click', '#homePageScroll', function() {
         windowOfset = 106;
 
-        if (window.innerWidth > 640) {
+        if (window.innerWidth > 640 && window.innerHeight > 800) {
             windowOfset = 106;
         } else if (window.innerWidth > 480) {
             windowOfset = 80;

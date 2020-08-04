@@ -230,6 +230,8 @@ nav .logo img {
 }
 
 nav a.button.square {
+  height: 38px;
+  width: 38px;
   line-height: 38px;
 }
 
@@ -307,6 +309,7 @@ nav a span {
 .action-group .button.square {
   border-radius: 0;
   border-right: 1px solid var(--background-grey-normal);
+  width: 40px;
 }
 
 .action-group .button:last-child,
@@ -421,11 +424,11 @@ nav a span {
 
 .button.round,
 .button.square {
-  height: 38px;
-  width: 38px;
+  height: 34px;
+  width: 34px;
   text-align: center;
   padding: 0;
-  line-height: 36px;
+  line-height: 32px;
 }
 
 .button.square {
@@ -483,7 +486,7 @@ nav a span {
 
 .button .chevron.left,
 .button .chevron.right {
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .button .chevron.down {
@@ -492,11 +495,11 @@ nav a span {
 }
 
 .button .chevron.left {
-  margin-left: 3px;
+  margin-left: 4px;
 }
 
 .button .chevron.right {
-  margin-right: 3px;
+  margin-right: 4px;
 }
 
 @media only screen and (max-width: 640px) {

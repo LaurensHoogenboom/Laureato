@@ -2,8 +2,10 @@
 
 function buildBlogList(blogs) {
     blogs.forEach((blog) => {
+        let blogDateTime = new Date(blog.submitedOn)
+
         $('#blog-list').append(
-            $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit').attr('data-title', blog.title)
+            $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit')
                 .append(
                     $("<div>").addClass('actions')
                         .append(
@@ -20,7 +22,7 @@ function buildBlogList(blogs) {
                     $("<label>").text(blog.category)
                 )
                 .append(
-                    $("<label>").text(blog.submitedOn)
+                    $("<label>").text(`${blogDateTime.getDate()}-${blogDateTime.getMonth()}-${blogDateTime.getFullYear()} | ${blogDateTime.getHours()}:${blogDateTime.getMinutes()}`)
                 )
         )
     })

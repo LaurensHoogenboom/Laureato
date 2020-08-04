@@ -52,11 +52,6 @@
                     &#xe902;
                 </span>
             </a>
-            <a class="button transparent square" href="/cms/portfolio/">
-                <span class="cms-icon">
-                    &#xe900;
-                </span>
-            </a>
             <a class="button transparent square" href="/cms/blog/">
                 <span class="cms-icon">
                     &#xe901;

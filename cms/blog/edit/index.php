@@ -8,15 +8,24 @@
 
 <div class="section-toolbar">
     <section class="left">
-        
+        <a class="button grey square" href="/cms/blog">
+            <label class="chevron left">
+                <span></span>
+                <span></span>
+            </label>
+        </a>
     </section>
 
     <section class="middle">
-
+        <p id="blogTitle"></p>
     </section>
 
     <section class="right">
-        <a class="button grey" id="blog-save-button">Save</a>
+        <a class="button grey square" id="blog-save-button">
+            <span class="cms-icon">
+                &#xe908;
+            </span>
+        </a>
     </section>
 </div>
 
