@@ -7,7 +7,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +18,7 @@
     <link rel="stylesheet" href="/src/css/cms/cms.css">
 
     <script src="/src/js/jquery-min.js"></script>
+    <script src="/src/js/import.js"></script>
     <script src="/src/js/cms/cms.js"></script>
     <script src="/src/js/cms/actions.js"></script>
 </head>

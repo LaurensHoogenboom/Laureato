@@ -47,6 +47,22 @@ function getBlogCategories(callback) {
     })
 }
 
+//update
+
+function updateBlogItem(id, pairs) {
+    pairs.forEach(pair => {
+        console.log(pair)
+
+        $.ajax({
+            type: "POST",
+            url: '/src/php/cms/actions/blog.php',
+            data: { action: "update", blogId: id, column: pair.label, value: pair.value},
+            success: function (response) {
+            }
+        })
+    }) 
+}
+
 //remove
 
 function removeBlogItem(item) {

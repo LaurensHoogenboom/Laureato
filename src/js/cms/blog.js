@@ -3,7 +3,7 @@
 function buildBlogList(blogs) {
     blogs.forEach((blog) => {
         $('#blog-list').append(
-            $('<div>').attr("id", blog.id).addClass('blog').addClass('item')
+            $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit').attr('data-title', blog.title)
                 .append(
                     $("<div>").addClass('actions')
                         .append(

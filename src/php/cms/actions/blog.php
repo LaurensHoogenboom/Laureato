@@ -30,6 +30,15 @@
             echo json_encode($portfolioItems, JSON_PRETTY_PRINT);
         }
 
+        if ($action == 'update') {
+            $id = $_POST['blogId'];
+            $column = $_POST['column'];
+            $value = $_POST['value'];
+
+            $db->query("UPDATE blogs SET $column='$value' WHERE id='$id'; ")
+                    or die($db->error);
+        }
+
         if ($action == 'delete') {
             $id = $_POST['blogId'];
 

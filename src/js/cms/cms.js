@@ -221,6 +221,19 @@ $(document).on('click', '.item-list .item', function () {
     }
 })
 
+//open item in list
+
+$(document).on('dblclick', '.item-list .item', function() {
+    let itemId = $(this).attr('id')
+    let itemAction = $(this).data('url')
+    let itemTitle = $(this).data('title')
+    let websiteOrigin = window.location.origin
+
+    let url = websiteOrigin + '/cms/' + itemAction + `/?id=${itemId}&itemTitle=${itemTitle}`
+
+    window.location.href = url
+})
+
 //action group
 
 const actionGroup = {
