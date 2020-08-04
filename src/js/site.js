@@ -166,7 +166,7 @@ $(document).ready(function() {
     
         $(item).addClass('opened');
     
-        if (window.innerWidth > 640) {
+        if (window.innerWidth > 640 && window.innerHeight > 800) {
             windowOfset = 146;
         } else if (window.innerWidth > 480) {
             windowOfset = 120;

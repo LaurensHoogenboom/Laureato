@@ -1186,6 +1186,12 @@ footer section:last-child .icon:first-of-type {
   }
 }
 
+@media only screen and (max-height: 800px) {
+  .itemList .item.opened {
+    height: calc(var(--vh, 1vh) * 100 - 158px);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .itemList .item .contentControls {
     top: 10px;
