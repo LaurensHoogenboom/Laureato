@@ -248,5 +248,15 @@ const actionGroup = {
     }
 }
 
+//switch
+
+$(document).on('click', '.switch .button', function() {
+    $(this).closest('.switch').find('.button').each(function() {
+        $(this).removeClass('selected')
+    })
+
+    $(this).addClass('selected')
+})
+
 
 

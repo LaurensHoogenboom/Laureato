@@ -49,7 +49,7 @@
         <h2>Add Blogpost</h2>
     </section>
     <form id="add-blog-post-form">
-        <label>Titel</label>
+        <label>Title</label>
         <input type="text" name="title" required>
 
         <label>Category</label>

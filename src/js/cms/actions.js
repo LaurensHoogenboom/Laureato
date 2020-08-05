@@ -4,14 +4,14 @@
 $(document).on('submit', '#add-blog-post-form', function (e) {
     e.preventDefault()
 
-    var form = $(this);
+    let form = $(this)
 
     $.ajax({
         type: "POST",
         url: '/src/php/cms/actions/blog.php',
         data: form.serialize(),
         success: function (response) {
-            console.log(response);
+            getBlogItems(buildBlogList)
         }
     });
 
@@ -19,8 +19,6 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
     $(this)[0].reset()
 
     $("#blog-list").html("")
-
-    getBlogItems(buildBlogList)
 })
 
 //get
