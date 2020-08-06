@@ -179,7 +179,9 @@ $(document).on('click', '.switch .button', function () {
             value: status
         })
 
-        updateBlogItem(blog.id, pairs)
+        updateBlogItem(blog.id, pairs, true, function() {
+            notification.succes('cms-notification', `Status is set to "${status}".`, 4)
+        })
     }
 })
 

@@ -189,7 +189,8 @@ article .button:last-child {
 
 header {
   display: grid;
-  grid-template-columns: max-content max-content 1fr 1fr;
+  position: relative;
+  grid-template-columns: 1fr max-content 1fr;
   width: calc(100% - 60px);
   float: right;
   height: 70px;
@@ -201,6 +202,26 @@ header {
 
 header h1 {
   color: var(--text-green);
+}
+
+header .left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .user-section {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+header .user-section .avatar {
+  display: block;
+  height: 38px;
+  width: 38px;
+  border: 1px solid var(--background-grey-normal);
+  border-radius: 50%;
 }
 
 nav {
@@ -351,7 +372,6 @@ nav a span {
   background-color: var(--background-grey-lightest);
   margin: -40px -20px 20px -20px;
   padding: 20px;
-  border-bottom: 1px solid var(--background-grey-normal);
 }
 
 .dialog .actions {
@@ -363,7 +383,6 @@ nav a span {
   height: 50px;
   padding: 0px 20px;
   border-radius: 0px 0px 10px 10px;
-  border-top: 1px solid var(--background-grey-normal);
 }
 
 .dialog .actions .button {
@@ -409,7 +428,41 @@ nav a span {
 /*list-item-types*/
 
 .item-list .item.blog {
-  grid-template-columns: max-content minmax(200px, 1fr) minmax(0, 200px) minmax(0, 200px);
+  grid-template-columns: max-content minmax(200px, 1fr) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px);
+}
+
+/*notification*/
+
+.notification {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px var(--shadow-input);
+    transition: top 0.2s, opacity 0.2s;
+    overflow: hidden;
+    border-left: 2px solid var(--text-blue);
+    color: var(--text-blue);
+}
+
+.notification.fail {
+  border-left: 2px solid var(--text-orange);
+  color: var(--text-orange);
+}
+
+.notification.succes {
+  border-left: 2px solid var(--text-green);
+  color: var(--text-green);
+}
+
+.notification.hidden {
+  top: 40%;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*button*/

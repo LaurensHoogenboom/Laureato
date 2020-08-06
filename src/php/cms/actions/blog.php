@@ -13,7 +13,7 @@
             $category = $_POST['category'];
             $title = $_POST['title'];
 
-            $db->query("INSERT INTO blogs (id, category, title, submitedOn, status) VALUES ('$id', '$category', '$title', NOW(), 'concept')") 
+            $db->query("INSERT INTO blogs (id, category, title, submitedOn, status) VALUES ('$id', '$category', '$title', NOW(), 'Concept')") 
                     or die($db->error);
         }
 

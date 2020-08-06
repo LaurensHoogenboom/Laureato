@@ -22,6 +22,9 @@ function buildBlogList(blogs) {
                     $("<label>").text(blog.category)
                 )
                 .append(
+                    $("<label>").text(blog.status)
+                )
+                .append(
                     $("<label>").text(`${blogDateTime.getDate()}-${blogDateTime.getMonth()}-${blogDateTime.getFullYear()} | ${blogDateTime.getHours()}:${blogDateTime.getMinutes()}`)
                 )
         )

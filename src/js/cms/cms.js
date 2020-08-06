@@ -258,5 +258,50 @@ $(document).on('click', '.switch .button', function() {
     $(this).addClass('selected')
 })
 
+//notification
+
+const notification = {
+    notify: (notificationContainer, message, duration) => {
+        let container = $('#' + notificationContainer)
+        let notificationDuration = duration * 1000
+
+        $(container).removeClass('succes')
+        $(container).removeClass('fail')
+        $(container).text(message)
+        $(container).removeClass('hidden')
+
+        window.setTimeout(function() {
+            $(container).addClass('hidden')
+        }, notificationDuration)
+    },
+    fail: (notificationContainer, message, duration) => {
+        let container = $('#' + notificationContainer)
+        let notificationDuration = duration * 1000
+
+        $(container).removeClass('succes')
+        $(container).addClass('fail')
+        $(container).text(message)
+        $(container).removeClass('hidden')
+
+        window.setTimeout(function() {
+            $(container).addClass('hidden')
+        }, notificationDuration)
+    },
+    succes: (notificationContainer, message, duration) => {
+        let container = $('#' + notificationContainer)
+        let notificationDuration = duration * 1000
+
+        $(container).addClass('succes')
+        $(container).removeClass('fail')
+        $(container).text(message)
+        $(container).removeClass('hidden')
+
+        window.setTimeout(function() {
+            $(container).addClass('hidden')
+        }, notificationDuration)
+    }
+}
+
+
 
 

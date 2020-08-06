@@ -22,11 +22,11 @@
 
     <section class="right">
         <div class="switch" data-action="change-blog-status" id="blog-status-switch">
-            <label class="button grey" data-status="published">
+            <label class="button grey" data-status="Published">
                 Published
             </label>
 
-            <label class="button grey" data-status="concept">
+            <label class="button grey" data-status="Concept">
                 Concept
             </label>
         </div>
@@ -49,7 +49,7 @@
     </section>
 
     <form id="edit-blog-post-form">
-        <label>Titel</label>
+        <label>Title</label>
         <input type="text" name="title" required>
 
         <label>Category</label>

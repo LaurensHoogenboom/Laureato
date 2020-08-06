@@ -31,13 +31,20 @@
             </h1>
         </section>
         <section class="toolbar middle">
-
+            <label class="notification hidden" id="cms-notification">
+                Test
+            </label>
         </section>
         <section class="toolbar left">
-            <div class="avatar">
+            <div class="user-section">
+                <div class="avatar" style="background-image: url(/cms/users/default.svg);">
+    
+                </div>
 
+                <label>
+                    <?php echo $_SESSION['user_name'] ?>
+                </label>
             </div>
-
         </section>
     </header>
 

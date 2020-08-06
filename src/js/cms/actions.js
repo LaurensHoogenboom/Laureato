@@ -11,6 +11,8 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
         url: '/src/php/cms/actions/blog.php',
         data: form.serialize(),
         success: function (response) {
+            notification.succes('cms-notification', 'Blog succesfully added.', 4)
+
             getBlogItems(buildBlogList)
         }
     });
@@ -47,13 +49,18 @@ function getBlogCategories(callback) {
 
 //update
 
-function updateBlogItem(id, pairs) {
+function updateBlogItem(id, pairs, doNotNotify, callback) {
     pairs.forEach(pair => {
         $.ajax({
             type: "POST",
             url: '/src/php/cms/actions/blog.php',
             data: { action: "update", blogId: id, column: pair.label, value: pair.value},
             success: function (response) {
+                if (!doNotNotify) {
+                    notification.succes('cms-notification', 'Changes succesfully saved.', 4)
+                } else {
+                    callback(response)
+                }
             }
         })
     }) 
@@ -67,6 +74,7 @@ function removeBlogItem(item) {
         url: '/src/php/cms/actions/blog.php',
         data: { action: "delete", blogId: item },
         success: function (response) {
+            notification.succes('cms-notification', 'The selected blog(s) are removed.', 4)
         }
     })
 }
