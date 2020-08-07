@@ -451,6 +451,7 @@ nav a span {
 }
 
 .notification.hidden {
+  display: block;
   top: 40%;
   opacity: 0;
   pointer-events: none;

@@ -1,9 +1,11 @@
 //build functions
 
 function buildBlogList(blogs) {
-    $('#blog-list').html("")
+    console.log(blogs.length)
 
     if (blogs.length > 0) {
+        $('#blog-list').html("")
+
         blogs.forEach((blog) => {
             let blogDateTime = new Date(blog.submitedOn)
     
