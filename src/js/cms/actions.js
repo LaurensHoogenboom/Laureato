@@ -19,8 +19,6 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
 
     $(this).closest('.dialog').addClass('hidden')
     $(this)[0].reset()
-
-    $("#blog-list").html("")
 })
 
 //get

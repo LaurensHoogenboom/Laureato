@@ -1,34 +1,38 @@
 //build functions
 
 function buildBlogList(blogs) {
-    blogs.forEach((blog) => {
-        let blogDateTime = new Date(blog.submitedOn)
+    $('#blog-list').html("")
 
-        $('#blog-list').append(
-            $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit')
-                .append(
-                    $("<div>").addClass('actions')
-                        .append(
-                            $("<input>").attr('type', "checkbox").attr("id", `select-${blog.id}`)
-                        )
-                        .append(
-                            $("<label>").attr('for', `select-${blog.id}`)
-                        )
-                )
-                .append(
-                    $("<label>").text(blog.title).addClass('title')
-                )
-                .append(
-                    $("<label>").text(blog.category)
-                )
-                .append(
-                    $("<label>").text(blog.status)
-                )
-                .append(
-                    $("<label>").text(`${blogDateTime.getDate()}-${blogDateTime.getMonth()}-${blogDateTime.getFullYear()} | ${blogDateTime.getHours()}:${blogDateTime.getMinutes()}`)
-                )
-        )
-    })
+    if (blogs.length > 0) {
+        blogs.forEach((blog) => {
+            let blogDateTime = new Date(blog.submitedOn)
+    
+            $('#blog-list').append(
+                $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit')
+                    .append(
+                        $("<div>").addClass('actions')
+                            .append(
+                                $("<input>").attr('type', "checkbox").attr("id", `select-${blog.id}`)
+                            )
+                            .append(
+                                $("<label>").attr('for', `select-${blog.id}`)
+                            )
+                    )
+                    .append(
+                        $("<label>").text(blog.title).addClass('title')
+                    )
+                    .append(
+                        $("<label>").text(blog.category)
+                    )
+                    .append(
+                        $("<label>").text(blog.status)
+                    )
+                    .append(
+                        $("<label>").text(`${blogDateTime.getDate()}-${blogDateTime.getMonth()}-${blogDateTime.getFullYear()} | ${blogDateTime.getHours()}:${blogDateTime.getMinutes()}`)
+                    )
+            )
+        })
+    }    
 }
 
 function buildBlogCategoryList(blogs) {

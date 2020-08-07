@@ -41,7 +41,9 @@
 </script>
 
 <div id="blog-list" class="item-list" data-action-group="blog-actions">
-    
+    <p style="text-align: center; font-style: italic;">
+        The are not posts available. You can add one by clicking the "plus" above.
+    </p>
 </div>
 
 <div class="dialog hidden" id="add-blog-post">

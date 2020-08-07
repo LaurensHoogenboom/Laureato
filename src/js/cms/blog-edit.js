@@ -2,6 +2,11 @@
 
 $.import_js('/src/js/cms/editorjs/editor.js')
 $.import_js('/src/js/cms/editorjs/extensions/header.js')
+$.import_js('/src/js/cms/editorjs/extensions/list.js')
+$.import_js('/src/js/cms/editorjs/extensions/simpleImage.js')
+$.import_js('/src/js/cms/editorjs/extensions/marker.js')
+$.import_js('/src/js/cms/editorjs/extensions/delimeter.js')
+$.import_js('/src/js/cms/editorjs/extensions/warning.js')
 
 //editor config var
 
@@ -98,12 +103,40 @@ function loadEditor(contentToEdit) {
                     levels: [1, 2, 3],
                     defaultLevel: 2
                 }
+            },
+            list: {
+                class: List,
+                inlineToolbar: true
+            },
+            image: {
+                class: InlineImage,
+                inlineToolbar: true,
+                config: {
+                    unsplash: {
+                        appName: 'Laureato Blog Editor',
+                        clientId: 'Y_LXy_unpfBxVemBKygXF9m9MrVdkcMQV7wybqQuwhs'
+                    }
+                }
+            },
+            marker: {
+                class: Marker
+            },
+            delimiter: Delimiter,
+            warning: {
+                class: Warning,
+                inlineToolbar: true,
+                config: {
+                    titlePlaceholder: 'Title',
+                    messagePlaceholder: 'Message',
+                },
             }
         },
 
         data: contentToEdit,
 
-        autofocus: true
+        autofocus: true,
+
+        logLevel: 'ERROR'
     })
 }
 
@@ -179,7 +212,7 @@ $(document).on('click', '.switch .button', function () {
             value: status
         })
 
-        updateBlogItem(blog.id, pairs, true, function() {
+        updateBlogItem(blog.id, pairs, true, function () {
             notification.succes('cms-notification', `Status is set to "${status}".`, 4)
         })
     }

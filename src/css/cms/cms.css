@@ -101,27 +101,16 @@ h3 {
 /*list*/
 
 ul {
-  list-style: none;
+  list-style: disc;
 }
 
 ul li {
-  padding-left: 60px;
-  text-indent: -60px;
+  padding-left: 30px;
   padding-bottom: 16px;
 }
 
 ul li:last-child {
   padding-bottom: 0;
-}
-
-ul li::before {
-  content: "";
-  display: inline-block;
-  height: 30px;
-  width: 35px;
-  background-image: url(/home/img/Laurel.svg);
-  vertical-align: middle;
-  margin-right: 20px;
 }
 
 a {
@@ -222,6 +211,8 @@ header .user-section .avatar {
   width: 38px;
   border: 1px solid var(--background-grey-normal);
   border-radius: 50%;
+  background-size: cover;
+  background-position: center;
 }
 
 nav {
