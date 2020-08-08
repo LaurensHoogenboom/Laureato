@@ -187,6 +187,7 @@ header {
   grid-gap: 40px;
   padding: 11px 40px;
   align-items: center;
+  z-index: 20;
 }
 
 header h1 {
@@ -338,9 +339,9 @@ nav a span {
 /*dialog*/
 
 .dialog {
-  position: absolute;
+  position: fixed;
   z-index: 19;
-  top: 50px;
+  top: 120px;
   left: 0;
   right: 0;
   margin-left: auto;
