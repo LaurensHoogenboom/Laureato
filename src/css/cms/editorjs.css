@@ -24,6 +24,10 @@
   padding: 0;
 }
 
+.codex-editor__redactor {
+  padding-bottom: 0 !important;
+}
+
 .ce-paragraph,
 .cdx-list__item,
 h1.ce-header,
