@@ -5,6 +5,7 @@
 ?>
 
 <script src="/src/js/cms/blog.js"></script>
+<link rel="stylesheet" href="/src/css/cms/editorjs.css">
 
 <div class="section-toolbar">
     <section class="left">

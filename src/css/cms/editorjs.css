@@ -1,0 +1,62 @@
+:root {
+    --background-white: rgb(2255, 255, 255);
+    --background-grey-lightest: rgb(250, 250, 250);
+    --background-grey-light: rgb(240, 240, 240);
+    --background-grey-normal: rgb(220, 220, 220);
+    --text-grey-light: rgb(180, 180, 180);
+    --text-grey-normal: rgb(112, 112, 112);
+    --text-grey-dark: rgb(51, 51, 51);
+    --text-blue-light: rgb(81, 153, 239);
+    --text-blue: rgb(38, 128, 235);
+    --text-blue-dark: rgb(30, 102, 188);
+    --text-green: rgb(13, 129, 54);
+    --text-orange: rgb(251, 86, 7);
+    --shadow-input: rgba(0, 0, 0, 0.16);
+    --shadow-nav: rgba(0, 0, 0, 0.03);
+    --light-shadow: rgba(226, 226, 226);
+  }
+
+.ce-paragraph,
+.cdx-list__item {
+  font-family: SegoeUI;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-grey-normal);
+}
+
+h1.ce-header {
+  font-family: SegoeUI;
+  font-weight: 100;
+  font-size: 55px;
+  color: var(--text-grey-dark);
+}
+
+h2.ce-header {
+  font-family: SegoeUI;
+  font-weight: 100;
+  font-size: 40px;
+  color: var(--text-grey-dark);
+}
+
+h3.ce-header {
+  font-family: SegoeUI;
+  font-weight: 100;
+  font-size: 20px;
+  color: var(--text-green);
+}
+
+.cdx-list {
+    padding-left: 20px;
+}
+
+@font-face {
+  font-family: SegoeUI;
+  font-weight: 400;
+  src: url(/src/font/SegoeUI/Regular.woff);
+}
+
+@font-face {
+  font-family: SegoeUI;
+  font-weight: 100;
+  src: url(/src/font/SegoeUI/Light.woff);
+}
