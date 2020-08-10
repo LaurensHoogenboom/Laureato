@@ -167,7 +167,7 @@ article .button:last-child {
 }
 
 .cms-icon {
-  font-family: CMS-icons;
+  font-family: cms-icons;
 }
 
 .hidden {
@@ -855,7 +855,7 @@ input[type="checkbox"]+label::before {
   border-radius: 10px;
   border: 1px solid var(--background-grey-normal);
   transition: all 0.2s;
-  font-family: CMS-icons;
+  font-family: cms-icons;
   font-size: 10px;
   margin-right: 10px;
 }
@@ -944,6 +944,6 @@ form label {
 }
 
 @font-face {
-  font-family: CMS-icons;
-  src: url(/src/font/CMS/CMS-icons.woff);
+  font-family: cms-icons;
+  src: url(/src/font/cms/cms-icons.woff);
 }

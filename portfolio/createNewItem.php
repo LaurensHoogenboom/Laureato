@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <script src="/src/js/jquery-min.js"></script>
+    <script src="/src/js/plugins/jquery-min.js"></script>
 </head>
 <body>
     <form method="post" id="portfolioAdd">

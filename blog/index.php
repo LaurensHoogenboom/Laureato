@@ -10,10 +10,10 @@
     <div class="overlay">
         <article>
             <h1>
-                Portfolio
+                Blog
             </h1>
             <h3>
-                This is what I'm doing. Enjoy.
+                Stories about the things I do.
             </h3>
         </article>
         <div class="content contentFilterWrapper">
@@ -58,10 +58,10 @@
     <div class="overlay">
         <div class="itemList" id="portfolioList">
             <script>
-                $.import_js('/src/js/portfolio.js')
-                $.import_js('/src/js/dal/portfolio.js')
+                $.import_js('/src/js/blog.js')
+                $.import_js('/src/js/dal/blog.js')
 
-                getPortfolioItems(filterPortfolioItems);
+                getBlogItems();
             </script>
         </div>
 

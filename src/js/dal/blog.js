@@ -1,4 +1,3 @@
-//-----------------------blog
 //add
 
 $(document).on('submit', '#add-blog-post-form', function (e) {
@@ -8,7 +7,7 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
 
     $.ajax({
         type: "POST",
-        url: '/src/php/cms/actions/blog.php',
+        url: '/src/php/dal/blog.php',
         data: form.serialize(),
         success: function (response) {
             notification.succes('cms-notification', 'Blog succesfully added.', 4)
@@ -26,7 +25,7 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
 function getBlogItems(callback) {
     $.ajax({
         type: "POST",
-        url: '/src/php/cms/actions/blog.php',
+        url: '/src/php/dal/blog.php',
         data: { action: "get" },
         success: function (response) {
             callback(response)
@@ -37,7 +36,7 @@ function getBlogItems(callback) {
 function getBlogCategories(callback) {
     $.ajax({
         type: "POST",
-        url: '/src/php/cms/actions/blog.php',
+        url: '/src/php/dal/blog.php',
         data: { action: "get" },
         success: function (response) {
             callback(response)
@@ -51,7 +50,7 @@ function updateBlogItem(id, pairs, doNotNotify, callback) {
     pairs.forEach(pair => {
         $.ajax({
             type: "POST",
-            url: '/src/php/cms/actions/blog.php',
+            url: '/src/php/dal/blog.php',
             data: { action: "update", blogId: id, column: pair.label, value: pair.value},
             success: function (response) {
                 if (!doNotNotify) {
@@ -69,7 +68,7 @@ function updateBlogItem(id, pairs, doNotNotify, callback) {
 function removeBlogItem(item) {
     $.ajax({
         type: "POST",
-        url: '/src/php/cms/actions/blog.php',
+        url: '/src/php/dal/blog.php',
         data: { action: "delete", blogId: item },
         success: function (response) {
             notification.succes('cms-notification', 'The selected blog(s) are removed.', 4)

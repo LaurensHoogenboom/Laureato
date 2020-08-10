@@ -17,10 +17,10 @@
 
     <link rel="stylesheet" href="/src/css/cms/cms.css">
 
-    <script src="/src/js/jquery-min.js"></script>
-    <script src="/src/js/import.js"></script>
+    <script src="/src/js/plugins/jquery-min.js"></script>
+    <script src="/src/js/plugins/import.js"></script>
     <script src="/src/js/cms/cms.js"></script>
-    <script src="/src/js/cms/actions.js"></script>
+    <script src="/src/js/dal/blog.js"></script>
 </head>
 
 <body>

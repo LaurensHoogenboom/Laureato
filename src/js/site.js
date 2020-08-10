@@ -208,7 +208,6 @@ $(document).ready(function() {
     });
 });
 
-
 //set dynamic viewheight
 
 $(document).ready(function () {
@@ -220,5 +219,101 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+//contact form
+
+$(document).ready(function () {
+    $(document).on('submit', '#contactForm', function (e) {
+        e.preventDefault();
+
+        Notify("Processing...");
+
+        $.ajax({
+            type: 'post',
+            url: '/src/php/contactMail.php',
+            data: $('#contactForm').serialize(),
+            success: function (response) {
+                if ($.trim(response) == "succes") {
+                    NotifySucces("Your message has been sent succesfully.");
+                } else {
+                    NotifyFail("Something went wrong. Please try again.");
+                }
+            },
+            error: function () {
+                NotifyFail("Something went wrong. Please try again.");
+            }
+        });
+
+        function Notify(message) {
+            $('#contactFormStatus').removeClass('succes');
+            $('#contactFormStatus').removeClass('fail');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(message);
+        }
+
+        function NotifyFail(error) {
+            $('#contactFormStatus').addClass('fail');
+            $('#contactFormStatus').removeClass('succes');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(error);
+        }
+
+        function NotifySucces(succes) {
+            $('#contactFormStatus').addClass('succes');
+            $('#contactFormStatus').removeClass('fail');
+            $('#contactFormStatus').removeClass('hidden');
+            $('#contactFormStatus').text(succes);
+        }
+    });
+});
+
+//site wide search
+
+$(document).ready(function () {
+    $(document).on('submit', '#alienPortfolioSearchForm', function (e) {
+        e.preventDefault();
+
+        console.log('fire');
+
+        var alienSearch = $('#alienPortfolioSearchInput').val();
+
+        sessionStorage.setItem('alienSearch', alienSearch);
+
+        window.location.href = "/portfolio/";
+    })
+})
+
+$(document).ready(function () {
+    $(document).on('submit', '#headerPortfolioSearchForm', function (e) {
+        e.preventDefault();
+
+        console.log('fire');
+
+        var alienSearch = $('#headerPortfolioSearchInput').val();
+
+        sessionStorage.setItem('alienSearch', alienSearch);
+
+        window.location.href = "/portfolio/";
+    })
+})
+
+//remove reset filter button
+
+function toggleRemoveFilterButton(form) {
+    var noFilter = true;
+
+    $(form).find("input[type='text'], select").each(function() {
+        if ($(this).val() && $(this).val() !== "default") {
+            noFilter = false;
+        }
+    })
+
+    if (noFilter) {
+        $(form).find(".removeFilterButton").addClass('hidden')
+    } else {
+        $(form).find(".removeFilterButton").removeClass('hidden')
+    }
+}
+
 
 
