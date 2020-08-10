@@ -3,9 +3,7 @@ function filterData(itemsToFilter, callback, amount, page, sort, category, searc
     var pageSize = 8;
     var pageIndex = 0;
     var alienSearch = sessionStorage.getItem('alienSearch');
-
-    console.log(callback)
-
+    
     sessionStorage.removeItem('alienSearch');
 
     items = items.sort(function (a, b) {

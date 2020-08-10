@@ -18,26 +18,26 @@
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
-                <form id="portfolioFilterForm">
+                <form>
                     <div class="buttonTextInput">
-                        <input type="text" placeholder="Search" id="portfolioSearchInput">
+                        <input type="text" placeholder="Search" id="search">
                         <label class="icon">
                             &#xe901;
                         </label>
                     </div>
-                    <select id="portfolioCategoryInput">
+                    <select id="category">
                         <option value="default">Category</option>
                         <option value="UI/UX">UX / UI</option>
                         <option>Web</option>
                         <option>Art</option>
                     </select>
-                    <select id="portfolioSortInput">
+                    <select id="sort">
                         <option value="default">Sort</option>
                         <option value="submitDate">Date</option>
                         <option value="category">Category</option>
                     </select>
-                    <a class="button transparent blue removeFilterButton hidden" id="removePortfolioFilters">Reset</a>
-                    <label class="button blue mobileCloseFilterButton" id="closePortfolioFilterMenu">
+                    <a class="button transparent blue removeFilterButton hidden">Reset</a>
+                    <label class="button blue mobileCloseFilterButton">
                         <span class="text">
                             View items
                         </span>
@@ -58,29 +58,33 @@
     <div class="overlay">
         <div class="itemList" id="portfolioList">
             <script>
-                $.import_js('/src/js/portfolio.js')
-                $.import_js('/src/js/dal/portfolio.js')
+                $(document).ready(function () {
+                    $.import_js('/src/js/portfolio.js')
+                    $.import_js('/src/js/dal/portfolio.js')
 
-                getPortfolioItems(requestPortfolioBuild)
+                    setContentFilterFunctions(getPortfolioItems, buildPortfolio)
 
-                function requestPortfolioBuild(items) {
-                    filterData(items, buildPortfolio, null, null, null, null, null, null)
-                }
+                    getPortfolioItems(requestPortfolioBuild)
+
+                    function requestPortfolioBuild(items) {
+                        filterData(items, buildPortfolio)
+                    }
+                })
             </script>
         </div>
 
         <div class="itemPaging">
             <div class="pageNumber">
-                <label class="button grey round" id="previousPortfolioPageButton">
+                <label class="button grey round" id="previous">
                     <div class="chevron left">
                         <span></span>
                         <span></span>
                     </div>
                 </label>
-                <label class="button blue square" id="currentPortfolioPageIndex">
+                <label class="button blue square" id="current">
                     1
                 </label>
-                <label class="button grey round" id="nextPortfolioPageButton">
+                <label class="button grey round" id="next">
                     <div class="chevron right">
                         <span></span>
                         <span></span>
@@ -95,7 +99,7 @@
                     Items per page:
                 </label>
 
-                <form id="portfolioSizeForm">
+                <form>
                     <select>
                         <option value="8">
                             8

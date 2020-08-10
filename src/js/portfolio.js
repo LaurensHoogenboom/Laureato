@@ -8,86 +8,6 @@ $("#portfolioAdd").submit(function (e) {
     addPortfolioItem(form);
 })
 
-//portfolio filter form handling
-
-$(document).ready(function () {
-    $(document).on('change', "#portfolioFilterForm input, #portfolioFilterForm select, #portfolioSizeForm select", function () {
-        createFilterRequest();
-        toggleRemoveFilterButton($(this).closest('form'));
-    });
-
-    $(document).on('submit', "#portfolioFilterForm", function (e) {
-        e.preventDefault();
-
-        createFilterRequest();
-        toggleRemoveFilterButton($(this).closest('form'));
-    });
-
-    $(document).on('click', '#nextPortfolioPageButton', function () {
-        var newIndex = parseInt(sessionStorage.getItem('currentPage')) + 1;
-
-        setTimeout(function () {
-            $("html, body").animate({
-                scrollTop: $("html body").offset().top
-            }, 300);
-        }, 300)
-
-        createFilterRequest(newIndex);
-        toggleRemoveFilterButton($(this).closest('form'));
-    });
-
-    $(document).on('click', '#previousPortfolioPageButton', function () {
-        var newIndex = parseInt(sessionStorage.getItem('currentPage')) - 1;
-
-        setTimeout(function () {
-            $("html, body").animate({
-                scrollTop: $("html body").offset().top
-            }, 300);
-        }, 300)
-
-        createFilterRequest(newIndex);
-        toggleRemoveFilterButton($(this).closest('form'));
-    });
-})
-
-function createFilterRequest(pageIndex) {
-    page = 0
-
-    if (pageIndex != null) {
-        page = pageIndex
-    }
-
-    var categoryValue = $('#portfolioCategoryInput').val()
-    var sortValue = $("#portfolioSortInput").val()
-    var searchValue = $("#portfolioSearchInput").val()
-    var pageSize = $("#portfolioSizeForm select").val()
-
-    getPortfolioItems(requestPortfolioBuild)
-
-    function requestPortfolioBuild(items) {
-        filterData(items, buildPortfolio, pageSize, page, sortValue, categoryValue, searchValue)
-    }
-}
-
-$(document).ready(function () {
-    $(document).on('click', "#removePortfolioFilters", function () {
-        $("#portfolioSizeForm select").val(8)
-        $("#portfolioSearchInput").val("")
-        $('#portfolioCategoryInput').val("default")
-        $("#portfolioSortInput").val("default")
-
-        $("select").change()
-
-        getPortfolioItems(requestPortfolioBuild)
-
-        function requestPortfolioBuild(items) {
-            filterData(items, buildPortfolio, null, null, null, null, null, null)
-        }
-
-        toggleRemoveFilterButton($(this).closest('form'))
-    });
-})
-
 //populate portfolio
 
 function buildPortfolio(items) {
@@ -145,19 +65,6 @@ function buildPortfolio(items) {
             )
     });
 
-    $("#currentPortfolioPageIndex").text(parseInt(sessionStorage.getItem('currentPage')) + 1);
-
-    if (sessionStorage.getItem('hasNextPage') === 'true') {
-        $("#nextPortfolioPageButton").removeClass('hidden');
-    }
-    else {
-        $("#nextPortfolioPageButton").addClass('hidden');
-    }
-
-    if (sessionStorage.getItem('hasPreviousPage') === 'true') {
-        $("#previousPortfolioPageButton").removeClass('hidden');
-    }
-    else {
-        $("#previousPortfolioPageButton").addClass('hidden');
-    }
+    setPagingButtons()
+    toggleRemoveFilterButton('.contentFilter form')
 }

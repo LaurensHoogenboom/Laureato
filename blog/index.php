@@ -18,7 +18,7 @@
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
-                <form id="blogFilterForm">
+                <form>
                     <div class="buttonTextInput search">
                         <input type="text" placeholder="Search" id="blogSearchInput">
                         <label class="icon">
@@ -102,16 +102,16 @@
 
         <div class="itemPaging">
             <div class="pageNumber">
-                <label class="button grey round" id="previousblogPageButton">
+                <label class="button grey round" id="previous">
                     <div class="chevron left">
                         <span></span>
                         <span></span>
                     </div>
                 </label>
-                <label class="button blue square" id="currentBlogPageIndex">
+                <label class="button blue square" id="current">
                     1
                 </label>
-                <label class="button grey round" id="nextBlogPageButton">
+                <label class="button grey round" id="next">
                     <div class="chevron right">
                         <span></span>
                         <span></span>
