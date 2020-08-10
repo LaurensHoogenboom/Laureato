@@ -17,6 +17,7 @@
 
     <script src="/src/js/plugins/jquery-min.js"></script>
     <script src="/src/js/plugins/import.js"></script>
+    <script src="/src/js/helpers/dataFilter.js"></script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157737566-1"></script>

@@ -34,7 +34,7 @@
                     <select id="portfolioSortInput">
                         <option value="default">Sort</option>
                         <option value="submitDate">Date</option>
-                        <option value="type">Category</option>
+                        <option value="category">Category</option>
                     </select>
                     <a class="button transparent blue removeFilterButton hidden" id="removePortfolioFilters">Reset</a>
                     <label class="button blue mobileCloseFilterButton" id="closePortfolioFilterMenu">
@@ -61,7 +61,11 @@
                 $.import_js('/src/js/portfolio.js')
                 $.import_js('/src/js/dal/portfolio.js')
 
-                getPortfolioItems(filterPortfolioItems);
+                getPortfolioItems(requestPortfolioBuild)
+
+                function requestPortfolioBuild(items) {
+                    filterData(items, buildPortfolio, null, null, null, null, null, null)
+                }
             </script>
         </div>
 

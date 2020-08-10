@@ -1,12 +1,12 @@
 <?php 
-    $pgKeywords="My Work Portfolio Webdevelopment UI UX Design Classic Art";
-    $pgDesc="This is what I do. I do everything what has to do with UX and/or UI design, webdevelopment and classic art.";
+    $pgKeywords="My Work Blog Stories UI UX Design Classic Art";
+    $pgDesc="Stories about what I do: everything related to UX and/or UI design, webdevelopment and classic art.";
     $pgName="Portfolio";
 
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; 
 ?>
 
-<section class="smallMargin left background pageTitle" style="background-image: url(/portfolio/img/header.jpg);">
+<section class="smallMargin left background pageTitle" style="background-image: url(/blog/img/header.jpg);">
     <div class="overlay">
         <article>
             <h1>
@@ -18,26 +18,23 @@
         </article>
         <div class="content contentFilterWrapper">
             <div class="contentFilter">
-                <form id="portfolioFilterForm">
-                    <div class="buttonTextInput">
-                        <input type="text" placeholder="Search" id="portfolioSearchInput">
+                <form id="blogFilterForm">
+                    <div class="buttonTextInput search">
+                        <input type="text" placeholder="Search" id="blogSearchInput">
                         <label class="icon">
                             &#xe901;
                         </label>
                     </div>
-                    <select id="portfolioCategoryInput">
+                    <select id="blogCategoryInput">
                         <option value="default">Category</option>
-                        <option value="UI/UX">UX / UI</option>
-                        <option>Web</option>
-                        <option>Art</option>
                     </select>
-                    <select id="portfolioSortInput">
+                    <select id="blogSortInput">
                         <option value="default">Sort</option>
                         <option value="submitDate">Date</option>
                         <option value="type">Category</option>
                     </select>
-                    <a class="button transparent blue removeFilterButton hidden" id="removePortfolioFilters">Reset</a>
-                    <label class="button blue mobileCloseFilterButton" id="closePortfolioFilterMenu">
+                    <a class="button transparent blue removeFilterButton hidden" id="removeblogFilters">Reset</a>
+                    <label class="button blue mobileCloseFilterButton" id="closeBlogFilterMenu">
                         <span class="text">
                             View items
                         </span>
@@ -56,7 +53,45 @@
 
 <section class="contentList">
     <div class="overlay">
-        <div class="itemList" id="portfolioList">
+        <div class="itemList blogList" id="blogList">
+            <div class="item blogItem featured">
+                <article>
+                    <h1>
+                        Daar gaan we! - Noorwegen
+                    </h1>
+                    <p>
+                        10 augustus 2020
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas pharetra odio mi, ut dictum arcu ornare ut.
+                        Duis vel nulla in erat commodo viverra in id quam.
+                        In condimentum diam at pulvinar elementum...
+                    </p>
+                    <a class="button blue" href="#">
+                        Lezen
+                    </a>
+                </article>
+                <div class="tumbnail" style="background-image: url('/blog/placeholder.jpg');"></div>
+            </div>
+
+            <div class="item blogItem">
+                <label>
+                    <b>
+                        Possible Content Blog Test
+                    </b>
+                </label>
+                <label>
+                    Testcategory
+                </label>
+                <label>
+                    Concept
+                </label>
+                <label>
+                    8-7-2020 | 7:47
+                </label>
+            </div>
+
             <script>
                 $.import_js('/src/js/blog.js')
                 $.import_js('/src/js/dal/blog.js')
@@ -67,16 +102,16 @@
 
         <div class="itemPaging">
             <div class="pageNumber">
-                <label class="button grey round" id="previousPortfolioPageButton">
+                <label class="button grey round" id="previousblogPageButton">
                     <div class="chevron left">
                         <span></span>
                         <span></span>
                     </div>
                 </label>
-                <label class="button blue square" id="currentPortfolioPageIndex">
+                <label class="button blue square" id="currentBlogPageIndex">
                     1
                 </label>
-                <label class="button grey round" id="nextPortfolioPageButton">
+                <label class="button grey round" id="nextBlogPageButton">
                     <div class="chevron right">
                         <span></span>
                         <span></span>
@@ -91,7 +126,7 @@
                     Items per page:
                 </label>
 
-                <form id="portfolioSizeForm">
+                <form id="blogSizeForm">
                     <select>
                         <option value="8">
                             8
