@@ -1,12 +1,21 @@
+$.import_js('/src/js/helpers/dataFormat.js')
+
 function buildBloglist(items) {
     $("#blogList").html("")
 
     let isFirst = true
 
     items.forEach(item => {
-        if (item.status === "Published") {
+        let content = JSON.parse(item.content)
+
+        if (item.status === "Published" && content) {
+            let blogDateTime = new Date(item.submitedOn)
+            let blogViewDate = getDate.dmy(blogDateTime, "-")
+            let blogId = item.id
+            let blogURL = `/blog/read?id=${item.id}`
+
             if (isFirst) {
-                let content = JSON.parse(item.content).blocks
+                content = JSON.parse(item.content).blocks
                 let firstParagraph
                 let firstImage
 
@@ -20,57 +29,40 @@ function buildBloglist(items) {
                     }
                 })
 
-                if (firstImage) {
-                    $("#blogList")
-                        .append(
-                            $("<div>").addClass('item').addClass('blogItem').addClass('featured')
-                                .append(
-                                    $("<article>")
-                                        .append(
-                                            $("<h1>").text(`${item.title} - ${item.category}`)
-                                        )
-                                        .append(
-                                            $("<p>").text(item.submitedOn)
-                                        )
-                                        .append(
-                                            $("<p>").text(firstParagraph)
-                                        )
-                                        .append(
-                                            $("<a>").addClass('button').addClass('blue').text('Read')
-                                        )
-                                )
-                                .append(
-                                    $("<div>").addClass("tumbnail").css({
-                                        'background-image': `url('${firstImage}')`
-                                    })
-                                )
+                $("#blogList")
+                    .append(
+                        $("<div>").addClass('item').addClass('blogItem').addClass('featured').attr('data-action', 'go-to-page').attr('data-url', blogURL).attr('id', blogId)
+                            .append(
+                                $("<article>")
+                                    .append(
+                                        $("<h1>").text(`${item.title} - ${item.category}`)
+                                    )
+                                    .append(
+                                        $("<p>").text(blogViewDate)
+                                    )
+                                    .append(
+                                        $("<p>").text(firstParagraph)
+                                    )
+                                    .append(
+                                        $("<a>").addClass('button').addClass('blue').text('Read').attr('href', blogURL)
+                                    )
+                            )
+                    )
 
-                        )
-                } else {
-                    $("#blogList")
+                if (firstImage) {
+                    $(`#${blogId}`)
                         .append(
-                            $("<div>").addClass('item').addClass('blogItem').addClass('featured')
-                                .append(
-                                    $("<article>")
-                                        .append(
-                                            $("<h1>").text(`${item.title} - ${item.category}`)
-                                        )
-                                        .append(
-                                            $("<p>").text(item.submitedOn)
-                                        )
-                                        .append(
-                                            $("<p>").text(firstParagraph)
-                                        )
-                                        .append(
-                                            $("<a>").addClass('button').addClass('blue').text('Read')
-                                        )
-                                )
+                            $("<div>").addClass("tumbnail").css({
+                                'background-image': `url('${firstImage}')`
+                            })
                         )
                 }
+
+                isFirst = false
             } else {
                 $("#blogList")
                     .append(
-                        $("<div>").addClass('item').addClass('blogItem')
+                        $("<div>").addClass('item').addClass('blogItem').attr('data-action', 'go-to-page').attr('data-url', blogURL).attr('id', blogId)
                             .append(
                                 $("<label>")
                                     .append(
@@ -81,13 +73,11 @@ function buildBloglist(items) {
                                 $("<label>").text(item.category)
                             )
                             .append(
-                                $("<label>").text(item.submitedOn)
+                                $("<label>").text(blogViewDate)
                             )
                     )
             }
         }
-
-        isFirst = false
     })
 
     setPagingButtons()

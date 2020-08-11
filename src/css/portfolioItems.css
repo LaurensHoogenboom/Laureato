@@ -234,15 +234,13 @@ section:nth-child(odd).long {
 }
 
 @media only screen and (max-width: 1024px) {
-    section {
+    section,
+    section.art {
         padding: 80px 40px;
     }
 
     section.projectTitle {
         grid-template-columns: 1fr fit-content(380px);
-    }
-    section.art {
-        padding: 80px 40px;
     }
 }
 

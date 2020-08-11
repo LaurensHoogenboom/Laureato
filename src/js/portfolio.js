@@ -34,7 +34,7 @@ function buildPortfolio(items) {
 
         $('#portfolioList')
             .append(
-                $("<div>").addClass('item')
+                $("<div>").addClass('item').attr('data-action', 'open-self')
                     .append(
                         $("<div>").addClass('tumbnail').attr('style', 'background-image: url("' + tumbnailPath + '")')
                     )

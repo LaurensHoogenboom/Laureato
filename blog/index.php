@@ -1,7 +1,7 @@
 <?php 
-    $pgKeywords="My Work Portfolio Webdevelopment UI UX Design Classic Art";
-    $pgDesc="This is what I do. I do everything what has to do with UX and/or UI design, webdevelopment and classic art.";
-    $pgName="Portfolio";
+    $pgKeywords="Blog Stories Webdevelopment UI UX Design Classic Art";
+    $pgDesc="Stories about what I do: everything related to UX and/or UI design, webdevelopment and classic art.";
+    $pgName="Blog";
 
     include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php"; 
 ?>
@@ -55,10 +55,10 @@
     <div class="overlay">
         <div class="itemList blogList" id="blogList">
             <script>
-                $(document).ready(function () {
-                    $.import_js('/src/js/blog.js')
-                    $.import_js('/src/js/dal/blog.js')
+                $.import_js('/src/js/blog.js')
+                $.import_js('/src/js/dal/blog.js')
 
+                $(document).ready(function () {
                     setContentFilterFunctions(getBlogItems, buildBloglist)
 
                     getBlogItems(requestBlogBuild)

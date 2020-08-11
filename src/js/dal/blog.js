@@ -55,7 +55,9 @@ function updateBlogItem(id, pairs, doNotNotify, callback) {
             success: function (response) {
                 if (!doNotNotify) {
                     notification.succes('cms-notification', 'Changes succesfully saved.', 4)
-                } else {
+                } 
+
+                if (callback) {
                     callback(response)
                 }
             }

@@ -139,33 +139,43 @@ $("select").change();
 //itemlist
 
 $(document).ready(function () {
-    $(document).on('click', '.itemList .item .tumbnail, .itemList .item .title', function () {
-        var item = $(this).closest('.item');
-        var windowOfset;
-        var iframe = $(item).find('iframe');
+    $(document).on('click', '.itemList .item .tumbnail, .itemList .item .title, .itemList .item.blogItem:not(.featured)', function () {
+        let action = $(this).closest('.item').data('action')
 
-        $(item).closest('.itemList').find('.item').each(function () {
-            $(this).removeClass('opened');
-        });
+        if (action === "open-self") {
+            let item = $(this).closest('.item')
+            let windowOfset
+            let iframe = $(item).find('iframe')
 
-        $(item).addClass('opened');
+            $(item).closest('.itemList').find('.item').each(function () {
+                $(this).removeClass('opened')
+            })
 
-        if (window.innerWidth > 640 && window.innerHeight > 800) {
-            windowOfset = 146;
-        } else if (window.innerWidth > 480) {
-            windowOfset = 120;
-        } else {
-            windowOfset = 100;
+            $(item).addClass('opened')
+
+            if (window.innerWidth > 640 && window.innerHeight > 800) {
+                windowOfset = 146
+            } else if (window.innerWidth > 480) {
+                windowOfset = 120
+            } else {
+                windowOfset = 100
+            }
+
+            setTimeout(function () {
+                $("html, body").animate({
+                    scrollTop: $(item).offset().top - windowOfset
+                }, 300)
+
+                $(iframe).attr("src", $(iframe).attr("page"))
+            }, 300)
+        } else if (action === "go-to-page") {
+            let action = $(this).data('url')
+            let websiteOrigin = window.location.origin
+            let url = websiteOrigin + action
+
+            window.location.href = url
         }
-
-        setTimeout(function () {
-            $("html, body").animate({
-                scrollTop: $(item).offset().top - windowOfset
-            }, 300);
-
-            $(iframe).attr("src", $(iframe).attr("page"));
-        }, 300)
-    });
+    })
 
     $(document).on('click', '.itemList .item .cross', function () {
         var item = $(this).closest('.item');
