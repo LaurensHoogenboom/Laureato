@@ -60,6 +60,12 @@
         </select>
         <input type="text" class="possible-new-input hidden" id="blog-category-input" placeholder="Category name">
 
+        <label>Language</label>
+        <select name="language">
+            <option value="EN">English</option>
+            <option value="NL">Dutch</option>
+        </select>
+
         <input type="hidden" value="add" name="action">
 
         <input type="submit" class="hidden" id="submit-add-blog">

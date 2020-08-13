@@ -12,8 +12,9 @@
             $id = uniqid();
             $category = $_POST['category'];
             $title = $_POST['title'];
+            $language = $_POST['language'];
 
-            $db->query("INSERT INTO blogs (id, category, title, submitedOn, status, views) VALUES ('$id', '$category', '$title', NOW(), 'Concept', 0)") 
+            $db->query("INSERT INTO blogs (id, category, title, submitedOn, status, views, language) VALUES ('$id', '$category', '$title', NOW(), 'Concept', 0, '$language')") 
                     or die($db->error);
         }
 

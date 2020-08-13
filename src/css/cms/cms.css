@@ -417,10 +417,15 @@ nav a span {
   font-weight: bold;
 }
 
+.item-list .item .cms-icon {
+  padding-right: 10px;
+  padding-top: 1px;
+}
+
 /*list-item-types*/
 
 .item-list .item.blog {
-  grid-template-columns: max-content minmax(200px, 1fr) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px);
+  grid-template-columns: max-content minmax(200px, 1fr) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px);
 }
 
 /*notification*/

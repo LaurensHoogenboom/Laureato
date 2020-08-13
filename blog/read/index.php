@@ -6,29 +6,50 @@ $pgName = "Blog";
 include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
 ?>
 
-<section class="smallMargin left background pageTitle" style="background-image: url('/blog/img/header.jpg');">
+<section class="smallMargin left background pageTitle blogTitle" style="background-image: url('/blog/img/header.jpg');">
     <div class="overlay">
         <article>
             <h1 id="blog-title">
             </h1>
-            <h3 id="blog-category">
+            <h3 id="blog-subtitle">
             </h3>
         </article>
     </div>
 </section>
 
+<div class="seccondary-nav">
+    <div class="left">
+        <a href="/blog/" class="button grey">
+            <label class="chevron left">
+                <span></span>
+                <span></span>
+            </label>
+            Blog
+        </a>
+        <label id="blog-category">
+
+        </label>
+    </div>
+    <div class="middle">
+
+    </div>
+    <div class="right">
+        <label id="category-views">
+            <span class="icon">
+                &#xe90a;
+            </span>
+        </label>
+    </div>
+</div>
+
 <section class="center blog">
     <div class="overlay">
         <script>
             $.import_js('/src/js/blog-read.js')
-
-            $(document).ready(function() {
-                
-            })
         </script>
 
         <article id="blog">
-            
+
         </article>
     </div>
 </section>

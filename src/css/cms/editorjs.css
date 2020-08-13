@@ -20,6 +20,10 @@
   margin-bottom: 17px;
 }
 
+.ce-block .ce-paragraph:first-child {
+  font-weight: 700;
+}
+
 .cdx-block {
   padding: 0;
 }
@@ -93,7 +97,13 @@ h3.ce-header {
 }
 
 .cdx-block.inline-image {
-  padding-bottom: 33px;
+  padding-bottom: 23px;
+}
+
+.cdx-settings-button[data-tune='withBorder'],
+.cdx-settings-button[data-tune='stretched'],
+.cdx-settings-button[data-tune='withBackground'] {
+  display: none;
 }
 
 .inline-image__control-panel {

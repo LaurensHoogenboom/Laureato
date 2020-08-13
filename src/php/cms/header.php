@@ -19,6 +19,7 @@
 
     <script src="/src/js/plugins/jquery-min.js"></script>
     <script src="/src/js/plugins/import.js"></script>
+    <script src="/src/js/helpers/dataFormat.js"></script>
     <script src="/src/js/cms/cms.js"></script>
     <script src="/src/js/dal/blog.js"></script>
 </head>

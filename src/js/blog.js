@@ -29,34 +29,49 @@ function buildBloglist(items) {
                     }
                 })
 
+                if (!firstImage) {
+                    firstImage = '/blog/img/placeholder.jpg'
+                }
+
                 $("#blogList")
                     .append(
                         $("<div>").addClass('item').addClass('blogItem').addClass('featured').attr('data-action', 'go-to-page').attr('data-url', blogURL).attr('id', blogId)
                             .append(
                                 $("<article>")
                                     .append(
-                                        $("<h1>").text(`${item.title} - ${item.category}`)
+                                        $("<h1>").text(`${item.title} | ${item.category}`)
                                     )
                                     .append(
-                                        $("<p>").text(blogViewDate)
+                                        $("<p>")
+                                            .append(
+                                                $("<span>").addClass('icon').html('&#xe908;')
+                                            )
+                                            .append(
+                                                blogViewDate
+                                            )
+                                            .append(
+                                                $("<span>").addClass('seperator')
+                                            )
+                                            .append(
+                                                $("<span>").addClass('icon').html('&#xe90b;')
+                                            )
+                                            .append(
+                                                item.language
+                                            )
                                     )
                                     .append(
-                                        $("<p>").text(firstParagraph)
+                                        $("<p>").html(firstParagraph)
                                     )
                                     .append(
                                         $("<a>").addClass('button').addClass('blue').text('Read').attr('href', blogURL)
                                     )
                             )
+                            .append(
+                                $("<div>").addClass("tumbnail").css({
+                                    'background-image': `url('${firstImage}')`
+                                })
+                            )
                     )
-
-                if (firstImage) {
-                    $(`#${blogId}`)
-                        .append(
-                            $("<div>").addClass("tumbnail").css({
-                                'background-image': `url('${firstImage}')`
-                            })
-                        )
-                }
 
                 isFirst = false
             } else {
@@ -71,9 +86,21 @@ function buildBloglist(items) {
                             )
                             .append(
                                 $("<label>").text(item.category)
+                                    .prepend(
+                                        $("<span>").addClass('icon').html("&#xe909;")
+                                    )
                             )
                             .append(
                                 $("<label>").text(blogViewDate)
+                                    .prepend(
+                                        $("<span>").addClass('icon').html("&#xe908;")
+                                    )
+                            )
+                            .append(
+                                $("<label>").text(item.language)
+                                    .prepend(
+                                        $("<span>").addClass('icon').html("&#xe90b;")
+                                    )
                             )
                     )
             }

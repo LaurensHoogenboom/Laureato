@@ -8,7 +8,8 @@ function buildBlogList(blogs) {
 
         blogs.forEach((blog) => {
             let blogDateTime = new Date(blog.submitedOn)
-    
+            let blogViewDate = getDate.dmy(blogDateTime, "-")
+
             $('#blog-list').append(
                 $('<div>').attr("id", blog.id).addClass('blog').addClass('item').attr('data-url', 'blog/edit')
                     .append(
@@ -25,16 +26,38 @@ function buildBlogList(blogs) {
                     )
                     .append(
                         $("<label>").text(blog.category)
+                            .prepend(
+                                $("<span>").addClass('cms-icon').html('&#xe90c;')
+                            )
+                    )
+                    .append(
+                        $("<label>").text(blogViewDate)
+                            .prepend(
+                                $("<span>").addClass('cms-icon').html('&#xe90a;')
+                            )
                     )
                     .append(
                         $("<label>").text(blog.status)
+                            .prepend(
+                                $("<span>").addClass('cms-icon').html('&#xe90e;')
+                            )
                     )
                     .append(
-                        $("<label>").text(`${blogDateTime.getDate()}-${blogDateTime.getMonth()}-${blogDateTime.getFullYear()} | ${blogDateTime.getHours()}:${blogDateTime.getMinutes()}`)
+                        $("<label>").text(blog.views)
+                            .prepend(
+                                $("<span>").addClass('cms-icon').html('&#xe90b;')
+                            )
                     )
+                    .append(
+                        $("<label>").text(blog.language)
+                            .prepend(
+                                $("<span>").addClass('cms-icon').html('&#xe90f;')
+                            )
+                    )
+                    
             )
         })
-    }    
+    }
 }
 
 function buildBlogCategoryList(blogs) {
@@ -76,7 +99,7 @@ $(document).on('click', 'label.button', function () {
         let blogsToDelete = []
         let dialog = $(this).closest('.dialog')
 
-        $(blogListId).find('.blog').each(function() {
+        $(blogListId).find('.blog').each(function () {
             let checkbox = $(this).find('.actions input[type="checkbox"]')
 
             if (checkbox.is(':checked')) {
@@ -91,5 +114,5 @@ $(document).on('click', 'label.button', function () {
         })
 
         $(dialog).addClass('hidden')
-    } 
+    }
 })

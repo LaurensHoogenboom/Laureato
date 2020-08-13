@@ -1,7 +1,7 @@
-<?php 
-    $pgName="Edit Blogpost";
+<?php
+$pgName = "Edit Blogpost";
 
-    include $_SERVER['DOCUMENT_ROOT'] . "/src/php/cms/header.php"; 
+include $_SERVER['DOCUMENT_ROOT'] . "/src/php/cms/header.php";
 ?>
 
 <script src="/src/js/cms/blog.js"></script>
@@ -59,6 +59,12 @@
         </select>
         <input type="text" class="possible-new-input hidden" id="blog-category-input" placeholder="Category name">
 
+        <label>Language</label>
+        <select name="language">
+            <option value="EN">English</option>
+            <option value="NL">Dutch</option>
+        </select>
+
         <input type="hidden" value="add" name="action">
 
         <input type="submit" class="hidden" id="submit-edit-blog">
@@ -76,6 +82,6 @@
 
 <script src="/src/js/cms/blog-edit.js"></script>
 
-<?php 
-    include $_SERVER['DOCUMENT_ROOT'] . "/src/php/cms/footer.php"; 
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . "/src/php/cms/footer.php";
 ?>

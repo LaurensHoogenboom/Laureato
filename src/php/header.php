@@ -43,7 +43,7 @@
 
         <section class="navMenu">
             <img src="/home/img/logo.svg" id="headerLogo">
-
+                
             <div class="navLinks" id="navMenu">
                 <a href="/">Home</a>
                 <a href="/portfolio/">Portfolio</a>

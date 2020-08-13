@@ -5,6 +5,8 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
 
     let form = $(this)
 
+    console.log(form.serialize())
+
     $.ajax({
         type: "POST",
         url: '/src/php/dal/blog.php',

@@ -58,6 +58,12 @@ function setEditorWrapper(blog) {
         .append(
             $("<span>").attr('id', 'category').text(blog.category)
         )
+        .append(
+            " - "
+        )
+        .append(
+            $("<span>").attr('id', 'language').text(blog.language)
+        )
 
     $('#blog-status-switch').find('.button').each(function () {
         let status = $(this).data('status').trim()
@@ -84,6 +90,16 @@ function setEditDialog(blog) {
         $(this).prop("selected", false)
 
         if (optionValue.trim() === blog.category.trim()) {
+            $(this).prop("selected", true)
+        }
+    })
+
+    $('#edit-blog-post').find('form select[name="language"] option').each(function () {
+        let optionValue = $(this).val()
+
+        $(this).prop("selected", false)
+
+        if (optionValue.trim() === blog.language.trim()) {
             $(this).prop("selected", true)
         }
     })
@@ -167,6 +183,7 @@ $(document).on('submit', '#edit-blog-post-form', function (e) {
     let id = $(this).find('input[name="id"]').val()
     let title = $(this).find('input[name="title"]').val()
     let category = $(this).find('*[name="category"]').val()
+    let language = $(this).find('*[name="language"]').val()
     let pairs = []
 
     //create keyvaluepairs
@@ -179,6 +196,11 @@ $(document).on('submit', '#edit-blog-post-form', function (e) {
     pairs.push({
         label: "category",
         value: category
+    })
+
+    pairs.push({
+        label: "language",
+        value: language
     })
 
     //update the blog

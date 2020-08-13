@@ -1,19 +1,21 @@
 //highlight the current nav item
 
 $(document).ready(function () {
-    var current = location.pathname;
-    if (current == "/") {
+    var currentMainSection = location.pathname.split('/')[1].trim();
+
+    if (!currentMainSection) {
         $('.navMenu .navLinks a').first().addClass('current');
     } else {
         $('.navMenu .navLinks a').each(function () {
             var $this = $(this);
             // if the current path is like this link, make it active
-            if ($this.attr('href').indexOf(current) !== -1) {
+            if ($this.attr('href').indexOf(currentMainSection) !== -1) {
                 $this.addClass('current');
             }
         })
     }
 });
+
 
 //navigation menu
 
@@ -173,7 +175,9 @@ $(document).ready(function () {
             let websiteOrigin = window.location.origin
             let url = websiteOrigin + action
 
-            window.location.href = url
+            if (action) {
+                window.location.href = url
+            }
         }
     })
 
