@@ -14,13 +14,15 @@
   --shadow-input: rgba(0, 0, 0, 0.16);
   --shadow-nav: rgba(0, 0, 0, 0.03);
   --light-shadow: rgba(226, 226, 226);
+  --marker-yellow: rgb(253,253,150);
 }
 
 .ce-block {
   margin-bottom: 17px;
 }
 
-.ce-block:first-child .ce-paragraph {
+.ce-block:first-child .ce-paragraph,
+.ce-block:first-child .ce-paragraph a {
   font-weight: 700;
 }
 
@@ -36,7 +38,8 @@
 .cdx-list__item,
 h1.ce-header,
 h2.ce-header,
-h3.ce-header {
+h3.ce-header,
+.ce-paragraph a {
   font-family: SegoeUI;
   font-weight: 400;
   font-size: 20px;
@@ -77,6 +80,11 @@ h3.ce-header {
 
 .ce-delimiter:before {
   line-height: initial;
+}
+
+.ce-block mark {
+  background-color: var(--marker-yellow);
+  color: var(--text-grey-normal);
 }
 
 .cdx-input {

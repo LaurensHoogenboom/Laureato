@@ -35,8 +35,11 @@
             $id = $_POST['blogId'];
             $column = $_POST['column'];
             $value = $_POST['value'];
+            $escaped_value = $db->real_escape_string($value);
 
-            $db->query("UPDATE blogs SET $column='$value' WHERE id='$id'; ")
+            echo $value;
+
+            $db->query("UPDATE blogs SET $column='$escaped_value' WHERE id='$id'; ")
                     or die($db->error);
         }
 

@@ -22,6 +22,7 @@
   --shadow-input: rgba(0, 0, 0, 0.1);
   --shadow-nav: rgba(0, 0, 0, 0.03);
   --light-shadow: rgba(0, 0, 0, 0.15);
+  --marker-yellow: rgb(253,253,150);
 }
 
 /*text*/
@@ -178,10 +179,6 @@ article .delimiter {
   letter-spacing: 0.2em;
 }
 
-article .delimiter::before {
-  
-}
-
 article .warning {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -204,6 +201,15 @@ article .warning p {
 
 article .warning .icon {
   font-size: 40px;
+}
+
+article a:not(.button) {
+  text-decoration: underline;
+}
+
+article mark {
+  background-color: var(--marker-yellow);
+  color: var(--text-grey-normal);
 }
 
 /*misc*/

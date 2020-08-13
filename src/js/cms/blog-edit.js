@@ -35,6 +35,8 @@ function initialize(blogs) {
         }
     }
 
+    console.log(blog.content)
+
     setEditorWrapper(blog)
     setEditDialog(blog)
     loadEditor(JSON.parse(blog.content))
@@ -160,6 +162,9 @@ function loadEditor(contentToEdit) {
 
 $('#blog-save-button').click(function () {
     editor.save().then((outputData) => {
+        console.log(outputData)
+        console.log(JSON.stringify(outputData))
+
         let values = []
 
         values.push({

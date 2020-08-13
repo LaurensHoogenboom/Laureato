@@ -20,7 +20,8 @@
     --text-green: rgb(13, 129, 54);
     --shadow-input: rgba(0, 0, 0, 0.1);
     --shadow-nav: rgba(0, 0, 0, 0.03);
-    --light-shadow: rgba(0,0,0,0.15);
+    --light-shadow: rgba(0, 0, 0, 0.15);
+    --marker-yellow: rgb(253,253,150);
 }
 
 /*text*/
@@ -137,6 +138,15 @@ article .button:last-child {
     margin-bottom: 0;
 }
 
+article a:not(.button) {
+    text-decoration: underline;
+}
+
+article mark {
+    background-color: var(--marker-yellow);
+    color: var(--text-grey-normal);
+}
+
 /*misc*/
 
 .icon {
@@ -234,16 +244,13 @@ section:nth-child(odd).long {
 }
 
 @media only screen and (max-width: 1024px) {
-    section,
-    section.art {
+    section, section.art {
         padding: 80px 40px;
     }
-
     section.projectTitle {
         grid-template-columns: 1fr fit-content(380px);
     }
 }
-
 
 @media only screen and (max-width: 960px) {
     section, section.right, section.left {
@@ -649,7 +656,7 @@ section:nth-child(even) .infoBlock {
 }
 
 @media only screen and (max-width: 800px) {
-    .timeline{
+    .timeline {
         padding: 0px;
     }
     .timeline:before {
@@ -716,11 +723,9 @@ section:nth-child(even) .infoBlock {
         right: -25px;
         border-radius: 10px 0px 0px 0px;
     }
-
     .timeline li:nth-child(odd):before, .timeline li:nth-child(even):before {
         display: none;
     }
-
     .timeline li:nth-child(odd) h2, .timeline li:nth-child(even) h2 {
         display: inline-block;
         background-color: var(--background-grey-normal);
