@@ -20,7 +20,7 @@
   margin-bottom: 17px;
 }
 
-.ce-block .ce-paragraph:first-child {
+.ce-block:first-child .ce-paragraph {
   font-weight: 700;
 }
 
