@@ -101,8 +101,6 @@ function buildBlog(blog) {
     content = JSON.parse(blog.content).blocks
     blogWrapper = $("#blog")
 
-    console.log(content)
-
     let itemCount = 0
 
     content.forEach(part => {

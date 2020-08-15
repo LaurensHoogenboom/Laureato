@@ -271,8 +271,6 @@ $(document).ready(function () {
     $(document).on('submit', '#alienPortfolioSearchForm', function (e) {
         e.preventDefault();
 
-        console.log('fire');
-
         var alienSearch = $('#alienPortfolioSearchInput').val();
 
         sessionStorage.setItem('alienSearch', alienSearch);
@@ -284,8 +282,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(document).on('submit', '#headerPortfolioSearchForm', function (e) {
         e.preventDefault();
-
-        console.log('fire');
 
         var alienSearch = $('#headerPortfolioSearchInput').val();
 

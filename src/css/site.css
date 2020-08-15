@@ -185,7 +185,8 @@ article .warning {
   align-items: center;
   width: 100%;
   text-align: center;
-  margin-bottom: 17px;
+  margin-bottom: 40px;
+  margin-top: 23px;
   background-color: var(--background-grey-lightest);
   border: 1px solid var(--background-grey-normal);
   padding: 20px 20px 20px 40px;
@@ -210,6 +211,19 @@ article a:not(.button) {
 article mark {
   background-color: var(--marker-yellow);
   color: var(--text-grey-normal);
+}
+
+@media only screen and (max-width: 480px) {
+  main section.blog article > .warning,
+  article .warning {
+    margin-left: -25px;
+    margin-right: -25px;
+    width: calc(100% + 50px);
+    border-radius: 0;
+    padding-left: 25px;
+    border-left: 0;
+    border-right: 0;
+  }
 }
 
 /*misc*/
@@ -903,7 +917,11 @@ main section.blog article>* {
 
 main section.blog article ul {
   list-style: disc;
-  padding-left: 20px;
+  padding-left: 40px;
+}
+
+main section.blog article ol {
+  padding-left: 40px;
 }
 
 main section.blog article ul li {
