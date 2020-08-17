@@ -14,11 +14,11 @@
   --text-grey-light: rgb(180, 180, 180);
   --text-grey-normal: rgb(112, 112, 112);
   --text-grey-dark: rgb(51, 51, 51);
-  --text-blue-light: rgb(81, 153, 239);
-  --text-blue: rgb(38, 128, 235);
-  --text-blue-dark: rgb(30, 102, 188);
-  --text-green: rgb(13, 129, 54);
-  --text-orange: rgb(251, 86, 7);
+  --blue-light: rgb(104, 173, 202);
+  --blue: rgb(74, 156, 191);
+  --blue-dark: rgb(58, 134, 166);
+  --green: rgb(13, 129, 54);
+  --orange: rgb(240, 176, 86);
   --shadow-input: rgba(0, 0, 0, 0.1);
   --shadow-nav: rgba(0, 0, 0, 0.03);
   --light-shadow: rgba(0, 0, 0, 0.15);
@@ -49,7 +49,7 @@ h2 {
 }
 
 h3 {
-  color: var(--text-green);
+  color: var(--green);
 }
 
 @media only screen and (max-width: 800px) {
@@ -288,7 +288,7 @@ nav .navMenu .navLinks a:hover {
 }
 
 nav .navMenu a.current {
-  color: var(--text-blue);
+  color: var(--blue);
 }
 
 nav .menu form {
@@ -776,7 +776,7 @@ main section.contentList .overlay {
 
 main section.home {
   position: relative;
-  height: calc(100vh - 106px);
+  height: calc(var(--vh, 1vh) * 100 - 106px);
 }
 
 main section.home .overlay {
@@ -861,13 +861,13 @@ main section.home .chevron span {
 
 @media only screen and (max-height: 800px) {
   main section.home {
-    height: calc(100vh - 80px);
+    height: calc(var(--vh, 1vh) * 100 - 80px);
   }
 }
 
 @media only screen and (max-width: 640px) {
   main section.home {
-    height: calc(100vh - 80px);
+    height: calc(var(--vh, 1vh) * 100 - 80px);
   }
   main section.home .overlay .caption h1 {
     font-size: 45px;
@@ -879,7 +879,7 @@ main section.home .chevron span {
 
 @media only screen and (max-width: 480px) {
   main section.home {
-    height: calc(100vh - 60px);
+    height: calc(var(--vh, 1vh) * 100 - 60px);
   }
   main section.home .overlay .caption h1 {
     font-size: 35px;
@@ -1046,8 +1046,8 @@ footer section:last-child .icon:first-of-type {
   display: inline-block;
   height: 15px;
   width: 15px;
-  background-color: var(--text-blue);
-  border: 4px solid var(--text-blue);
+  background-color: var(--blue);
+  border: 4px solid var(--blue);
   border-radius: 50%;
   margin-left: 10px;
   transition: background-color 0.3s;
@@ -1649,7 +1649,7 @@ main section .content .contentFilter {
 .button {
   display: inline-block;
   padding: 3px 20px 6px 20px;
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
   border-radius: 18px;
   transition: background-color 0.3s;
@@ -1682,11 +1682,11 @@ main section .content .contentFilter {
 }
 
 .button.blue {
-  background-color: var(--text-blue);
+  background-color: var(--blue);
 }
 
 .button.blue:hover {
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
 }
 
 .button.blue .chevron span {
@@ -1717,7 +1717,7 @@ main section .content .contentFilter {
 }
 
 .button.transparent.blue {
-  color: var(--text-blue);
+  color: var(--blue);
 }
 
 .button .chevron.left, .button .chevron.right {
@@ -1792,7 +1792,7 @@ main section .content .contentFilter {
 }
 
 .buttonTextInput .icon:hover {
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
 }
 
@@ -2005,7 +2005,7 @@ form .button {
 .formStatus {
   display: block;
   padding: 4px 20px 7px 20px;
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
   border-radius: 4px;
   transition: all 0.3s;
@@ -2022,11 +2022,11 @@ form .button {
 }
 
 .formStatus.fail {
-  background-color: var(--text-orange);
+  background-color: var(--orange);
 }
 
 .formStatus.succes {
-  background-color: var(--text-green);
+  background-color: var(--green);
 }
 
 /*login*/
