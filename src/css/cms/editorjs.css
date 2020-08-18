@@ -6,14 +6,14 @@
   --text-grey-light: rgb(180, 180, 180);
   --text-grey-normal: rgb(112, 112, 112);
   --text-grey-dark: rgb(51, 51, 51);
-  --blue-light: rgb(81, 153, 239);
-  --blue: rgb(38, 128, 235);
-  --blue-dark: rgb(30, 102, 188);
+  --blue-light: rgb(104, 173, 202);
+  --blue: rgb(74, 156, 191);
+  --blue-dark: rgb(58, 134, 166);
   --green: rgb(13, 129, 54);
-  --orange: rgb(251, 86, 7);
-  --shadow-input: rgba(0, 0, 0, 0.16);
+  --orange: rgb(240, 176, 86);
+  --shadow-input: rgba(0, 0, 0, 0.1);
   --shadow-nav: rgba(0, 0, 0, 0.03);
-  --light-shadow: rgba(226, 226, 226);
+  --light-shadow: rgba(0, 0, 0, 0.15);
   --marker-yellow: rgb(253,253,150);
 }
 
