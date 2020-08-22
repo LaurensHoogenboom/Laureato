@@ -30,8 +30,6 @@ $(document).on('submit', '#logout', function (e) {
         type: "POST",
         url: '/src/php/cms/logout.php',
         success: function (response) {
-            console.log(response)
-
             if (response === "OK") {
                 window.location.href = "/";
             }

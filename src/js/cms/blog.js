@@ -1,8 +1,6 @@
 //build functions
 
 function buildBlogList(blogs) {
-    console.log(blogs.length)
-
     if (blogs.length > 0) {
         $('#blog-list').html("")
 

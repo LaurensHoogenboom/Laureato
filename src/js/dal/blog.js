@@ -5,8 +5,6 @@ $(document).on('submit', '#add-blog-post-form', function (e) {
 
     let form = $(this)
 
-    console.log(form.serialize())
-
     $.ajax({
         type: "POST",
         url: '/src/php/dal/blog.php',
@@ -50,15 +48,11 @@ function getBlogCategories(callback) {
 
 function updateBlogItem(id, pairs, doNotNotify, callback) {
     pairs.forEach(pair => {
-        console.log(pair.value)
-
         $.ajax({
             type: "POST",
             url: '/src/php/dal/blog.php',
             data: { action: "update", blogId: id, column: pair.label, value: pair.value},
             success: function (response) {
-                console.log(response)
-
                 if (!doNotNotify) {
                     notification.succes('cms-notification', 'Changes succesfully saved.', 4)
                 } 

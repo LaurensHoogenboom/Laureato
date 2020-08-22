@@ -14,14 +14,15 @@
   --text-grey-light: rgb(180, 180, 180);
   --text-grey-normal: rgb(112, 112, 112);
   --text-grey-dark: rgb(51, 51, 51);
-  --text-blue-light: rgb(81, 153, 239);
-  --text-blue: rgb(38, 128, 235);
-  --text-blue-dark: rgb(30, 102, 188);
-  --text-green: rgb(13, 129, 54);
-  --text-orange: rgb(251, 86, 7);
-  --shadow-input: rgba(0, 0, 0, 0.16);
+  --blue-light: rgb(104, 173, 202);
+  --blue: rgb(74, 156, 191);
+  --blue-dark: rgb(58, 134, 166);
+  --green: rgb(13, 129, 54);
+  --orange: rgb(240, 176, 86);
+  --shadow-input: rgba(0, 0, 0, 0.1);
   --shadow-nav: rgba(0, 0, 0, 0.03);
-  --light-shadow: rgba(226, 226, 226);
+  --light-shadow: rgba(0, 0, 0, 0.15);
+  --marker-yellow: rgb(253,253,150);
 }
 
 /*text*/
@@ -62,7 +63,7 @@ h3 {
   font-size: 16px;
   font-weight: 100;
   font-family: SegoeUI;
-  color: var(--text-green);
+  color: var(--green);
 }
 
 @media only screen and (max-width: 800px) {
@@ -191,7 +192,7 @@ header {
 }
 
 header h1 {
-  color: var(--text-green);
+  color: var(--green);
 }
 
 header .left {
@@ -222,7 +223,7 @@ nav {
   grid-template-rows: 70px 1fr max-content;
   width: 60px;
   height: 100vh;
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   float: left;
   padding: 0px 11px 40px 11px;
 }
@@ -238,7 +239,7 @@ nav .logo {
   display: flex;
   align-content: center;
   justify-content: center;
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
   margin: 0px -11px 0px -11px;
 }
 
@@ -253,11 +254,11 @@ nav a.button.square {
 }
 
 nav a.button.transparent:hover {
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
 }
 
 nav a.button.transparent.current {
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
 }
 
 nav a span {
@@ -442,18 +443,18 @@ nav a span {
     box-shadow: 0px 1px 2px var(--shadow-input);
     transition: top 0.2s, opacity 0.2s;
     overflow: hidden;
-    border-left: 2px solid var(--text-blue);
-    color: var(--text-blue);
+    border-left: 2px solid var(--blue);
+    color: var(--blue);
 }
 
 .notification.fail {
-  border-left: 2px solid var(--text-orange);
-  color: var(--text-orange);
+  border-left: 2px solid var(--orange);
+  color: var(--orange);
 }
 
 .notification.succes {
-  border-left: 2px solid var(--text-green);
-  color: var(--text-green);
+  border-left: 2px solid var(--green);
+  color: var(--green);
 }
 
 .notification.hidden {
@@ -468,7 +469,7 @@ nav a span {
 .button {
   display: inline-block;
   padding: 2px 20px 4px 20px;
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
   border-radius: 16px;
   transition: background-color 0.3s;
@@ -503,11 +504,11 @@ nav a span {
 }
 
 .button.blue {
-  background-color: var(--text-blue);
+  background-color: var(--blue);
 }
 
 .button.blue:hover {
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
 }
 
 .button.blue .chevron span {
@@ -538,7 +539,7 @@ nav a span {
 }
 
 .button.transparent.blue {
-  color: var(--text-blue);
+  color: var(--blue);
 }
 
 .button .chevron.left,
@@ -614,7 +615,7 @@ nav a span {
 }
 
 .buttonTextInput .icon:hover {
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
 }
 
@@ -647,12 +648,12 @@ nav a span {
 }
 
 .switch .button.selected {
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: white;
 }
 
 .switch .button.selected:hover {
-  background-color: var(--text-blue-dark);
+  background-color: var(--blue-dark);
   color: white;
 }
 
@@ -866,7 +867,7 @@ input[type="checkbox"]+label::before {
 }
 
 input[type="checkbox"]:checked+label::before {
-  background-color: var(--text-green);
+  background-color: var(--green);
   content: '\e906';
   color: white;
 }
@@ -905,7 +906,7 @@ form label {
 .formStatus {
   display: block;
   padding: 4px 20px 7px 20px;
-  background-color: var(--text-blue);
+  background-color: var(--blue);
   color: var(--background-white);
   border-radius: 4px;
   transition: all 0.3s;
@@ -922,11 +923,11 @@ form label {
 }
 
 .formStatus.fail {
-  background-color: var(--text-orange);
+  background-color: var(--orange);
 }
 
 .formStatus.succes {
-  background-color: var(--text-green);
+  background-color: var(--green);
 }
 
 /*font*/

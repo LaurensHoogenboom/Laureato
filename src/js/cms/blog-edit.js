@@ -35,8 +35,6 @@ function initialize(blogs) {
         }
     }
 
-    console.log(blog.content)
-
     setEditorWrapper(blog)
     setEditDialog(blog)
     loadEditor(JSON.parse(blog.content))
@@ -162,9 +160,6 @@ function loadEditor(contentToEdit) {
 
 $('#blog-save-button').click(function () {
     editor.save().then((outputData) => {
-        console.log(outputData)
-        console.log(JSON.stringify(outputData))
-
         let values = []
 
         values.push({
@@ -174,7 +169,7 @@ $('#blog-save-button').click(function () {
 
         updateBlogItem(blogId, values)
     }).catch((error) => {
-        console.log('Saving failed: ', error)
+        notification.fail('cms-notification', `Saving failed: ${error}.`, 5)
     });
 })
 
@@ -238,6 +233,13 @@ $(document).on('click', '.switch .button', function () {
             label: "status",
             value: status
         })
+
+        if (status === "Published") {
+            pairs.push({
+                label: "submitedOn",
+                value: "dateTimeNow"
+            })
+        }
 
         updateBlogItem(blog.id, pairs, true, function () {
             notification.succes('cms-notification', `Blog status is set to "${status}".`, 4)

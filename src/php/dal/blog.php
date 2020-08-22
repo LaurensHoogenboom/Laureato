@@ -35,6 +35,11 @@
             $id = $_POST['blogId'];
             $column = $_POST['column'];
             $value = $_POST['value'];
+
+            if ($value == "dateTimeNow") {
+                $value = date("Y-m-d H:i:s");
+            }
+
             $escaped_value = $db->real_escape_string($value);
 
             echo $value;
