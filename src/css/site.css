@@ -312,6 +312,17 @@ nav .navButton {
   nav {
     padding: 23px 80px;
   }
+  nav {
+    height: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  nav .menu, nav .navMenu {
+    height: 50px;
+  }
+  nav .navMenu img {
+    max-height: 45px;
+  }
 }
 
 @media only screen and (max-width: 1152px) {
@@ -387,18 +398,7 @@ nav .navButton {
   }
 }
 
-@media only screen and (max-height: 800px) {
-  nav {
-    height: 80px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  nav .menu, nav .navMenu {
-    height: 50px;
-  }
-  nav .navMenu img {
-    max-height: 45px;
-  }
+@media only screen and (max-height: 800px) and (max-width: 1152px) {
   nav .navMenu .navLinks {
     height: calc(100vh - 80px);
     top: 80px;
