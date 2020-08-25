@@ -104,6 +104,7 @@ ul li::before {
 
 ol {
   padding-left: 20px;
+  padding-bottom: 16px;
 }
 
 /*links*/
@@ -1435,8 +1436,11 @@ footer section:last-child .icon:first-of-type {
   }
   .itemList .item.blogItem {
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content max-content;
     grid-gap: 25px;
+  }
+  .itemList .item.blogItem label:first-child {
+    grid-column: 1 / 4;
   }
   .itemList .item.blogItem label:first-of-type {
     font-size: 30px;
@@ -1452,6 +1456,9 @@ footer section:last-child .icon:first-of-type {
   }
   .itemList .item.blogItem {
     grid-template-columns: 1fr 1fr;
+  }
+  .itemList .item.blogItem label:first-child {
+    grid-column: 1 / 3;
   }
 }
 
