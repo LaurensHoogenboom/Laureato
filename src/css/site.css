@@ -310,7 +310,7 @@ nav .navButton {
 
 @media only screen and (max-width: 1440px), (max-height: 800px) {
   nav {
-    padding: 23px 80px;
+    padding: 15px 80px;
   }
   nav {
     height: 80px;
@@ -1429,7 +1429,7 @@ footer section:last-child .icon:first-of-type {
   }
   .itemList .item.blogItem {
     align-items: center;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: 1fr 1fr;
   }
   .itemList .item.blogItem label:first-of-type {
     font-size: 30px;
