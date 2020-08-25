@@ -1,3 +1,23 @@
+# REDIRECT TO HTTPS
+
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# BROWSER CACHING USING CACHE-CONTROL HEADERS
+<ifModule mod_headers.c> 
+    # One month for image and video files
+    <filesMatch ".(flv|gif|ico|jpg|jpeg|mp4|mpeg|png|svg|swf|webp)$">
+        Header set Cache-Control "max-age=18748800, public"
+    </filesMatch>
+
+    # One week for JavaScript, PDF and font files
+    <filesMatch ".(js|pdf|woff)$">
+        Header set Cache-Control "max-age=604800, public"
+    </filesMatch>
+
+    # One day for CSS files
+    <filesMatch ".(css)$">
+        Header set Cache-Control "max-age=86400, public"
+    </filesMatch>
+</ifModule>
