@@ -135,7 +135,7 @@ function buildBlog(blog) {
             part.data.items.forEach(listItem => {
                 $(`#${itemId}`)
                     .append(
-                        $("<li>").text(listItem)
+                        $("<li>").html(listItem)
                     )
             })
         }
@@ -155,7 +155,7 @@ function buildBlog(blog) {
                         .append(
                             $("<p>")
                             .append(
-                                $("<b>").text(part.data.title)
+                                $("<b>").html(part.data.title)
                             )
                             .append(
                                 $("<br>")
