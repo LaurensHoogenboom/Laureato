@@ -382,7 +382,7 @@ nav .navButton {
 
 @media only screen and (max-width: 1024px) {
   nav {
-    padding: 23px 40px;
+    padding: 15px 40px;
   }
   nav .navMenu .navLinks a {
     padding: 0 40px;
@@ -1219,6 +1219,12 @@ footer section:last-child .icon:first-of-type {
   padding: 20px;
 }
 
+.itemList .item.blogItem label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .itemList .item.blogItem.featured {
   padding: 60px;
   grid-template-columns: fit-content(738px) 1fr;
@@ -1430,6 +1436,7 @@ footer section:last-child .icon:first-of-type {
   .itemList .item.blogItem {
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
   }
   .itemList .item.blogItem label:first-of-type {
     font-size: 30px;
@@ -1444,7 +1451,7 @@ footer section:last-child .icon:first-of-type {
     height: calc(var(--vh, 1vh) * 100 - 140px);
   }
   .itemList .item.blogItem {
-    grid-template-columns: max-content max-content;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
