@@ -188,7 +188,7 @@ $(document).ready(function () {
 
         $(item).removeClass('opened');
 
-        if (window.innerWidth > 640) {
+        if (window.innerWidth > 640 && window.innerHeight > 800) {
             windowOfset = 146;
         } else if (window.innerWidth > 480) {
             windowOfset = 120;
@@ -291,8 +291,29 @@ $(document).ready(function () {
     })
 })
 
-//--------------------------- filter ---------------------------
+//----------------- play transition when visible ----------------
 
+$(document).ready(function () {
+    window.setTimeout(function () {
+        transitionOnScreen()
+    }, 200)
+})
+
+document.addEventListener('scroll', function (e) {
+    window.setTimeout(function () {
+        transitionOnScreen()
+    }, 300)
+})
+
+function transitionOnScreen() {
+    $('.float-on-screen, .opaque-on-screen').each(function () {
+        if ($(this).visible(true) && !$(this).hasClass('has-played')) {
+            $(this).addClass('has-played')
+        }
+    })
+}
+
+//--------------------------- filter ---------------------------
 //set callback functions
 
 let contentRequest

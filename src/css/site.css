@@ -131,6 +131,28 @@ video {
   outline: none;
 }
 
+/*scroll animations*/
+
+.float-on-screen {
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+.float-on-screen.has-played {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.opaque-on-screen {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.opaque-on-screen.has-played {
+  opacity: 1;
+}
+
 /*article*/
 
 article {

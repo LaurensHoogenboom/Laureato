@@ -8,7 +8,7 @@
 
 <section class="smallMargin left background pageTitle" style="background-image: url(/portfolio/img/header.jpg);">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Portfolio
             </h1>
@@ -16,7 +16,7 @@
                 This is what I'm doing. Enjoy.
             </h3>
         </article>
-        <div class="content contentFilterWrapper">
+        <div class="content contentFilterWrapper opaque-on-screen">
             <div class="contentFilter">
                 <form>
                     <div class="buttonTextInput">
@@ -56,7 +56,7 @@
 
 <section class="contentList">
     <div class="overlay">
-        <div class="itemList" id="portfolioList">
+        <div class="itemList float-on-screen" id="portfolioList">
             <script>
                 $(document).ready(function () {
                     $.import_js('/src/js/portfolio.js')

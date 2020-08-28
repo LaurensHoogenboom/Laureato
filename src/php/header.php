@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="/src/css/site.css">
 
     <script src="/src/js/plugins/jquery-min.js"></script>
+    <script src="/src/js/plugins/jquery.visible.js"></script>
     <script src="/src/js/plugins/import.js"></script>
     <script src="/src/js/helpers/dataFilter.js"></script>
     

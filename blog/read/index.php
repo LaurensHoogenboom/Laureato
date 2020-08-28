@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
 
 <section class="smallMargin left background pageTitle blogTitle" style="background-image: url('/blog/img/header.jpg');">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1 id="blog-title">
             </h1>
             <h3 id="blog-subtitle">
@@ -48,7 +48,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
             $.import_js('/src/js/blog-read.js')
         </script>
 
-        <article id="blog">
+        <article id="blog" class="float-on-screen">
 
         </article>
     </div>

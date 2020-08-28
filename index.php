@@ -19,7 +19,7 @@
     </div>
 
     <div class="overlay">
-        <div class="caption">
+        <div class="caption float-on-screen">
             <h1>
                 Craftmanschip. Redefined.
             </h1>
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="chevron down" id="homePageScroll">
+    <div class="chevron down float-on-screen" id="homePageScroll">
         <span></span>
         <span></span>
     </div>
@@ -42,7 +42,7 @@
 
 <section class="largeMargin center laurelLeft" id="skillSet">
     <div class="overlay">
-        <div class="iconSet">
+        <div class="iconSet opaque-on-screen">
             <label>
                 <span class="icon">
                     &#xe902;
@@ -73,7 +73,7 @@
 
 <section class="left">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 About Laureato
             </h1>
@@ -108,7 +108,7 @@
 </section>
 
 <section class="smallMargin center laurelRight">
-    <div class="overlay">
+    <div class="overlay float-on-screen">
         <article class="forceMargin">
             <h1>
                 Search my portfolio
@@ -128,7 +128,7 @@
 
 <section class="left">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Do you like it here?
             </h1>

@@ -8,7 +8,7 @@
 
 <section class="smallMargin left background pageTitle" style="background-image: url('/blog/img/header.jpg');">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Blog
             </h1>
@@ -16,7 +16,7 @@
                 Stories about the things I do.
             </h3>
         </article>
-        <div class="content contentFilterWrapper">
+        <div class="content contentFilterWrapper opaque-on-screen">
             <div class="contentFilter">
                 <form>
                     <!-- <div class="buttonTextInput">
@@ -53,7 +53,7 @@
 
 <section class="contentList">
     <div class="overlay">
-        <div class="itemList blogList" id="blogList">
+        <div class="itemList blogList float-on-screen" id="blogList">
             <script>
                 $.import_js('/src/js/blog.js')
                 $.import_js('/src/js/dal/blog.js')

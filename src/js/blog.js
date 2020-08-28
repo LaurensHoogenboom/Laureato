@@ -35,7 +35,13 @@ function buildBloglist(items) {
 
                 $("#blogList")
                     .append(
-                        $("<div>").addClass('item').addClass('blogItem').addClass('featured').attr('data-action', 'go-to-page').attr('data-url', blogURL).attr('id', blogId)
+                        $("<div>").addClass('item')
+                            .addClass('blogItem')
+                            .addClass('featured')
+                            .attr('data-action', 'go-to-page')
+                            .attr('data-url', blogURL)
+                            .attr('id', blogId)
+
                             .append(
                                 $("<article>")
                                     .append(

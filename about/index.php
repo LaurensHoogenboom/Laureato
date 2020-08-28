@@ -8,7 +8,7 @@
 
 <section class="smallMargin left background pageTitle" style="background-image: url(/about/img/header.jpg);">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 About Laureato
             </h1>
@@ -21,11 +21,11 @@
 
 <section class="right">
     <div class="overlay">
-        <div class="content center">
+        <div class="content center float-on-screen">
             <img src="/about/img/Me.png">
         </div>
 
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Hey, I am Laurens Hoogenboom.
             </h1>
@@ -59,7 +59,7 @@
 
 <section class="largeMargin center">
     <div class="overlay">
-        <article class="forceMargin">
+        <article class="forceMargin opaque-on-screen">
             <h1>
                 Skill & Tools
             </h1>
@@ -68,7 +68,7 @@
             </p>
         </article>
 
-        <div class="iconSet detail">
+        <div class="iconSet detail float-on-screen">
             <label>
                 <span class="icon">
                     &#xe903;
@@ -142,7 +142,7 @@
 </section>
 
 <section class="smallMargin center laurelRight">
-    <div class="overlay">
+    <div class="overlay float-on-screen">
         <article class="forceMargin">
             <h1>
                 Search my portfolio
@@ -162,7 +162,7 @@
 
 <section class="left">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Do you like it here?
             </h1>
