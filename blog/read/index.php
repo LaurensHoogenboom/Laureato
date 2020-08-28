@@ -56,7 +56,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
 
 <section class="left">
     <div class="overlay">
-        <article>
+        <article class="opaque-on-screen">
             <h1>
                 Do you want to know more about me or what I do?
             </h1>
