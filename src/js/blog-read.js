@@ -175,8 +175,14 @@ function buildBlog(blog) {
                         )
                 )
 
-            if (part.data.stretched) {
-                $(`#${itemId}`).addClass('stretched')
+            if (part.data.caption) {
+                $(`#${itemId}`)
+                .append(
+                    $("<p>")
+                    .append(
+                        $("<i>").html(part.data.caption)
+                    )
+                )
             }
         }
 

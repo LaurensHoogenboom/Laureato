@@ -176,6 +176,10 @@ article h3 {
   padding-bottom: 5px;
 }
 
+article b a {
+  font-weight: bold;
+}
+
 article ul {
   padding: 23px 0px 17px 0px;
 }
@@ -930,14 +934,26 @@ main section.center.blog .overlay article {
 }
 
 main section.blog article .image-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 40px;
   padding-bottom: 40px;
 }
 
 main section.blog article .image-wrapper img {
-  width: 100%;
+  max-height: 600px;
+  max-width: 100%;
   filter: drop-shadow(0px 0px 20px var(--light-shadow));
+}
+
+main section.blog article .image-wrapper p {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 17px;
+  color: var(--text-grey-light);
 }
 
 main section.blog article>* {
