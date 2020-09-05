@@ -45,24 +45,27 @@ function buildBloglist(items) {
                             .append(
                                 $("<article>")
                                     .append(
-                                        $("<h1>").text(`${item.title} | ${item.category}`)
+                                        $("<h1>").text(`${item.title}`)
                                     )
                                     .append(
-                                        $("<p>")
+                                        $("<p>").addClass('feactured-blog-info')
                                             .append(
-                                                $("<span>").addClass('icon').html('&#xe908;')
+                                                $("<label>").text(blogViewDate)
+                                                    .prepend(
+                                                        $("<span>").addClass('icon').html('&#xe908;')
+                                                    )
                                             )
                                             .append(
-                                                blogViewDate
+                                                $("<label>").text(item.category)
+                                                    .prepend(
+                                                        $("<span>").addClass('icon').html('&#xe909;')
+                                                    )
                                             )
                                             .append(
-                                                $("<span>").addClass('seperator')
-                                            )
-                                            .append(
-                                                $("<span>").addClass('icon').html('&#xe90b;')
-                                            )
-                                            .append(
-                                                item.language
+                                                $("<label>").text(item.language)
+                                                    .prepend(
+                                                        $("<span>").addClass('icon').html('&#xe90b;')
+                                                    )
                                             )
                                     )
                                     .append(
@@ -91,15 +94,15 @@ function buildBloglist(items) {
                                     )
                             )
                             .append(
-                                $("<label>").text(item.category)
-                                    .prepend(
-                                        $("<span>").addClass('icon').html("&#xe909;")
-                                    )
-                            )
-                            .append(
                                 $("<label>").text(blogViewDate)
                                     .prepend(
                                         $("<span>").addClass('icon').html("&#xe908;")
+                                    )
+                            )
+                            .append(
+                                $("<label>").text(item.category)
+                                    .prepend(
+                                        $("<span>").addClass('icon').html("&#xe909;")
                                     )
                             )
                             .append(

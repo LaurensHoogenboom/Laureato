@@ -178,10 +178,7 @@ function buildBlog(blog) {
             if (part.data.caption) {
                 $(`#${itemId}`)
                 .append(
-                    $("<p>")
-                    .append(
-                        $("<i>").html(part.data.caption)
-                    )
+                    $("<p>").html(part.data.caption)
                 )
             }
         }
