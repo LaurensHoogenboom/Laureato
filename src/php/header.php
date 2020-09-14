@@ -19,16 +19,33 @@
     <script src="/src/js/plugins/jquery.visible.js"></script>
     <script src="/src/js/plugins/import.js"></script>
     <script src="/src/js/helpers/dataFilter.js"></script>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157737566-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'UA-157737566-1', { 'anonymize_ip': true });
+    <!-- Start of Woopra Code -->
+    <script>
+        (function() {
+            var t, i, e, n = window,
+                o = document,
+                a = arguments,
+                s = "script",
+                r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"],
+                c = function() {
+                    var t, i = this;
+                    for (i._e = [], t = 0; r.length > t; t++)(function(t) {
+                        i[t] = function() {
+                            return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i
+                        }
+                    })(r[t])
+                };
+            for (n._w = n._w || {}, t = 0; a.length > t; t++) n._w[a[t]] = n[a[t]] = n[a[t]] || new c;
+            i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
+        })("woopra");
+
+        woopra.config({
+            domain: 'laureato.nl'
+        });
+        woopra.track();
     </script>
+    <!-- End of Woopra Code -->
 </head>
 
 <body>
@@ -44,7 +61,7 @@
 
         <section class="navMenu">
             <img src="/home/img/logo.svg" id="headerLogo">
-                
+
             <div class="navLinks" id="navMenu">
                 <a href="/">Home</a>
                 <a href="/portfolio/">Portfolio</a>
