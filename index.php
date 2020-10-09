@@ -78,7 +78,7 @@
                 About Laureato
             </h1>
             <p>
-                Hi! My name is Laurens Hoogenboom, 19 years old, born in the Netherlands,
+                Hi! My name is Laurens Hoogenboom, 20 years old, born in the Netherlands,
                 cyclist and a Dutch fellow at heart. My main activities are user interface and
                 user experience Design, Web development and the creation of classic art.
                 In terms of design, I do focus on a well thought functional experience,
