@@ -4,6 +4,10 @@ function buildBlogList(blogs) {
     if (blogs.length > 0) {
         $('#blog-list').html("")
 
+        blogs.sort((a, b) => {
+            return new Date(b.submitedOn) - new Date(a.submitedOn)
+        });
+
         blogs.forEach((blog) => {
             let blogDateTime = new Date(blog.submitedOn)
             let blogViewDate = getDate.dmy(blogDateTime, "-")
@@ -52,7 +56,7 @@ function buildBlogList(blogs) {
                                 $("<span>").addClass('cms-icon').html('&#xe90f;')
                             )
                     )
-                    
+
             )
         })
     }
