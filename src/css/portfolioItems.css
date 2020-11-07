@@ -179,6 +179,11 @@ section.art {
     padding: 60px;
 }
 
+section.right.art,
+section.left.art {
+    grid-gap: 60px;
+}
+
 section.art .content {
     min-height: 0;
 }
@@ -194,6 +199,7 @@ section.projectTitle {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 60px;
 }
 
 section.projectTitle .content {
@@ -249,9 +255,6 @@ section:nth-child(odd).long {
 }
 
 @media only screen and (max-width: 1024px) {
-    section, section.art {
-        padding: 80px 40px;
-    }
     section.projectTitle {
         grid-template-columns: 1fr fit-content(380px);
     }
@@ -261,7 +264,8 @@ section:nth-child(odd).long {
     section, section.right, section.left {
         grid-template-columns: 1fr;
     }
-    section .content>img, section .content>video {
+    section .content>img, 
+    section .content>video {
         max-height: initial;
         max-width: 100%;
         width: 100%;
@@ -270,11 +274,11 @@ section:nth-child(odd).long {
         grid-template-rows: calc(100vh - 80px) max-content;
         height: initial;
         min-height: 100vh;
-        grid-gap: 40px;
         padding: 40px;
     }
     section.art .content {
         min-height: 0;
+        justify-content: left;
     }
     section.art .content img {
         max-height: 100%;
@@ -286,7 +290,7 @@ section:nth-child(odd).long {
         grid-gap: 40px;
     }
     section.projectTitle .content img {
-        height: 100%;
+        max-height: 100%;
         width: initial;
     }
     section.projectTitle .description {
@@ -304,7 +308,8 @@ section:nth-child(odd).long {
 }
 
 @media only screen and (max-width: 768px) {
-    section .content>img, section .content>video {
+    section .content>img, 
+    section .content>video {
         width: calc(100% + 80px);
         margin: 0px -40px -80px -40px;
         filter: drop-shadow(0px -5px 10px var(--light-shadow));
@@ -319,8 +324,8 @@ section:nth-child(odd).long {
         width: initial;
         margin: 0;
     }
-    section.right.art .content>img {
-        margin: -80px -40px 0px -40px;
+    section.art .content>img {
+        margin: 0px;
     }
 }
 
@@ -331,14 +336,24 @@ section:nth-child(odd).long {
     section.right, section.left {
         grid-gap: 50px;
     }
-    section .content>img, section .content>video {
+    section .content>img, 
+    section .content>video {
         width: calc(100% + 50px);
         margin: 0px -25px -50px -25px;
     }
     section.art {
         padding: 25px 25px;
-        grid-template-rows: calc(100vh - 50px) max-content;
+        grid-template-rows: max-content max-content;
     }
+    section.art .content {
+        min-height: initial;
+        height: initial;
+    }
+    section.art .content img {
+        max-width: initial;
+        width: calc(100% + 50px);
+        margin: -25px -25px 0px -25px;
+    } 
 }
 
 @media only screen and (max-width: 590px) {

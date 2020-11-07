@@ -1939,7 +1939,6 @@ main section .content .contentFilter {
   padding-left: 10px;
 }
 
-
 .button.mobileRounded .chevron:last-child {
   margin-left: 10px;
 }
@@ -1969,6 +1968,10 @@ main section .content .contentFilter {
 
   .button.mobileRounded .text {
     display: none;
+  }
+  
+  .button.mobileRounded .chevron:last-child {
+    margin-left: 0px;
   }
 }
 

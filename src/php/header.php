@@ -21,7 +21,7 @@
     <script src="/src/js/helpers/dataFilter.js"></script>
 
     <!-- Start of Woopra Code -->
-    <!-- <script>
+    <script>
         (function() {
             var t, i, e, n = window,
                 o = document,
@@ -44,7 +44,7 @@
             domain: 'laureato.nl'
         });
         woopra.track();
-    </script> -->
+    </script>
     <!-- End of Woopra Code -->
 </head>
 
