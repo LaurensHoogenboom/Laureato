@@ -175,11 +175,12 @@ section>*:last-child {
 }
 
 section.art {
-    min-height: 100vh;
+    height: 100vh;
+    padding: 60px;
 }
 
-section.art {
-    padding: 60px;
+section.art .content {
+    min-height: 0;
 }
 
 section:nth-child(even) {
@@ -192,7 +193,11 @@ section.projectTitle {
     grid-gap: 80px;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+section.projectTitle .content {
+    min-height: 0;
 }
 
 section.center {
@@ -258,13 +263,31 @@ section:nth-child(odd).long {
     }
     section .content>img, section .content>video {
         max-height: initial;
-        max-width: initial;
+        max-width: 100%;
         width: 100%;
+    }
+    section.art {
+        grid-template-rows: calc(100vh - 80px) max-content;
+        height: initial;
+        min-height: 100vh;
+        grid-gap: 40px;
+        padding: 40px;
+    }
+    section.art .content {
+        min-height: 0;
+    }
+    section.art .content img {
+        max-height: 100%;
+        width: initial;
     }
     section.projectTitle {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr max-content;
         grid-gap: 40px;
+    }
+    section.projectTitle .content img {
+        height: 100%;
+        width: initial;
     }
     section.projectTitle .description {
         text-align: center;
@@ -313,7 +336,8 @@ section:nth-child(odd).long {
         margin: 0px -25px -50px -25px;
     }
     section.art {
-        padding: 50px 25px;
+        padding: 25px 25px;
+        grid-template-rows: calc(100vh - 50px) max-content;
     }
 }
 

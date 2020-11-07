@@ -95,3 +95,24 @@ function filterData(itemsToFilter, callback, amount, page, sort, category, searc
 
     callback(items);
 }
+
+//getNeighbourItems
+
+function getNeighbourItems(items, currentItem) {
+    let previousItem
+    let nextItem
+    let currentIndex = items.indexOf(currentItem)
+
+    nextItem = items[currentIndex + 1]
+    previousItem = items[currentIndex - 1]
+
+
+    if (previousItem || nextItem) {
+        return ({
+            previous: previousItem,
+            next: nextItem
+        })
+    } else {
+        return false
+    }
+}

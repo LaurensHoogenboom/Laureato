@@ -73,6 +73,8 @@ function setNeighbourBlogNavigation(possibleNeighbours, blog) {
         )
 
         if (neighbours.previous) {
+            console.log(neighbours.previous)
+
             let blogURL = `/blog/read?id=${neighbours.previous.id}`
 
             $('#blog-detail-paging .left')
@@ -94,6 +96,8 @@ function setNeighbourBlogNavigation(possibleNeighbours, blog) {
         }
 
         if (neighbours.next) {
+            console.log(neighbours.next)
+
             let blogURL = `/blog/read?id=${neighbours.next.id}`
 
             $('#blog-detail-paging .right')

@@ -456,30 +456,6 @@ function toggleRemoveFilterButton(form) {
     }
 }
 
-//getNeighbourItems
-
-function getNeighbourItems(items, currentItem) {
-    let previousItem
-    let nextItem
-
-    filterData(items, filterNeighbours, null, null, "submitDate", null, null)
-
-    function filterNeighbours(possibleNeighbours) {
-        let currentIndex = possibleNeighbours.indexOf(currentItem)
-
-        nextItem = possibleNeighbours[currentIndex + 1]
-        previousItem = possibleNeighbours[currentIndex - 1]
-    }
-
-    if (previousItem || nextItem) {
-        return ({
-            previous: previousItem,
-            next: nextItem
-        })
-    } else {
-        return false
-    }
-}
 
     
 
