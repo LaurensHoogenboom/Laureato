@@ -19,7 +19,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
 
 <div class="seccondary-nav">
     <div class="left">
-        <a href="/blog/" class="button grey">
+        <a href="/blog/" class="button grey mobile-rounded">
             <label class="chevron left">
                 <span></span>
                 <span></span>
