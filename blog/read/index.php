@@ -6,7 +6,7 @@ $pgName = "Blog";
 include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
 ?>
 
-<section class="smallMargin left background pageTitle blogTitle" style="background-image: url('/blog/img/header.jpg');">
+<section class="smallMargin left background pageTitle" style="background-image: url('/blog/img/header.jpg');">
     <div class="overlay">
         <article class="opaque-on-screen">
             <h1 id="blog-title">
@@ -24,7 +24,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/php/header.php";
                 <span></span>
                 <span></span>
             </label>
-            Blog
+            <span class="text">
+                Blog
+            </span>
         </a>
         <label id="blog-category">
 

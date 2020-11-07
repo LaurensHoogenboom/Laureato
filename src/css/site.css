@@ -524,6 +524,19 @@ nav .navButton {
 
 @media only screen and (max-width: 640px) {
   .seccondary-nav {
+    padding: 0 25px;
+  }
+
+  .seccondary-nav .button {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+  }
+
+  .seccondary-nav .button .text {
     display: none;
   }
 }
@@ -923,12 +936,6 @@ main section.home .chevron span {
 
 /*blog section*/
 
-@media only screen and (max-width: 640px) {
-  main section.blogTitle {
-    border-bottom: 10px solid var(--background-grey-lightest);
-  }
-}
-
 main section.center.blog .overlay article {
   text-align: left;
 }
@@ -994,6 +1001,16 @@ main section.blog article ul li::before {
 main section.blog p:first-child,
 main section.blog p:first-child a {
   font-weight: 700;
+}
+
+@media only screen and (max-width: 640px) {
+  .seccondary-nav #blog-category {
+    vertical-align: middle;
+  }
+
+  .seccondary-nav #blog-category .seperator {
+    width: 25px;
+  }
 }
 
 /*about avatar*/
