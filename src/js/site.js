@@ -376,11 +376,11 @@ function createFilterRequest(pageIndex) {
     var searchValue = $(".contentFilter form #search").val()
     var pageSize = $(".itemPaging .pageSize form select").val()
 
-    contentRequest(requistContentBuild)
-
     function requistContentBuild(items) {
         filterData(items, filterCallBack, pageSize, page, sortValue, categoryValue, searchValue)
     }
+
+    contentRequest(requistContentBuild)
 }
 
 //set paging buttons
@@ -414,11 +414,11 @@ $(document).ready(function () {
 
         $("select").change()
 
-        contentRequest(requistContentBuild)
-
         function requistContentBuild(items) {
             filterData(items, filterCallBack)
         }
+
+        contentRequest(requistContentBuild)
     });
 })
 
@@ -455,6 +455,36 @@ function toggleRemoveFilterButton(form) {
         $(form).find(".removeFilterButton").removeClass('hidden')
     }
 }
+
+//getNeighbourItems
+
+function getNeighbourItems(items, currentItem) {
+    let previousItem
+    let nextItem
+
+    filterData(items, filterNeighbours, null, null, "submitDate", null, null)
+
+    function filterNeighbours(possibleNeighbours) {
+        let currentIndex = possibleNeighbours.indexOf(currentItem)
+
+        nextItem = possibleNeighbours[currentIndex + 1]
+        previousItem = possibleNeighbours[currentIndex - 1]
+    }
+
+    if (previousItem || nextItem) {
+        return ({
+            previous: previousItem,
+            next: nextItem
+        })
+    } else {
+        return false
+    }
+}
+
+    
+
+
+
 
 
 

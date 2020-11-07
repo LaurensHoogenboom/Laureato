@@ -13,7 +13,7 @@ const blogId = url.searchParams.get("id").trim()
 
 let blog
 
-getBlogItems(initialize, { id: blogId })
+getBlogItems(initialize)
 
 //initialize the reader
 
@@ -25,6 +25,7 @@ function initialize(possibleBlogs) {
     })
 
     initializeReaderPage(blog)
+    setNeighbourBlogNavigation(possibleBlogs, blog)
     updateViews(blog)
     buildBlog(blog)
 }
@@ -58,6 +59,59 @@ function initializeReaderPage(blog) {
         )
 }
 
+//neighbourBlogNavigation
+
+function setNeighbourBlogNavigation(possibleNeighbours, blog) {
+    let neighbours = new getNeighbourItems(possibleNeighbours, blog)
+
+    if (neighbours) {
+        $('#blog').after(
+            $('<div>').addClass('itemDetailPaging').attr('id', 'blog-detail-paging')
+                .append($("<div>").addClass("left"))
+                .append($("<div>").addClass("middle"))
+                .append($("<div>").addClass("right"))
+        )
+
+        if (neighbours.previous) {
+            let blogURL = `/blog/read?id=${neighbours.previous.id}`
+
+            $('#blog-detail-paging .left')
+                .append(
+                    $("<a>").addClass('button').addClass('grey').attr('href', blogURL).addClass('mobileRounded')
+                        .append(
+                            $("<div>").addClass('chevron').addClass('left')
+                                .append(
+                                    $("<span>")
+                                )
+                                .append(
+                                    $("<span>")
+                                )
+                        )
+                        .append(
+                            $("<span>").addClass('text').text('Vorige')
+                        )
+                )
+        }
+
+        if (neighbours.next) {
+            let blogURL = `/blog/read?id=${neighbours.next.id}`
+
+            $('#blog-detail-paging .right')
+                .append(
+                    $("<a>").addClass('button').addClass('grey').attr('href', blogURL).addClass('mobileRounded')
+                        .append(
+                            $("<span>").addClass('text').text('Volgende')
+                        )
+                        .append(
+                            $("<div>").addClass('chevron').addClass('right')
+                                .append($("<span>"))
+                                .append($("<span>"))
+                        )
+                )
+        }
+    }
+}
+
 //update the number of views
 
 function updateViews(blog) {
@@ -83,16 +137,16 @@ function updateViews(blog) {
 
         let numberOfViews = parseInt(blog.views)
         numberOfViews += 1;
-    
+
         let pairs = []
-    
+
         pairs.push({
             label: 'views',
             value: numberOfViews
         })
-    
+
         updateBlogItem(blog.id, pairs, true)
-    }  
+    }
 }
 
 //build the blog
@@ -154,15 +208,15 @@ function buildBlog(blog) {
                         )
                         .append(
                             $("<p>")
-                            .append(
-                                $("<b>").html(part.data.title)
-                            )
-                            .append(
-                                $("<br>")
-                            )
-                            .append(
-                                part.data.message
-                            )
+                                .append(
+                                    $("<b>").html(part.data.title)
+                                )
+                                .append(
+                                    $("<br>")
+                                )
+                                .append(
+                                    part.data.message
+                                )
                         )
                 )
         }
@@ -177,9 +231,9 @@ function buildBlog(blog) {
 
             if (part.data.caption) {
                 $(`#${itemId}`)
-                .append(
-                    $("<p>").html(part.data.caption)
-                )
+                    .append(
+                        $("<p>").html(part.data.caption)
+                    )
             }
         }
 
