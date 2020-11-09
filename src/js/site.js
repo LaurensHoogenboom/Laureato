@@ -456,6 +456,14 @@ function toggleRemoveFilterButton(form) {
     }
 }
 
+//add porfolio item
+
+$('#portfolioAdd').submit(function(e) {
+    e.preventDefault()
+
+    addPortfolioItem($(this))
+});
+
 
     
 

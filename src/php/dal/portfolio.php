@@ -12,9 +12,9 @@
             $id = uniqid();
             $title = $_POST['title'];
             $date = $_POST['date'];
-            $type = $_POST['type'];
+            $type = $_POST['category'];
 
-            $db->query("INSERT INTO portfolioitems (id, title, submitDate, type) VALUES ('$id', '$title', '$date', '$type')") 
+            $db->query("INSERT INTO portfolioitems (id, title, submitDate, category) VALUES ('$id', '$title', '$date', '$type')") 
                     or die($db->error);
         }
 

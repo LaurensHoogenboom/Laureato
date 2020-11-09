@@ -12,7 +12,7 @@
     <form method="post" id="portfolioAdd">
         <input type="text" name="title">
         <input type="date" name="date">
-        <select name="type">
+        <select name="category">
             <option>Art</option>
             <option>UI/UX</option>
             <option>Web</option>
@@ -21,6 +21,7 @@
         <button type="submit" name="addPortfolio">Save</button>
     </form>
 
-    <script src="/src/js/form.js"></script>
+    <script src="/src/js/dal/portfolio.js"></script>
+    <script src="/src/js/site.js"></script>
 </body>
 </html>
