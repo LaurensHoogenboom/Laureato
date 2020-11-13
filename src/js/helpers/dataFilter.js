@@ -106,7 +106,6 @@ function getNeighbourItems(items, currentItem) {
     nextItem = items[currentIndex + 1]
     previousItem = items[currentIndex - 1]
 
-
     if (previousItem || nextItem) {
         return ({
             previous: previousItem,

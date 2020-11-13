@@ -72,9 +72,7 @@ function setNeighbourBlogNavigation(possibleNeighbours, blog) {
                 .append($("<div>").addClass("right"))
         )
 
-        if (neighbours.previous) {
-            console.log(neighbours.previous)
-
+        if (neighbours.previous && neighbours.previous.status === "Published") {
             let blogURL = `/blog/read?id=${neighbours.previous.id}`
 
             $('#blog-detail-paging .left')
@@ -95,9 +93,7 @@ function setNeighbourBlogNavigation(possibleNeighbours, blog) {
                 )
         }
 
-        if (neighbours.next) {
-            console.log(neighbours.next)
-
+        if (neighbours.next && neighbours.next.status === "Published") {
             let blogURL = `/blog/read?id=${neighbours.next.id}`
 
             $('#blog-detail-paging .right')
