@@ -16,7 +16,6 @@ $(document).ready(function () {
     }
 });
 
-
 //navigation menu
 
 $(document).ready(function () {

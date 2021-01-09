@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    $userActive = false;
+
+    if (isset($_SESSION['user_name']) && isset($_SESSION['user_id']) && isset($_SESSION['db']))
+    {
+      $userActive = true;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +29,13 @@
     <script src="/src/js/plugins/jquery.visible.js"></script>
     <script src="/src/js/plugins/import.js"></script>
     <script src="/src/js/helpers/dataFilter.js"></script>
+
+    <!-- store loginstate --> 
+
+    <script>
+        let userActive = <?php echo $userActive ? 1 : 0; ?>;
+        sessionStorage.setItem('userActive', userActive == 1 ? true : false);
+    </script>
 
     <!-- Start of Woopra Code -->
     <script>
