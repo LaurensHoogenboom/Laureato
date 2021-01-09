@@ -139,7 +139,7 @@ $(document).on("submit", "#unlockHiddenContentForm", function (e) {
             console.log("response");
 
             if (response === "OK") {
-                $('.hiddenBlogContentWrapper').each(function {
+                $('.hiddenBlogContentWrapper').each(function() {
                     $(this).addClass('hidden');
                 });
                 $(".hiddenBlogContent").each(function () {
