@@ -191,6 +191,7 @@ function buildBlog(blog) {
     blogWrapper = $("#blog");
 
     let itemCount = 0;
+    let unlockFormAdded = false;
 
     content.forEach((part) => {
         let itemId = itemCount;
@@ -252,7 +253,9 @@ function buildBlog(blog) {
                 $(`#${itemId}`).append($("<p>").html(caption));
             }
 
-            if (isHidden) {
+            if (isHidden && !unlockFormAdded) {
+                unlockFormAdded = true;
+
                 $(blogWrapper).append(
                     $("<div>")
                         .addClass("hiddenBlogContentWrapper")
@@ -261,7 +264,7 @@ function buildBlog(blog) {
                                 .append($("<span>").addClass("icon").html("&#xe900"))
                                 .append(
                                     $("<p>").html(
-                                        'This section of this blog is locked. For more information, please contact the owner at <a href="mailto:info@laureato.nl">info@laureato.nl</a>.',
+                                        'Some parts of this blog are hidden. For more information, please contact the owner at <a href="mailto:info@laureato.nl">info@laureato.nl</a>.',
                                     ),
                                 ),
                         )
@@ -276,12 +279,12 @@ function buildBlog(blog) {
                                         .attr("id", "unlockPassword")
                                 )
                                 .append(
-                                    $("<input>").prop("type", "submit").attr("id", "unlockArticle").addClass("hidden"),
+                                    $("<input>").prop("type", "submit").attr("id", "unlockFormSubmit").addClass("hidden"),
                                 )
                                 .append(
                                     $("<label>")
                                         .addClass("button")
-                                        .attr("for", "unlockArticle")
+                                        .attr("for", "unlockFormSubmit")
                                         .text("Unlock")
                                         .addClass("right"),
                                 ),
