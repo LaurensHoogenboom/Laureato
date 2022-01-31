@@ -180,7 +180,7 @@ $(document).ready(function () {
         }
     })
 
-    $(document).on('click', '.itemList .item .cross', function () {
+    $(document).on('click', '.itemList .item .contentControls', function () {
         var item = $(this).closest('.item');
         var windowOfset;
         var iframe = $(item).find('iframe');
