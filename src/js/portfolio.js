@@ -15,7 +15,7 @@ function buildPortfolio(items) {
 
     items.forEach(function (item) {
         var tumbnailPath = "/portfolio/content/" + item.title + "/tumbnail.jpg";
-        var pagePath = "/portfolio/content/" + item.title + '/';
+        var pagePath;
         var icon;
 
         switch (item.category) {
@@ -30,6 +30,12 @@ function buildPortfolio(items) {
                 break;
             default:
                 break;
+        }
+
+        if (item.externalPage) {
+            pagePath = item.externalPage;
+        } else {
+            pagePath = "/portfolio/content/" + item.title + '/';
         }
 
         $('#portfolioList')

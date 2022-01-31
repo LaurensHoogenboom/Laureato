@@ -4,7 +4,7 @@
         <section>
             <ul>
                 <li>
-                    Copyright 2020 &copy; Laureato
+                    Copyright <?php echo date('Y'); ?> &copy; Laureato
                 </li>
             </ul>
         </section>

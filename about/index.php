@@ -33,7 +33,7 @@
                 About Me
             </h3>
             <p>
-                20 years old, born in the Netherlands, adventurous cyclist, dutch fellow at heart and...
+                <span class="age-number"></span> years old, born in the Netherlands, adventurous cyclist, dutch fellow at heart and...
                 Ah right, a designer, artist, and developer. <br>
                 In short, I create human-centered stuff using technology and create art to express my vision on our
                 beautiful world.

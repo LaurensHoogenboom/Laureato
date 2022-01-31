@@ -264,6 +264,28 @@ $(document).ready(function () {
     });
 });
 
+//current age
+
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+$(document).ready(function() {
+    const age = getAge("2000/09/21");
+    const ageSpan = $('.age-number');
+
+    if (ageSpan) {
+        $(ageSpan).text(age);
+    }
+});
+
 //site wide search
 
 $(document).ready(function () {
