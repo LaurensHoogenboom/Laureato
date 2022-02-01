@@ -359,12 +359,13 @@ section:nth-child(odd).long {
 @media only screen and (max-width: 590px) {
     section.projectTitle {
         grid-template-rows: 2fr 1fr;
+        padding: 50px 25px;
     }
     section.projectTitle .content {
         align-items: flex-end;
     }
     section.right.art .content>img {
-        margin: -50px -25px 0px -25px;
+        margin: -25px -25px 0px -25px;
     }
 }
 
@@ -374,12 +375,8 @@ section:nth-child(odd).long {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
-    margin-top: 20px;
-    text-align: left;
-}
-
-section:nth-child(even) .infoBlock {
     margin-top: 40px;
+    text-align: left;
 }
 
 .infoBlock.two {
