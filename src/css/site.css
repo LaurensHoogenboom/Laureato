@@ -1515,6 +1515,7 @@ footer section:last-child .icon:first-of-type {
     width: 100%;
     max-width: initial;
     border: none;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 1280px) {
