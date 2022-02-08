@@ -154,9 +154,9 @@ $(document).ready(function () {
 
             $(item).addClass('opened')
 
-            if (window.innerWidth > 640 && window.innerHeight > 800) {
+            if (window.innerWidth > 1440 && window.innerHeight > 800) {
                 windowOfset = 146
-            } else if (window.innerWidth > 480) {
+            } else if (window.innerWidth > 480 || window.innerHeight < 800) {
                 windowOfset = 120
             } else {
                 windowOfset = 100
