@@ -222,7 +222,7 @@ nav {
   grid-gap: 70px;
   grid-template-rows: 70px 1fr max-content;
   width: 60px;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: var(--blue);
   float: left;
   padding: 0px 11px 40px 11px;
@@ -268,13 +268,14 @@ nav a span {
 
 .content-section {
   width: calc(100% - 60px);
-  height: calc(100vh - 70px);
+  height: calc((var(--vh, 1vh) * 100) - 70px);
   float: right;
   padding: 40px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
   background: linear-gradient(to bottom, rgb(240, 240, 240), rgb(250, 250, 250));
+  z-index: 19;
 }
 
 /*toolbar*/

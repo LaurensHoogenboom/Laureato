@@ -9,7 +9,7 @@ function buildBlogList(blogs) {
         });
 
         blogs.forEach((blog) => {
-            let blogDateTime = new Date(blog.submitedOn)
+            let blogDateTime = new Date(blog.submitedOn.replace(' ', 'T'))
             let blogViewDate = getDate.dmy(blogDateTime, "-")
 
             $('#blog-list').append(
@@ -118,3 +118,4 @@ $(document).on('click', 'label.button', function () {
         $(dialog).addClass('hidden')
     }
 })
+

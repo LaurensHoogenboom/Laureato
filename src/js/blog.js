@@ -9,7 +9,9 @@ function buildBloglist(items) {
         let content = JSON.parse(item.content)
 
         if (item.status === "Published" && content) {
-            let blogDateTime = new Date(item.submitedOn)
+            console.log(item.submitedOn);
+
+            let blogDateTime = new Date(item.submitedOn.replace(' ', 'T'))
             let blogViewDate = getDate.dmy(blogDateTime, "-")
             let blogId = item.id
             let blogURL = `/blog/read?id=${item.id}`

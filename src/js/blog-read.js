@@ -33,7 +33,7 @@ function initialize(possibleBlogs) {
 //initialize blog reader page
 
 function initializeReaderPage(blog) {
-    let blogViewDate = getDate.dmy(blog.submitedOn, "-");
+    let blogViewDate = getDate.dmy(blog.submitedOn.replace(' ', 'T'), "-");
 
     $("#blog-title").text(blog.title);
     $("#blog-subtitle").append(blog.category).append($("<span>").addClass("seperator").text("|")).append(blogViewDate);
