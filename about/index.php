@@ -22,7 +22,7 @@
 <section class="right">
     <div class="overlay">
         <div class="content center float-on-screen">
-            <div class="avatar" style="background-image: url('/about/img/Me.png');"></div>
+            <div class="avatar" style="background-image: url('/about/img/Me.jpg');"></div>
         </div>
 
         <article class="opaque-on-screen">
@@ -100,21 +100,10 @@
                         HTML & CSS
                     </li>
                     <li>
-                        JavaScript
+                        JavaScript & Typescript
                     </li>
                     <li>
-                        PHP
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        .Net
-                    </li>
-                    <li>
-                        C#
-                    </li>
-                    <li>
-                        SQL
+                        NodeJS, React, NextJS
                     </li>
                 </ul>
             </label>
